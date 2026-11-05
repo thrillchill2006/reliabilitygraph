@@ -1,0 +1,7 @@
+.git
+.venv
+__pycache__
+data/corpus/raw
+artifacts/*.json
+tests
+*.md

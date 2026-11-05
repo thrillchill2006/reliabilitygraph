@@ -11,3 +11,6 @@
 - Record exact validation commands and observed results; do not claim CI passed
   without a successful workflow run.
 - Do not begin a later phase while the current gate is incomplete.
+- If Gate Q is blocked, provisional development may continue only when
+  explicitly documented in `docs/STATUS.md`; this never makes Q or later
+  provisional metrics pass or final.

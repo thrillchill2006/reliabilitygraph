@@ -1,0 +1,982 @@
+[
+  {
+    "link_id": "8df7f7e7715ac2a8822c",
+    "source_id": "c7d966e88daf97c00334",
+    "passage_id": "823de62ad20762339407",
+    "href": "./Incident_response",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Incident_response",
+    "label": "Incident response",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "feac72ff805a67893fe6",
+    "source_id": "c7d966e88daf97c00334",
+    "passage_id": "81dde1d4ca53b0d0e560",
+    "href": "https://wikitech.wikimedia.org/w/index.php?title=Template:Navigation_Incidents&action=edit",
+    "resolved_url": "https://wikitech.wikimedia.org/w/index.php?title=Template:Navigation_Incidents&action=edit",
+    "label": "edit",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "8ea673d8163128388e2b",
+    "source_id": "c7d966e88daf97c00334",
+    "passage_id": "6d1248e18dac279640fb",
+    "href": "./Incident_status",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Incident_status",
+    "label": "Incident Reports",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "fb5c701ba09160dad61b",
+    "source_id": "c7d966e88daf97c00334",
+    "passage_id": "6d1248e18dac279640fb",
+    "href": "./Incident_response/Lightweight_report_template",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Incident_response/Lightweight_report_template",
+    "label": "lightweight",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "3293b4c3cb70465f35ad",
+    "source_id": "c7d966e88daf97c00334",
+    "passage_id": "6d1248e18dac279640fb",
+    "href": "./Incident_response/Full_report_template",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Incident_response/Full_report_template",
+    "label": "full",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "0ff7f53b6fd07da62595",
+    "source_id": "2493c360096ef6df7499",
+    "passage_id": "d2d0b0e07654cb60c232",
+    "href": "https://www.wikipedia.org",
+    "resolved_url": "https://www.wikipedia.org",
+    "label": "Wikipedia",
+    "target_class": "external",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "175e76b6cf631fd5a886",
+    "source_id": "2493c360096ef6df7499",
+    "passage_id": "6757e5281a42baa76930",
+    "href": "./Category:Incident_documentation",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Category:Incident_documentation",
+    "label": "Category:Incident documentation",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "908a6318b51680a156ce",
+    "source_id": "71b147a6287113592d33",
+    "passage_id": "fc19b9e911b84420aea1",
+    "href": "./Incident_response",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Incident_response",
+    "label": "Incident response",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "00de67b04677d8a04ba9",
+    "source_id": "71b147a6287113592d33",
+    "passage_id": "fd524857952384b41bae",
+    "href": "https://wikitech.wikimedia.org/w/index.php?title=Template:Navigation_Incidents&action=edit",
+    "resolved_url": "https://wikitech.wikimedia.org/w/index.php?title=Template:Navigation_Incidents&action=edit",
+    "label": "edit",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "afc82c076dadbf66d443",
+    "source_id": "71b147a6287113592d33",
+    "passage_id": "80bb945916cee8f517a1",
+    "href": "./Incident_response/Post-incident",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Incident_response/Post-incident",
+    "label": "post-incident documentation",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "7e63bc0a91d7d3a01762",
+    "source_id": "71b147a6287113592d33",
+    "passage_id": "30fba062a6a5116ea8c5",
+    "href": "https://phabricator.wikimedia.org/project/board/2143/",
+    "resolved_url": "https://phabricator.wikimedia.org/project/board/2143/",
+    "label": "Wikimedia-incident",
+    "target_class": "phabricator",
+    "resolution_status": "link-only"
+  },
+  {
+    "link_id": "1d1cc1b0e9efc1713b04",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "passage_id": "bd4538c326cc40b35c64",
+    "href": "https://phabricator.wikimedia.org/T330271",
+    "resolved_url": "https://phabricator.wikimedia.org/T330271",
+    "label": "live switchover test",
+    "target_class": "phabricator",
+    "resolution_status": "link-only"
+  },
+  {
+    "link_id": "1b45518f01cd262a5782",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "passage_id": "bd4538c326cc40b35c64",
+    "href": "https://phabricator.wikimedia.org/T327920",
+    "resolved_url": "https://phabricator.wikimedia.org/T327920",
+    "label": "2023 WMF datacenter switchover",
+    "target_class": "phabricator",
+    "resolution_status": "link-only"
+  },
+  {
+    "link_id": "3f1fabe9d358cf3818a2",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "32a560583e1f1236999c",
+    "href": "./Wikimedia_infrastructure",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Wikimedia_infrastructure",
+    "label": "Wikimedia infrastructure",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "5f05d137c87e728e6e42",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "f506069e712afde3eea0",
+    "href": "./Data_centers",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Data_centers",
+    "label": "Data centers",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "f76a08c9759cd56372c2",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "65a0447f0ccc8cb0191f",
+    "href": "./Network_design",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Network_design",
+    "label": "Networking",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "1c5fe6f39f44d97a8bdc",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "a72a7e5e8459957700dd",
+    "href": "./Global_traffic_routing",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Global_traffic_routing",
+    "label": "Global traffic routing",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "0f7130f54c98d00adbe2",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "ec12c949042b495d2f24",
+    "href": "./MediaWiki_at_WMF",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/MediaWiki_at_WMF",
+    "label": "MediaWiki SRE",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "32ed397d8aa2ccfc7ea4",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "2c259b5c187475f47ca0",
+    "href": "./MediaWiki_Engineering",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/MediaWiki_Engineering",
+    "label": "MediaWiki Engineering",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "ccebeedab716e028e767",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "c4c148625e096f72fd19",
+    "href": "./Upload.wikimedia.org",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Upload.wikimedia.org",
+    "label": "Multimedia",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "81dbb8e47d56cf8b9d4e",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "1033a1fa461a4bc23de9",
+    "href": "./Data_Engineering",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Data_Engineering",
+    "label": "Data Engineering",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "feb8a0d882c8bb836fba",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "1cdb45946e5c9e935772",
+    "href": "./Search",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Search",
+    "label": "Search",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "2651a47164be2905e1b4",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "41218b77e16288a40442",
+    "href": "./SRE/Data_Persistence/Documentation",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/SRE/Data_Persistence/Documentation",
+    "label": "SRE Data Persistence",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "9a0c62b4062acf2633cc",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "c3d5c31b80f01992087a",
+    "href": "./SRE/Infrastructure_Foundations/Documentation",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/SRE/Infrastructure_Foundations/Documentation",
+    "label": "SRE Infra Foundations",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "ee90b2270f213914f1c0",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "a8d8dab77705b047a693",
+    "href": "./SRE/Observability/Documentation",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/SRE/Observability/Documentation",
+    "label": "SRE Observability",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "135f86118861f563d6b9",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "a2a38a09c06e3d9b94a5",
+    "href": "./Wikidata_Platform",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Wikidata_Platform",
+    "label": "Wikidata Platform",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "83e9457b09b1d28cbb0a",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "6b56e2ba26c55443a064",
+    "href": "./Performance",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Performance",
+    "label": "Wikimedia Performance",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "ce0cdd9b79b5e0e865bb",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "68a697ea7b7ac38f29a4",
+    "href": "./Event_Platform",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Event_Platform",
+    "label": "Event Platform",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "36d69ec9387fdb18ab3d",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "87f1f1d5d10b2905d711",
+    "href": "./Release_Engineering",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Release_Engineering",
+    "label": "Release Engineering",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "ee99bdc6551d387fb494",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "5e84c76f69db7cfd86e3",
+    "href": "./Fundraising",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Fundraising",
+    "label": "Fundraising",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "0f42b30e51cda2082b47",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "99297c848ec7afc2126c",
+    "href": "https://wikitech.wikimedia.org/w/index.php?title=Template:Navigation_Wikimedia_infrastructure&action=edit",
+    "resolved_url": "https://wikitech.wikimedia.org/w/index.php?title=Template:Navigation_Wikimedia_infrastructure&action=edit",
+    "label": "edit",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "5cdaeb3a5601d1acb582",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "c77817fef035954f1848",
+    "href": "./MariaDB/monitoring",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/MariaDB/monitoring",
+    "label": "MariaDB/monitoring",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "6ae26dbc1cc38f1a507f",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "c77817fef035954f1848",
+    "href": "./MariaDB/Backups#Recovering_a_Snapshot",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/MariaDB/Backups#Recovering_a_Snapshot",
+    "label": "MariaDB/Backups#Recovering a Snapshot",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "3690648853b4839ea229",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "e7879713b59ddd5aafa2",
+    "href": "https://orchestrator.wikimedia.org",
+    "resolved_url": "https://orchestrator.wikimedia.org",
+    "label": "Orchestrator",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "8d5ea79c12ffe6595d15",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "4b65cd981419998e1c51",
+    "href": "https://office.wikimedia.org/wiki/Contact_list#Data_Persistence",
+    "resolved_url": "https://office.wikimedia.org/wiki/Contact_list#Data_Persistence",
+    "label": "escalate to a DBA",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "ba700e9990874dd5f85e",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "9af7295c059e057ca3fd",
+    "href": "./MariaDB/Troubleshooting#Depooling_a_replica",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/MariaDB/Troubleshooting#Depooling_a_replica",
+    "label": "#Depooling_a_replica",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "e4d0ca5b80b4b8697f94",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "0c71279eab764e4c92a5",
+    "href": "https://phabricator.wikimedia.org/maniphest/task/edit/form/1/?projects=DBA",
+    "resolved_url": "https://phabricator.wikimedia.org/maniphest/task/edit/form/1/?projects=DBA",
+    "label": "please create a task tagging #DBA so we can take a look at what happened.",
+    "target_class": "phabricator",
+    "resolution_status": "link-only"
+  },
+  {
+    "link_id": "9537499d311b6c651279",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "700aac47f2385ff89f9e",
+    "href": "https://orchestrator.wikimedia.org/web/cluster/alias/pc3",
+    "resolved_url": "https://orchestrator.wikimedia.org/web/cluster/alias/pc3",
+    "label": "example",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "bc7dc4790707aee871eb",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "77b307bdafcb90d9bf5b",
+    "href": "https://noc.wikimedia.org/dbconfig/eqiad.json",
+    "resolved_url": "https://noc.wikimedia.org/dbconfig/eqiad.json",
+    "label": "https://noc.wikimedia.org/dbconfig/eqiad.json",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "ef24e1467d971f91698b",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "c3e6d79909425dc11606",
+    "href": "https://gerrit.wikimedia.org/g/operations/puppet/+/89a0eb18b5bc04c9bb6254ef06267d3a1e9f8480/modules/conftool/manifests/config.pp#33",
+    "resolved_url": "https://gerrit.wikimedia.org/g/operations/puppet/+/89a0eb18b5bc04c9bb6254ef06267d3a1e9f8480/modules/conftool/manifests/config.pp#33",
+    "label": "managed in puppet",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "5f7aa3338c662aae711d",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "2617c51735e09b80db80",
+    "href": "https://phabricator.wikimedia.org/T313383",
+    "resolved_url": "https://phabricator.wikimedia.org/T313383",
+    "label": "https://phabricator.wikimedia.org/T313383",
+    "target_class": "phabricator",
+    "resolution_status": "link-only"
+  },
+  {
+    "link_id": "6ee4e7484729534497e0",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "7876113ca60cddfebcaa",
+    "href": "./Primary_database_switchover",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Primary_database_switchover",
+    "label": "Primary database switchover",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "6e3d57b12838df1857ad",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "dbba0e021eb28aa80f7d",
+    "href": "./MySQL#Replication_lag",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/MySQL#Replication_lag",
+    "label": "MySQL#Replication lag",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "7bf6a785086f462cf56a",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "caf6377144f553f52ebc",
+    "href": "./PERCCli",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/PERCCli",
+    "label": "PERCCli",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "3cb2e3e1c006edd5d82e",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "da23ef7596ae46ec46f1",
+    "href": "./PERCCli",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/PERCCli",
+    "label": "PERCCli",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "13c0763103ef634c29c2",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "e6c18efdadbc3de660e4",
+    "href": "https://grafana.wikimedia.org/d/000000273/mysql",
+    "resolved_url": "https://grafana.wikimedia.org/d/000000273/mysql",
+    "label": "",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "3d3ca9eb2b1023e88b13",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "e6c18efdadbc3de660e4",
+    "href": "https://grafana.wikimedia.org/d/000000278/mysql-aggregated",
+    "resolved_url": "https://grafana.wikimedia.org/d/000000278/mysql-aggregated",
+    "label": "",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "05f6013d558fae12a4c6",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "059b5234992d6661a566",
+    "href": "./Query_killer",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Query_killer",
+    "label": "query killer",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "30ae5609ce636d7f49ac",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "43a6b2c6f5b221a9c9f7",
+    "href": "https://phabricator.wikimedia.org/T365164",
+    "resolved_url": "https://phabricator.wikimedia.org/T365164",
+    "label": "phab:T365164",
+    "target_class": "phabricator",
+    "resolution_status": "link-only"
+  },
+  {
+    "link_id": "fa25836b4bd8b48a3c8d",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "b03773a9e74327e6c430",
+    "href": "./MariaDB/Backups",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/MariaDB/Backups",
+    "label": "MariaDB/Backups",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "c958cb46c1be479afb2e",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "13afff463d47f88fc89a",
+    "href": "./Bacula",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Bacula",
+    "label": "Bacula",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "d68159af110dbc0c7dee",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "cc3e095e2337ec62b1c4",
+    "href": "./Transfer.py",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Transfer.py",
+    "label": "transfer.py",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "b457589ed8e7091f05fe",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "183283830a6a824fde6e",
+    "href": "https://phabricator.wikimedia.org/diffusion/OSMD/browse/master/wmfmariadbpy/compare.py;a2c2eaec25fe9dca11c0e4df38f925264bc33ebe?as=source&blame=off",
+    "resolved_url": "https://phabricator.wikimedia.org/diffusion/OSMD/browse/master/wmfmariadbpy/compare.py;a2c2eaec25fe9dca11c0e4df38f925264bc33ebe?as=source&blame=off",
+    "label": "db-compare",
+    "target_class": "phabricator",
+    "resolution_status": "link-only"
+  },
+  {
+    "link_id": "4dc16c108b9d9798f064",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "4fa6b7e0ca8a881797b8",
+    "href": "./Portal:Data_Services/Admin/Runbooks/Depool_wikireplicas",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Portal:Data_Services/Admin/Runbooks/Depool_wikireplicas",
+    "label": "Portal:Data Services/Admin/Runbooks/Depool wikireplicas",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "08a44801b7983671aac7",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "192755aad715968a808d",
+    "href": "https://github.com/wikimedia/operations-puppet/blob/9ba8043aab4fd0ba51dc96e3404b257782ffdf45/modules/admin/files/home/arnaudb/.bashrc#L52-L57",
+    "resolved_url": "https://github.com/wikimedia/operations-puppet/blob/9ba8043aab4fd0ba51dc96e3404b257782ffdf45/modules/admin/files/home/arnaudb/.bashrc#L52-L57",
+    "label": "the snippets",
+    "target_class": "external",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "513c6b3030f90c86f891",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "7ae95afcb50acf3f1edf",
+    "href": "./MariaDB/Troubleshooting#Event_Scheduler",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/MariaDB/Troubleshooting#Event_Scheduler",
+    "label": "Event Scheduler",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "d75ac07245b660c38151",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "fc60f6cffa05dba518c8",
+    "href": "./SRE/Data_Persistence/Documentation",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/SRE/Data_Persistence/Documentation",
+    "label": "SRE Data Persistence technical documentation",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "59c4de62d12fdbc66832",
+    "source_id": "a80d620c06908c65a45d",
+    "passage_id": "fc60f6cffa05dba518c8",
+    "href": "./Special:WhatLinksHere/Template:SRE/Data_Persistence/Footer",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Special:WhatLinksHere/Template:SRE/Data_Persistence/Footer",
+    "label": "go here for a list of all our pages",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "d343ee4313889690652d",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "42d0597ad2fc5e068ae2",
+    "href": "https://duckduckgo.com/?q=Datacenter+switchover",
+    "resolved_url": "https://duckduckgo.com/?q=Datacenter+switchover",
+    "label": "web search",
+    "target_class": "external",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "85e08d7b8a0a818a4412",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "4da1103630f373c42782",
+    "href": "./Eqiad",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Eqiad",
+    "label": "eqiad",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "7a69a7f41a9991ec819e",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "4da1103630f373c42782",
+    "href": "./Codfw",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Codfw",
+    "label": "codfw",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "7a701f02deedd25e1179",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "d3ad4979f3372672b6e8",
+    "href": "./Switch_Datacenter#Upcoming_Switches",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Switch_Datacenter#Upcoming_Switches",
+    "label": "#Upcoming Switches",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "e313b5b51ddac72507f1",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "d3ad4979f3372672b6e8",
+    "href": "./Switch_Datacenter/Switchover_Dates",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Switch_Datacenter/Switchover_Dates",
+    "label": "Switch Datacenter/Switchover Dates",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "308b1b026051a14880fb",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "3f2e704e27d2b7610d05",
+    "href": "./SRE/Service_Operations",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/SRE/Service_Operations",
+    "label": "SRE/Service Operations",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "3ae70439d455d7186cb5",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "a0934f5cd7b39601510b",
+    "href": "./MariaDB#Core_MediaWiki_databases",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/MariaDB#Core_MediaWiki_databases",
+    "label": "MediaWiki databases",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "94f1864e30feecabcae1",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "fe985aca11f511599d12",
+    "href": "./MariaDB#Core_MediaWiki_databases",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/MariaDB#Core_MediaWiki_databases",
+    "label": "MediaWiki databases",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "42ffde1093bf18cc6909",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "6b870358409b21d249a7",
+    "href": "./Eqiad_data_center",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Eqiad_data_center",
+    "label": "Eqiad",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "7712a3c5aedf371d5dbe",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "6b870358409b21d249a7",
+    "href": "./Codfw_data_center",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Codfw_data_center",
+    "label": "Codfw",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "7beee519904c579a9cfa",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "1a8009f6af742d59a2aa",
+    "href": "./Switch_Datacenter/Coordination",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Switch_Datacenter/Coordination",
+    "label": "Switch Datacenter/Coordination",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "cfc4e838d892423afa53",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "0630b6923a2d953e2d72",
+    "href": "./Global_traffic_routing",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Global_traffic_routing",
+    "label": "Global traffic routing",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "f442b3d4ee7530bc6a8b",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "c426d66e833048aca022",
+    "href": "./DNS#Change_GeoDNS_/_Depool_a_Site",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/DNS#Change_GeoDNS_/_Depool_a_Site",
+    "label": "Change GeoDNS / Depool a Site",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "cdbe6e99ec732edee656",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "7ba5009500d4e1150938",
+    "href": "https://gerrit.wikimedia.org/r/plugins/gitiles/operations/cookbooks/+/refs/heads/master/cookbooks/sre/discovery/datacenter.py",
+    "resolved_url": "https://gerrit.wikimedia.org/r/plugins/gitiles/operations/cookbooks/+/refs/heads/master/cookbooks/sre/discovery/datacenter.py",
+    "label": " sre.discovery.datacenter ",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "47d8ff66f8515a9214f9",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "811a33c80b38fb96af88",
+    "href": "https://gerrit.wikimedia.org/r/plugins/gitiles/operations/puppet/+/refs/heads/production/hieradata/common/service.yaml",
+    "resolved_url": "https://gerrit.wikimedia.org/r/plugins/gitiles/operations/puppet/+/refs/heads/production/hieradata/common/service.yaml",
+    "label": "hieradata",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "0d50b9139e6333186f01",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "a1f5c5dd3f98cb385579",
+    "href": "./MediaWiki_On_Kubernetes",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/MediaWiki_On_Kubernetes",
+    "label": "MediaWiki On Kubernetes",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "571487e263cd2e239f51",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "a1f5c5dd3f98cb385579",
+    "href": "https://gerrit.wikimedia.org/r/plugins/gitiles/operations/cookbooks/+/refs/heads/master/cookbooks/sre/switchdc/mediawiki/__init__.py#25",
+    "resolved_url": "https://gerrit.wikimedia.org/r/plugins/gitiles/operations/cookbooks/+/refs/heads/master/cookbooks/sre/switchdc/mediawiki/__init__.py#25",
+    "label": "sre.switchdc.mediawiki",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "150e1bc6bec4ccf752af",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "a1f5c5dd3f98cb385579",
+    "href": "https://gerrit.wikimedia.org/r/plugins/gitiles/operations/cookbooks/+/refs/heads/master/cookbooks/sre/discovery/datacenter.py#519",
+    "resolved_url": "https://gerrit.wikimedia.org/r/plugins/gitiles/operations/cookbooks/+/refs/heads/master/cookbooks/sre/discovery/datacenter.py#519",
+    "label": "sre.discovery.datacenter",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "3f1a51e1f00f1835de7b",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "f57fa6afec345e2a4790",
+    "href": "https://gerrit.wikimedia.org/g/operations/cookbooks/",
+    "resolved_url": "https://gerrit.wikimedia.org/g/operations/cookbooks/",
+    "label": "operations/cookbooks",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "728830a0c88486a79cd0",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "f57fa6afec345e2a4790",
+    "href": "https://gerrit.wikimedia.org/g/operations/cookbooks/+/master/cookbooks/sre/switchdc/mediawiki/",
+    "resolved_url": "https://gerrit.wikimedia.org/g/operations/cookbooks/+/master/cookbooks/sre/switchdc/mediawiki/",
+    "label": "cookbooks/sre/switchdc/mediawiki/",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "57914f0143a4470ad19f",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "201298188d8c7633bbc6",
+    "href": "https://phabricator.wikimedia.org/T421343",
+    "resolved_url": "https://phabricator.wikimedia.org/T421343",
+    "label": "T421343",
+    "target_class": "phabricator",
+    "resolution_status": "link-only"
+  },
+  {
+    "link_id": "505570a30ebed94164f8",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "e992bb244db68ad3b03c",
+    "href": "https://github.com/wikimedia/operations-mediawiki-config/blob/master/wmf-config/ext-CirrusSearch.php#L12",
+    "resolved_url": "https://github.com/wikimedia/operations-mediawiki-config/blob/master/wmf-config/ext-CirrusSearch.php#L12",
+    "label": "ext-CirrusSearch.php",
+    "target_class": "external",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "a94e6152afe4fdf69068",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "6adbafde4d28caef168c",
+    "href": "./Search#Recovering_from_an_Elasticsearch_outage.2Finterruption_in_updates",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Search#Recovering_from_an_Elasticsearch_outage.2Finterruption_in_updates",
+    "label": "Recovering from an Elasticsearch outage / interruption in updates",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "3561e352a6d9a41fe1a1",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "5051796dfd9f43eea68c",
+    "href": "./Conftool#Depool_all_nodes_in_a_specific_datacenter",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Conftool#Depool_all_nodes_in_a_specific_datacenter",
+    "label": "using conftool",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "3414728d24a6b64d2091",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "4b5a05160e29432699dc",
+    "href": "https://gerrit.wikimedia.org/r/893409",
+    "resolved_url": "https://gerrit.wikimedia.org/r/893409",
+    "label": "Puppet change",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "18501119b4e4f8884916",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "7198dfa36d22e6e34811",
+    "href": "https://phabricator.wikimedia.org/T422166",
+    "resolved_url": "https://phabricator.wikimedia.org/T422166",
+    "label": "T422166",
+    "target_class": "phabricator",
+    "resolution_status": "link-only"
+  },
+  {
+    "link_id": "ff92144e31186efc3e49",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "7198dfa36d22e6e34811",
+    "href": "./Ceph/Cephadm#Pooling_/_Depooling",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Ceph/Cephadm#Pooling_/_Depooling",
+    "label": "needs to be restarted",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "4adba0cfc1ec13bb82bc",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "c7f7e5ef45aebd1a32a6",
+    "href": "./MariaDB/Switch_Datacenter",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/MariaDB/Switch_Datacenter",
+    "label": "MariaDB/Switch Datacenter",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "9d5b0c98ea94456073ef",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "fda5b2a2618e1b3515fc",
+    "href": "./Spicerack/Cookbooks#Run_a_single_Cookbook",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Spicerack/Cookbooks#Run_a_single_Cookbook",
+    "label": "cookbook",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "337ffb67f8866933631e",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "e8d5597eb12452474619",
+    "href": "./Switch_Datacenter/Recurring,_Equinox-based,_Data_Center_Switchovers",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Switch_Datacenter/Recurring,_Equinox-based,_Data_Center_Switchovers",
+    "label": "Recurring, Equinox-based, Data Center Switchovers",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "59b88a124851c0e6a2db",
+    "source_id": "36bd54e1db437198538f",
+    "passage_id": "0e05b1218310d1b37b9e",
+    "href": "./Switch_Datacenter/Switchover_Dates",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Switch_Datacenter/Switchover_Dates",
+    "label": "Switch Datacenter/Switchover Dates",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "f70d3968dd9d927a8d33",
+    "source_id": "0e0702e1d1a9f789152e",
+    "passage_id": "160062b35f38f85c8f2d",
+    "href": "./Incidents/2021-11-10_cirrussearch_commonsfile_outage#cite_note-1",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Incidents/2021-11-10_cirrussearch_commonsfile_outage#cite_note-1",
+    "label": "[1]",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "4220cd7271b761f604d9",
+    "source_id": "0ca602b66d40fb32a655",
+    "passage_id": "46026f4f2587d9195bf6",
+    "href": "https://phabricator.wikimedia.org/T224395",
+    "resolved_url": "https://phabricator.wikimedia.org/T224395",
+    "label": "https://phabricator.wikimedia.org/T224395",
+    "target_class": "phabricator",
+    "resolution_status": "link-only"
+  },
+  {
+    "link_id": "0d43a79637bf0e5890c3",
+    "source_id": "0ca602b66d40fb32a655",
+    "passage_id": "46026f4f2587d9195bf6",
+    "href": "./Incident_documentation/20190603-maps",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Incident_documentation/20190603-maps",
+    "label": "Incident documentation/20190603-maps",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "a8ef2c6ee96698ecd964",
+    "source_id": "9354eda28b449247d0a7",
+    "passage_id": "f3602112b9ef7447d30c",
+    "href": "http://bugs.mysql.com/bug.php?id=44884",
+    "resolved_url": "http://bugs.mysql.com/bug.php?id=44884",
+    "label": "http://bugs.mysql.com/bug.php?id=44884",
+    "target_class": "external",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "517ba62b74218c3d43bd",
+    "source_id": "65d1733fbae92c90a624",
+    "passage_id": "c446988ca2ea309dd5b9",
+    "href": "https://www.kernel.org/doc/Documentation/networking/bonding.txt",
+    "resolved_url": "https://www.kernel.org/doc/Documentation/networking/bonding.txt",
+    "label": "kernel.org bonding page",
+    "target_class": "external",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "d1778a42432279813c35",
+    "source_id": "9dc571a5930bf9ea0822",
+    "passage_id": "ffd5151b62baa37bdbb1",
+    "href": "https://wikitech.wikimedia.org/wiki/Search/New#Stuck_in_red",
+    "resolved_url": "https://wikitech.wikimedia.org/wiki/Search/New#Stuck_in_red",
+    "label": "https://wikitech.wikimedia.org/wiki/Search/New#Stuck_in_red",
+    "target_class": "wikitech",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "74e0b031f9fd42f2ce7d",
+    "source_id": "d473b9b21f31ea49e920",
+    "passage_id": "20a3d98cab9b3bc21717",
+    "href": "https://gerrit.wikimedia.org/r/99576",
+    "resolved_url": "https://gerrit.wikimedia.org/r/99576",
+    "label": "https://gerrit.wikimedia.org/r/99576",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "3e5dcd63f786afd7fe28",
+    "source_id": "04f7feb3457423073737",
+    "passage_id": "f75f2242893e48ad271e",
+    "href": "https://gerrit.wikimedia.org/r/#/c/75087/",
+    "resolved_url": "https://gerrit.wikimedia.org/r/#/c/75087/",
+    "label": "https://gerrit.wikimedia.org/r/#/c/75087/",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  },
+  {
+    "link_id": "a9c267a68b9a23a78daa",
+    "source_id": "04f7feb3457423073737",
+    "passage_id": "0778eb942ea225e9e70a",
+    "href": "https://gerrit.wikimedia.org/r/#/c/110940/",
+    "resolved_url": "https://gerrit.wikimedia.org/r/#/c/110940/",
+    "label": "https://gerrit.wikimedia.org/r/#/c/110940/",
+    "target_class": "wikimedia",
+    "resolution_status": "unresolved"
+  }
+]

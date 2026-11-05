@@ -1,0 +1,909 @@
+{
+  "schema_version": 2,
+  "status": "annotation-pending",
+  "question_count": 40,
+  "multi_source_candidate_count": 17,
+  "questions": [
+    {
+      "question_id": "Q001",
+      "question": "Across the 2017 Wikidata/dewiki, 2023 switchover, and 2021 Commons incidents, which different failure mechanisms led to read-only/editing problems?",
+      "question_class": "similar-symptom-different-mechanism",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "4beae77689f755606b09",
+        "0cee9e2147b8a6651d9f",
+        "8dcbaae33b95dd4e5e4e"
+      ],
+      "evidence_span_ids": [
+        "bbc3272fd75f7eceaf02",
+        "bd4538c326cc40b35c64",
+        "3333cdc089fa5c167d5e",
+        "beb1aa23975ff1e674ed",
+        "8d300bddb41249b0611d"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W3 attributes the 2017 failure to an out-of-memory termination of the s5 master and its read-only restart. W4 identifies a 2023 switchover-script/configuration fault (including a string/Boolean mismatch) affecting application editing. W5 reports InnoDB contention as the immediate Commons cause, with GlobalUsage a probable contributor rather than a conclusively proven underlying cause. Similar symptoms are not a shared root cause.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q002",
+      "question": "What do the 2017 s5 incident passages establish about the OOM crash, the read-only interval, and the limits of detection evidence?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "4beae77689f755606b09"
+      ],
+      "evidence_span_ids": [
+        "bbc3272fd75f7eceaf02",
+        "a6c5831a40f60dc47c7f"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "The s5 master was killed by an out-of-memory event at 05:48 and restarted read-only. The source reports write unavailability until 07:04, when read-write was restored. The two snapshot passages do not identify a particular alert mechanism or exact initial human-detection time.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q003",
+      "question": "What does the datacenter guide say a live test is intended to avoid, and what actually happened in the 2023 switchover test?",
+      "question_class": "multi-document-context-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "36bd54e1db437198538f",
+        "0cee9e2147b8a6651d9f"
+      ],
+      "evidence_span_ids": [
+        "7975ea9322dad6530fce",
+        "bd4538c326cc40b35c64"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "The later/current guide says live-test mode should skip actions hazardous to the primary datacenter or execute them on the secondary. The 2023 report records an accidental secondary read-only setting and a subsequent tool issue that made both datacenters read-only. The 2026 guide is contextual and is not proof of exactly which instructions existed in 2023.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q004",
+      "question": "What causal uncertainty did the Commons incident preserve, and which principle in the review guidance helps avoid overclaiming?",
+      "question_class": "multi-document-context-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "8dcbaae33b95dd4e5e4e",
+        "c7d966e88daf97c00334"
+      ],
+      "evidence_span_ids": [
+        "8d300bddb41249b0611d",
+        "9f195aec0d7e5eff5768"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W5 identifies InnoDB contention as the immediate issue and says GlobalUsage was the most probable contributor, while the underlying cause was not proven. W1 encourages discussion and challenging assumptions to avoid hearsay and cargo-cult reasoning. W1 is proposed review practice, not a re-investigation of Commons.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q005",
+      "question": "How does later MariaDB guidance on recovering a master contextualize the 2017 s5 restart, and what recovery action is not documented?",
+      "question_class": "multi-document-context-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "a80d620c06908c65a45d",
+        "4beae77689f755606b09"
+      ],
+      "evidence_span_ids": [
+        "3abfa35ce58076e6d8bd",
+        "065aae695cdd4a878567",
+        "bbc3272fd75f7eceaf02"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W6 distinguishes master failures from replica failures because replicas can be at different transaction positions; it advises waiting when a master is recoverable. W3 describes an s5 master that restarted read-only after an OOM and was later restored to read-write. Neither cited incident passage says a replica was promoted.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q006",
+      "question": "How does planned read-only during a datacenter switchover differ from the accidental read-only states in the 2023 incident?",
+      "question_class": "multi-document-context-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "36bd54e1db437198538f",
+        "0cee9e2147b8a6651d9f"
+      ],
+      "evidence_span_ids": [
+        "7a6f0b7daf106ec01f7b",
+        "a0934f5cd7b39601510b",
+        "bd4538c326cc40b35c64"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W7 describes a planned short read-only window and distinct application/database phases. W4 describes a live test accidentally leaving the secondary read-only and subsequent changes affecting both datacenters until reverted. The later guide’s stated expected duration is not the observed 2023 impact duration.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q007",
+      "question": "Compare the documented restoration actions for the 2017 s5 and 2021 Commons database incidents. Which steps differed?",
+      "question_class": "cross-incident-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "4beae77689f755606b09",
+        "8dcbaae33b95dd4e5e4e"
+      ],
+      "evidence_span_ids": [
+        "bbc3272fd75f7eceaf02",
+        "beb1aa23975ff1e674ed"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "After its OOM crash, W3’s master restarted in read-only mode and was eventually set back to read-write. In W5, after restart and forced termination, the database came back read-only; GlobalUsage was temporarily disabled before restoring read-write. These are reported recovery actions, not proof of durable preventive fixes.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q008",
+      "question": "What instruction about runbook links appears on the 2021 Commons incident page, and what does the later MariaDB troubleshooting guide establish without proving an alert update?",
+      "question_class": "multi-document-context-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "8dcbaae33b95dd4e5e4e",
+        "a80d620c06908c65a45d"
+      ],
+      "evidence_span_ids": [
+        "bc209f1665c6605db0cf",
+        "c77817fef035954f1848",
+        "49cf0417f9da2f41a15e"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "The Commons incident page includes an instruction to add relevant responder documentation links or an action item where documentation is missing. That instruction alone is not a verified follow-up task or proof of implementation. A later MariaDB troubleshooting guide exists and explains protective read-only after crashes, but the cited evidence does not establish that any Commons alert URL was updated.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q009",
+      "question": "Do the 2017 and 2021 incident descriptions prove that their restorations prevented later similar outages?",
+      "question_class": "missing-evidence-negative",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "4beae77689f755606b09",
+        "8dcbaae33b95dd4e5e4e"
+      ],
+      "evidence_span_ids": [
+        "bbc3272fd75f7eceaf02",
+        "beb1aa23975ff1e674ed"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "No. Both passages describe restoration from specific incidents; neither cited passage gives subsequent longitudinal evidence of nonrecurrence or verified preventive effectiveness. The incidents also have distinct immediate mechanisms. This is an absence-of-evidence finding limited to these passages, not proof that no corrective work ever occurred.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q010",
+      "question": "How does the read-only restart in the 2017 incident relate to the later runbook’s explanation of protective read-only state?",
+      "question_class": "multi-document-context-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "4beae77689f755606b09",
+        "a80d620c06908c65a45d"
+      ],
+      "evidence_span_ids": [
+        "bbc3272fd75f7eceaf02",
+        "49cf0417f9da2f41a15e",
+        "157e78b88446aa918ef1"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W3 reports the s5 master restarting read-only after an OOM crash until returned to read-write. W6 says a primary may return read-only after a crash as protection against corruption, with reads available while writes are blocked. The sources do not prove this specific protection motivation was explicitly recorded in the 2017 incident.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q011",
+      "question": "Which distinctions in the later MariaDB guidance prevent treating the 2017 s5 read-only restart as a documented replica failover?",
+      "question_class": "multi-document-context-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "4beae77689f755606b09",
+        "a80d620c06908c65a45d"
+      ],
+      "evidence_span_ids": [
+        "bbc3272fd75f7eceaf02",
+        "3abfa35ce58076e6d8bd",
+        "065aae695cdd4a878567"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W3 reports OOM, restart in read-only, and eventual restoration on the s5 master. W6 explains that master recovery and replica promotion depend on recoverability and replication positions. No source passage cited for W3 establishes that promotion occurred; W6 is general later context.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q012",
+      "question": "How do the 2017 s5, 2021 Commons and 2021 CirrusSearch reports differ in certainty about their triggering or contributing conditions?",
+      "question_class": "cross-incident-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "4beae77689f755606b09",
+        "8dcbaae33b95dd4e5e4e",
+        "0e0702e1d1a9f789152e"
+      ],
+      "evidence_span_ids": [
+        "bbc3272fd75f7eceaf02",
+        "8d300bddb41249b0611d",
+        "d30c979102e8eaa9b74d",
+        "d7d61fe70633cbc00757"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W3 directly attributes the s5 crash to an OOM event. W5 states that GlobalUsage was the most probable source of troublesome queries, with uncertainty over the deeper cause. W9 records a high volume of queries and index recreation, explicitly saying the exact reason for index recreation was not yet understood. Distinguish stated events from uncertain contributors or mechanisms.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q013",
+      "question": "Did the three documented read-only/editing incidents share one established technical root cause?",
+      "question_class": "false-analogy-negative",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "4beae77689f755606b09",
+        "0cee9e2147b8a6651d9f",
+        "8dcbaae33b95dd4e5e4e"
+      ],
+      "evidence_span_ids": [
+        "bbc3272fd75f7eceaf02",
+        "bd4538c326cc40b35c64",
+        "beb1aa23975ff1e674ed",
+        "8d300bddb41249b0611d"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "No: W3 reports an OOM-related database restart into read-only, W4 a switchover configuration/script error, and W5 database contention with uncertainty over an upstream contributor. The same user-visible write restriction is insufficient to infer the same root cause.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q014",
+      "question": "Why should the 2017 s5 report not be treated as interchangeable with later MariaDB and datacenter runbooks when explaining a historical outage?",
+      "question_class": "time-qualified",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "4beae77689f755606b09",
+        "a80d620c06908c65a45d",
+        "36bd54e1db437198538f"
+      ],
+      "evidence_span_ids": [
+        "bbc3272fd75f7eceaf02",
+        "c77817fef035954f1848",
+        "49cf0417f9da2f41a15e",
+        "a0934f5cd7b39601510b"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W3 documents what was reported about the 2017 OOM event. W6 describes an evolving troubleshooting procedure, and W7 describes operational switchover practices; their snapshot revisions are from 2026. Such guides provide context but do not establish what was documented or done in 2017. Check document revision dates in the manifest.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q015",
+      "question": "Do the documentation-link instruction in the Commons incident page and the later MariaDB guide establish that a Commons alert was updated?",
+      "question_class": "missing-evidence-negative",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "8dcbaae33b95dd4e5e4e",
+        "a80d620c06908c65a45d"
+      ],
+      "evidence_span_ids": [
+        "bc209f1665c6605db0cf",
+        "c77817fef035954f1848",
+        "49cf0417f9da2f41a15e"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "No. The Commons page contains an instruction to add links or raise an action item; the later MariaDB guide exists and is marked work in progress. These passages do not provide a completed task/change record or timestamp demonstrating any alert-link update.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q016",
+      "question": "What knowledge-sharing benefit does Wikimedia’s proposed incident-review ritual seek beyond publishing incident reports?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "c7d966e88daf97c00334"
+      ],
+      "evidence_span_ids": [
+        "c2c53ca85e4a382a3250",
+        "9f195aec0d7e5eff5768"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W1 proposes regular shared reviews so more engineers become familiar with infrastructure and can challenge misunderstandings and inherited assumptions. The passage is evidence of a proposed process goal, not proof the process was adopted or improved outcomes.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q017",
+      "question": "How does the Wikimedia incident-status page direct readers toward older incident reports?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "2493c360096ef6df7499"
+      ],
+      "evidence_span_ids": [
+        "d2d0b0e07654cb60c232",
+        "6757e5281a42baa76930"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W10 says it tracks reports about Wikimedia Foundation properties and points readers to the “Incident documentation” category for older incidents. The retrieved excerpt does not establish complete coverage, a precise count, or document quality.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q018",
+      "question": "What should the incident coordinator document after an incident is resolved, according to the incident-response runbook?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "71b147a6287113592d33"
+      ],
+      "evidence_span_ids": [
+        "80bb945916cee8f517a1"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "After an incident is resolved, the incident coordinator should follow post-incident documentation to write an incident report and action items.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q019",
+      "question": "What maintenance mistake triggered the February 2023 draft wiki outage and what traffic impacts are reported?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "f42ec2b72f2037e0ba35"
+      ],
+      "evidence_span_ids": [
+        "911114cca64609a7acb7"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "The draft W8 report describes HAProxy maintenance that inadvertently depooled ATS backends in esams/eqiad. It reports errors affecting both cached and uncached requests to backed services, with notable geographic differences and unaffected categories. Preserve draft status and do not generalize its figures beyond that source.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q020",
+      "question": "Which search surfaces were affected and unaffected in the November 2021 Commons/CirrusSearch incident?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "0e0702e1d1a9f789152e"
+      ],
+      "evidence_span_ids": [
+        "160062b35f38f85c8f2d",
+        "0043e6864d6bee6fc619"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W9 reports that media searches on Commons failed and cross-wiki search-sidebars affected other projects. It separately notes that ordinary search suggestions generally continued to work outside Commons. This does not establish that every Wikipedia search was down.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q021",
+      "question": "What capacity condition produced maps request timeouts, and what detection/impact timings are reported?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "0ca602b66d40fb32a655"
+      ],
+      "evidence_span_ids": [
+        "46026f4f2587d9195bf6",
+        "ec835b9def2e5008f149"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W13 says reimaging the last pooled kartotherian node left codfw with no backend to route to. It reports Icinga alerts beginning at 08:21 and user impact of about six minutes (based on Logstash). The excerpt does not establish the exact first failing request or exact detection delay.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q022",
+      "question": "Why was the May 2011 network maintenance scheduled, and what interruptions were reported during it?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "aafcb8b94578b0a54a01"
+      ],
+      "evidence_span_ids": [
+        "921d9cd7184fdcc304ef",
+        "259cc4030c52c827786e",
+        "39eeaa5ca2e96f48e27d"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W14 describes persistent router slowdowns/packet-loss and a planned router software upgrade. During the scheduled work, the site was intermittently unavailable from reboots, a replica DB went down, and some servers needed recovery after a network-driver problem. A report’s “success” assessment should not erase the documented interruptions.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q023",
+      "question": "How did replacement of a non-production management switch disrupt a rack of production application servers and affect wider services?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "9354eda28b449247d0a7"
+      ],
+      "evidence_span_ids": [
+        "26d7c0c92284f42c0bad",
+        "84b470b585e1dd524380",
+        "7cc3fec973d548b81856"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W15 says proximity to a production access switch caused its power lead to loosen during replacement of a management switch. About forty application servers lost network connectivity; reduced capacity and lost memcached cache contributed to additional load and secondary service disruption.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q024",
+      "question": "What immediate mitigation restored bits.wikimedia.org after the Varnish overload, and what future improvements were proposed?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "65d1733fbae92c90a624"
+      ],
+      "evidence_span_ids": [
+        "6afd4877c61878342f3d",
+        "c5071e6eb4debd201546"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W16 reports moving bits traffic from Ashburn/EQIAD to Tampa/SDTPA and restarting affected Varnish instances, with service restored. It also says operations planned to investigate automatic failover and overload limits; those were proposals, not proof of completed implementation.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q025",
+      "question": "What triggered the memcached failure chain, and what subsequent twemproxy observation was reported?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "25ee624f72dd282d67d9"
+      ],
+      "evidence_span_ids": [
+        "a8e3bb6fa340c465df9c",
+        "41f855f21482d02cb914",
+        "eb445fcfa4df05b5315f"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W17 says a failing mc1009 SFP+ module triggered partial switch reboot, blocked application servers on memcached, and cascaded into cache clusters. Later, after routing through twemproxy, a deliberate mc1009 reboot reportedly did not affect site availability or PHP latency, although this remained a provisional rollout and is not proof of permanent resilience.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q026",
+      "question": "How did redundancy configuration and Elasticsearch versions complicate the November 2013 CirrusSearch recovery?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "9dc571a5930bf9ea0822"
+      ],
+      "evidence_span_ids": [
+        "6d99443f4145afdb35e7",
+        "1103417dec6e33f5f86b",
+        "fea52bd88707620956c1",
+        "af10e4fd0828a5f6b956"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W18 reports that a redundancy setting intended to restore replicas had not taken effect; a node’s data were then removed in the mistaken belief that replicas remained. Later attempts to restore replicas were complicated by errors moving replicas between Elasticsearch 0.90.7 and 0.90.4. Do not infer all the data loss from the initial deletion alone.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q027",
+      "question": "What failure chain connected verbose logging to Parsoid unavailability and reported user impact?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "fe3b1cf3ea388d8af40b"
+      ],
+      "evidence_span_ids": [
+        "6271b79698e236830bf6"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W19 attributes filled disks on roughly three quarters of Parsoid nodes to verbose logging and broken rotation, stopping daemons from accepting requests and creating some VisualEditor errors over a 17-minute interval. The reported percentage is an estimate and should be labeled as such.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q028",
+      "question": "How did the Puppet-managed rsyslog upgrade lead to failures propagating from Swift to image rendering?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "d473b9b21f31ea49e920"
+      ],
+      "evidence_span_ids": [
+        "15f3723e395e662fecec",
+        "ec8ddb95dc4939599daf",
+        "77134b9044f2f2d91dc5"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W20 reports that Puppet upgraded rsyslog, the package restart caused Swift to lose its socket and busy-loop, and overloaded Swift returned errors that affected the imagescaler cluster. The report’s recovery timeline has uncertainty and should not be overinterpreted.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q029",
+      "question": "What sysctl configuration precedence issue caused the LVS outage and why could external checks miss it?",
+      "question_class": "single-document-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "04f7feb3457423073737"
+      ],
+      "evidence_span_ids": [
+        "7042420fad7393cedde5",
+        "6025ccc2c63d3591c9e1",
+        "29625b20a33642cfaf10",
+        "f75f2242893e48ad271e"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W21 attributes failure to a Puppet refactor which lowered the LVS-specific sysctl priority, letting Ubuntu defaults reenable rp_filter. After reboot this broke internal forwarding while many external probes still appeared normal. The operator initially considered and then rejected another suspected HTTPS issue.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q030",
+      "question": "How did the maps and Parsoid outages differ in failed layer, observed impact, and available detection evidence?",
+      "question_class": "cross-incident-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "0ca602b66d40fb32a655",
+        "fe3b1cf3ea388d8af40b"
+      ],
+      "evidence_span_ids": [
+        "46026f4f2587d9195bf6",
+        "ec835b9def2e5008f149",
+        "6271b79698e236830bf6"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W13 describes a maps/kartotherian routing-capacity gap during reimaging, request timeouts, Icinga alerting and about six minutes of impact. W19 describes Parsoid daemons refusing requests after log-driven disks filled, affecting VisualEditor users over a reported 17-minute period. W19’s cited passage does not give an exact alert time, so detection speed cannot be compared numerically.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q031",
+      "question": "How did the Varnish overload and mc1009 memcached failure propagate through caching infrastructure by different mechanisms?",
+      "question_class": "cross-incident-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "65d1733fbae92c90a624",
+        "25ee624f72dd282d67d9"
+      ],
+      "evidence_span_ids": [
+        "db1aeb1c4ff529500f76",
+        "6afd4877c61878342f3d",
+        "a8e3bb6fa340c465df9c"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W16 describes a network bonding/configuration operation that temporarily disrupted Varnish connectivity and overloaded bits servers, mitigated by redirecting traffic. W17 describes a failed SFP+ module and switch disruption affecting a memcached server, blocking applications and cascading into Squid/Varnish. Shared “cache” vocabulary does not imply identical initiating faults.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q032",
+      "question": "How did the 2013 CirrusSearch outage and 2021 Commons-file search failure differ in initiating mechanism and scope?",
+      "question_class": "cross-incident-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "9dc571a5930bf9ea0822",
+        "0e0702e1d1a9f789152e"
+      ],
+      "evidence_span_ids": [
+        "6d99443f4145afdb35e7",
+        "fea52bd88707620956c1",
+        "d30c979102e8eaa9b74d",
+        "160062b35f38f85c8f2d",
+        "af10e4fd0828a5f6b956"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W18 describes disabled/inoperative shard redundancy and deletion of data under an incorrect belief that copies existed; a later version mismatch complicated recovery. W9 describes high-volume queries during bug verification, followed by index deletion/recreation for reasons not fully understood, affecting Commons media search and some cross-wiki search pages. These are different data/index incidents.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q033",
+      "question": "Which two incident reports show a failure propagating into other services through an intermediate dependency rather than a defect in each affected application?",
+      "question_class": "cross-incident-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "d473b9b21f31ea49e920",
+        "9354eda28b449247d0a7"
+      ],
+      "evidence_span_ids": [
+        "ec8ddb95dc4939599daf",
+        "84b470b585e1dd524380",
+        "7cc3fec973d548b81856"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W20 reports Swift socket/busy-loop errors after an rsyslog restart propagating into image rendering. W15 reports network loss to a rack of application servers, reducing capacity and memcached caching, which burdened the remaining application services. These are reported dependency paths, not proof that the same software defect caused both.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q034",
+      "question": "How do the 2012 Varnish and 2013 Swift reports distinguish proposed follow-up from an author-reported change?",
+      "question_class": "time-qualified",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "65d1733fbae92c90a624",
+        "d473b9b21f31ea49e920"
+      ],
+      "evidence_span_ids": [
+        "c5071e6eb4debd201546",
+        "20a3d98cab9b3bc21717"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W16 says automatic failover and Varnish limits were to be investigated, without evidence in that passage that they were completed. W20 states the author had fixed one Swift-related behavior in a linked code change and would examine another upstream issue. A source claim of a fix is not independent evidence of deployment or later effectiveness.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q035",
+      "question": "Can GlobalUsage be labeled the conclusively proven root cause of the Commons DB incident, and does the LVS investigation illustrate why initial hypotheses require checking?",
+      "question_class": "false-analogy-negative",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "8dcbaae33b95dd4e5e4e",
+        "04f7feb3457423073737"
+      ],
+      "evidence_span_ids": [
+        "8d300bddb41249b0611d",
+        "29625b20a33642cfaf10",
+        "7042420fad7393cedde5"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "No. W5 names GlobalUsage as a most probable contributor while retaining underlying causal uncertainty. In W21, the operator initially suspected an HTTPS termination issue before tracing the actual failure to rp_filter/sysctl precedence. Similar diagnostic uncertainty does not mean the technical causes of these incidents were related.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q036",
+      "question": "How does the documented planned network maintenance in 2011 differ from the accidental backend depooling during 2023 cache maintenance?",
+      "question_class": "multi-document-context-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "aafcb8b94578b0a54a01",
+        "f42ec2b72f2037e0ba35"
+      ],
+      "evidence_span_ids": [
+        "259cc4030c52c827786e",
+        "39eeaa5ca2e96f48e27d",
+        "911114cca64609a7acb7",
+        "921d9cd7184fdcc304ef"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W14 describes scheduled router work addressing packet loss/latency, with planned reboots and intermittent impact during the window. W8, a draft report, describes HAProxy maintenance which accidentally depooled ATS text-cache backends across sites and caused unexpected request errors. Planned maintenance can still have disruption, but the source-described changes and unexpected failure mechanisms differ.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q037",
+      "question": "How does the post-incident reporting obligation in the incident-response runbook relate to the documented Varnish response and proposed follow-ups?",
+      "question_class": "multi-document-context-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "71b147a6287113592d33",
+        "65d1733fbae92c90a624"
+      ],
+      "evidence_span_ids": [
+        "80bb945916cee8f517a1",
+        "6afd4877c61878342f3d",
+        "c5071e6eb4debd201546"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W11 states that after resolving an incident the coordinator should prepare an incident report and action items. W16 documents traffic redirection and Varnish restarts during one historical outage, and lists future investigation of automatic failover and overload limits. W11’s current procedure does not prove the historical operators followed it at that time.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q038",
+      "question": "What can and cannot be inferred about detection and restoration timelines from the 2017 s5 and 2013 CirrusSearch incident descriptions?",
+      "question_class": "multi-document-context-comparison",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "4beae77689f755606b09",
+        "9dc571a5930bf9ea0822"
+      ],
+      "evidence_span_ids": [
+        "bbc3272fd75f7eceaf02",
+        "a6c5831a40f60dc47c7f",
+        "fea52bd88707620956c1",
+        "2907bf4f46963bf83327",
+        "826085c64bfd7bd69bdd"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W3 records an impact interval from 05:48 to 07:04 and a recovery after the read-only state was noticed, but the cited passages give no timestamp for the first alert or human recognition. W18 reports an Icinga “red” alert at 16:15, a partial assignment milestone at 17:01, and further recovery work later. The evidence permits reporting these timings, not equating time-to-alert with time-to-full-remediation.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q039",
+      "question": "What does the post-twemproxy mc1009 reboot test show about immediate resilience, and what remains unproven?",
+      "question_class": "missing-evidence-negative",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "25ee624f72dd282d67d9"
+      ],
+      "evidence_span_ids": [
+        "41f855f21482d02cb914",
+        "eb445fcfa4df05b5315f"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "W17 reports that after traffic was routed via twemproxy a deliberate mc1009 reboot caused no observed site availability or general latency impact during that test. The same report describes the deployment as provisional and still requiring logging/statistics work. This supports one observed improvement, not demonstrated permanent immunity to future memcached failures.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    },
+    {
+      "question_id": "Q040",
+      "question": "Does the incident-review ritual alone establish that the proposed Varnish failover and overload measures were implemented?",
+      "question_class": "abstention-control",
+      "split": "review",
+      "answerability": "pending-review",
+      "source_ids": [
+        "c7d966e88daf97c00334",
+        "65d1733fbae92c90a624"
+      ],
+      "evidence_span_ids": [
+        "c2c53ca85e4a382a3250",
+        "c5071e6eb4debd201546"
+      ],
+      "reference_answer": null,
+      "proposed_answer": "No. W1 proposes shared incident review to improve organizational learning; W16 proposes investigating automatic failover and Varnish limits. The passages contain no verified later implementation or effect record. The system should report the proposal and abstain from claiming completion.",
+      "unacceptable_inferences": [
+        "Do not infer causality, prevention, or operational effectiveness beyond source wording."
+      ],
+      "review_status": "pending",
+      "multi_source_reviewed": false
+    }
+  ]
+}

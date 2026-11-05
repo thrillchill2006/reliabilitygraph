@@ -1,0 +1,1270 @@
+{
+  "status": "pending-human-review",
+  "instructions": "Confirm or reject each proposed answer and citation set; do not treat this file as approved gold data.",
+  "questions": [
+    {
+      "question_id": "Q001",
+      "question": "Across the 2017 Wikidata/dewiki, 2023 switchover, and 2021 Commons incidents, which different failure mechanisms led to read-only/editing problems?",
+      "proposed_answer": "W3 attributes the 2017 failure to an out-of-memory termination of the s5 master and its read-only restart. W4 identifies a 2023 switchover-script/configuration fault (including a string/Boolean mismatch) affecting application editing. W5 reports InnoDB contention as the immediate Commons cause, with GlobalUsage a probable contributor rather than a conclusively proven underlying cause. Similar symptoms are not a shared root cause.",
+      "citations": [
+        {
+          "source_key": "W3",
+          "source_id": "4beae77689f755606b09",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2017-07-28_s5_(WikiData_and_dewiki)_read-only",
+          "section_path": "Summary",
+          "passage_id": "bbc3272fd75f7eceaf02",
+          "quote": "The s5 master MySQL process (containing wikidatawiki and dewiki) was killed at 5:48 due to an Out Of Memory error- which lead to the server automatically reboot in read only, recover its data and stay like that until it was noticed, checked and set back as read-write."
+        },
+        {
+          "source_key": "W4",
+          "source_id": "0cee9e2147b8a6651d9f",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2023-02-22_read_only",
+          "section_path": "Summary",
+          "passage_id": "bd4538c326cc40b35c64",
+          "quote": "While performing a live switchover test in advance of the 2023 WMF datacenter switchover, an existing logical bug on the switchover test script accidentally set the secondary datacenter in read-only mode. While this didn't disrupt most users, mobile editing for people geolocated to codfw app servers (mostly, people in the Americas, and part of Asia and Oceania) had the editing interface disabled (while desktop users were redirected to edit through eqiad). While trying to fix this issue, an tooling interface issue caused all datacenters to be set in read-only mode, disabling editing for all users. This was quickly reverted for both datacenters and editing was restored."
+        },
+        {
+          "source_key": "W4",
+          "source_id": "0cee9e2147b8a6651d9f",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2023-02-22_read_only",
+          "section_path": "Timeline",
+          "passage_id": "3333cdc089fa5c167d5e",
+          "quote": "The cause of read-only is confctl not setting the right type and putting a string instead of a boolean"
+        },
+        {
+          "source_key": "W5",
+          "source_id": "8dcbaae33b95dd4e5e4e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-04-27_Commons_wiki_primary_db",
+          "section_path": "Summary",
+          "passage_id": "beb1aa23975ff1e674ed",
+          "quote": "From 10:28 to 11:43, Wikimedia Commons was unavailable and/or slow to respond. Additionally, from 10:41 to 11:10, commons was set in unscheduled read only mode (unable to create new users, upload files or edit pages). The immediate cause was large amount of InnoDB contention for read and write queries on the primary s4 database (which serves commonswiki and testcommonswiki writes). After a restart and a forced kill, the database came back cleanly in read only mode. Global usage extension was temporarily disabled (several queries were observed from this extension blocked on the master) before the server was set back up in read write, ending the incident."
+        },
+        {
+          "source_key": "W5",
+          "source_id": "8dcbaae33b95dd4e5e4e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-04-27_Commons_wiki_primary_db",
+          "section_path": "Summary",
+          "passage_id": "8d300bddb41249b0611d",
+          "quote": "GlobalUsage was signaled as the most probable cause, as it was sending large amount of long-running queries at the moment of the issue to the primary DB server. Because of the general InnoDB error obtained -contention on an Innodb index (on an engine where everything, including data, are indexes)- it is difficult to say if this was the primary cause, or another underlying cause caused them to block, leading the the outage. Other scaling problems are known to occur on commonswiki (e.g. large image table). Work has been done to send as much traffic as possible to the replicas."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q002",
+      "question": "What do the 2017 s5 incident passages establish about the OOM crash, the read-only interval, and the limits of detection evidence?",
+      "proposed_answer": "The s5 master was killed by an out-of-memory event at 05:48 and restarted read-only. The source reports write unavailability until 07:04, when read-write was restored. The two snapshot passages do not identify a particular alert mechanism or exact initial human-detection time.",
+      "citations": [
+        {
+          "source_key": "W3",
+          "source_id": "4beae77689f755606b09",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2017-07-28_s5_(WikiData_and_dewiki)_read-only",
+          "section_path": "Summary",
+          "passage_id": "bbc3272fd75f7eceaf02",
+          "quote": "The s5 master MySQL process (containing wikidatawiki and dewiki) was killed at 5:48 due to an Out Of Memory error- which lead to the server automatically reboot in read only, recover its data and stay like that until it was noticed, checked and set back as read-write."
+        },
+        {
+          "source_key": "W3",
+          "source_id": "4beae77689f755606b09",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2017-07-28_s5_(WikiData_and_dewiki)_read-only",
+          "section_path": "Document",
+          "passage_id": "a6c5831a40f60dc47c7f",
+          "quote": "Wikidata and the German Wikipedia were in read-only mode from 5:48 to 7:04 on 2017-07-28. No edits, user creations were possible between these two timestamps."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q003",
+      "question": "What does the datacenter guide say a live test is intended to avoid, and what actually happened in the 2023 switchover test?",
+      "proposed_answer": "The later/current guide says live-test mode should skip actions hazardous to the primary datacenter or execute them on the secondary. The 2023 report records an accidental secondary read-only setting and a subsequent tool issue that made both datacenters read-only. The 2026 guide is contextual and is not proof of exactly which instructions existed in 2023.",
+      "citations": [
+        {
+          "source_key": "W7",
+          "source_id": "36bd54e1db437198538f",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Switch_Datacenter",
+          "section_path": "Weeks in advance: communication, testing, and preparation / Testing - 3 weeks before / Live Test",
+          "passage_id": "7975ea9322dad6530fce",
+          "quote": "A live test ( --live-test) flag will skip actions that could harm the primary DC or perform them on the secondary DC and is available only for the sre.switchdc.mediawiki cookbook. What we should be careful about it is that we \"switch\" from the currently secondary DC to the currently primary DC. While the live-test process will log your actions to SAL please remember to announce to #wikimedia-sre and to #wikimedia-operations too that you will be running this test. Unless something goes really badly this is a non-disruptive test."
+        },
+        {
+          "source_key": "W4",
+          "source_id": "0cee9e2147b8a6651d9f",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2023-02-22_read_only",
+          "section_path": "Summary",
+          "passage_id": "bd4538c326cc40b35c64",
+          "quote": "While performing a live switchover test in advance of the 2023 WMF datacenter switchover, an existing logical bug on the switchover test script accidentally set the secondary datacenter in read-only mode. While this didn't disrupt most users, mobile editing for people geolocated to codfw app servers (mostly, people in the Americas, and part of Asia and Oceania) had the editing interface disabled (while desktop users were redirected to edit through eqiad). While trying to fix this issue, an tooling interface issue caused all datacenters to be set in read-only mode, disabling editing for all users. This was quickly reverted for both datacenters and editing was restored."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q004",
+      "question": "What causal uncertainty did the Commons incident preserve, and which principle in the review guidance helps avoid overclaiming?",
+      "proposed_answer": "W5 identifies InnoDB contention as the immediate issue and says GlobalUsage was the most probable contributor, while the underlying cause was not proven. W1 encourages discussion and challenging assumptions to avoid hearsay and cargo-cult reasoning. W1 is proposed review practice, not a re-investigation of Commons.",
+      "citations": [
+        {
+          "source_key": "W5",
+          "source_id": "8dcbaae33b95dd4e5e4e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-04-27_Commons_wiki_primary_db",
+          "section_path": "Summary",
+          "passage_id": "8d300bddb41249b0611d",
+          "quote": "GlobalUsage was signaled as the most probable cause, as it was sending large amount of long-running queries at the moment of the issue to the primary DB server. Because of the general InnoDB error obtained -contention on an Innodb index (on an engine where everything, including data, are indexes)- it is difficult to say if this was the primary cause, or another underlying cause caused them to block, leading the the outage. Other scaling problems are known to occur on commonswiki (e.g. large image table). Work has been done to send as much traffic as possible to the replicas."
+        },
+        {
+          "source_key": "W1",
+          "source_id": "c7d966e88daf97c00334",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incident_review_ritual",
+          "section_path": "Ritual walkthrough / Leave space for questions",
+          "passage_id": "9f195aec0d7e5eff5768",
+          "quote": "This is a pretty important part of the ritual. People should ask questions to help them clarify their understanding of the situation and the infrastructure. Better understanding of the infrastructure and the situation will avoid hearsay and Cargo Culting as well as allow us to attack assumptions, made in times past, that no longer apply. This will become especially important if people that are not part of SRE participate in the ritual."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q005",
+      "question": "How does later MariaDB guidance on recovering a master contextualize the 2017 s5 restart, and what recovery action is not documented?",
+      "proposed_answer": "W6 distinguishes master failures from replica failures because replicas can be at different transaction positions; it advises waiting when a master is recoverable. W3 describes an s5 master that restarted read-only after an OOM and was later restored to read-write. Neither cited incident passage says a replica was promoted.",
+      "citations": [
+        {
+          "source_key": "W6",
+          "source_id": "a80d620c06908c65a45d",
+          "source_url": "https://wikitech.wikimedia.org/wiki/MariaDB%2FTroubleshooting",
+          "section_path": "Depooling a master (a.k.a. promoting a new replica to master) / Emergency failover",
+          "passage_id": "3abfa35ce58076e6d8bd",
+          "quote": "If the master is not available, or replication is broken, this is a more complex case. The reason is that replicas will have executed different amount of transactions and will be in a close, but different state. E.g. slave1 has executed transactions A, while slave2 has executed transactions A, B and C. In addition to that, if we do not have access to the master's binary log (or it has not properly been synchronized to disk after a crash), we will have to recover from a replica. In theory, with semi-sync replication, no transaction will be lost, and at least one replica will have the change, but all other replicas will be on different coordinates (and binary log position is only local to the masters)."
+        },
+        {
+          "source_key": "W6",
+          "source_id": "a80d620c06908c65a45d",
+          "source_url": "https://wikitech.wikimedia.org/wiki/MariaDB%2FTroubleshooting",
+          "section_path": "Depooling a master (a.k.a. promoting a new replica to master) / Emergency failover",
+          "passage_id": "065aae695cdd4a878567",
+          "quote": "Scenario 1 -master is recoverable: just wait until the master restarts, it will avoid headaches and be faster and less disruptive than trying to failover it."
+        },
+        {
+          "source_key": "W3",
+          "source_id": "4beae77689f755606b09",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2017-07-28_s5_(WikiData_and_dewiki)_read-only",
+          "section_path": "Summary",
+          "passage_id": "bbc3272fd75f7eceaf02",
+          "quote": "The s5 master MySQL process (containing wikidatawiki and dewiki) was killed at 5:48 due to an Out Of Memory error- which lead to the server automatically reboot in read only, recover its data and stay like that until it was noticed, checked and set back as read-write."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q006",
+      "question": "How does planned read-only during a datacenter switchover differ from the accidental read-only states in the 2023 incident?",
+      "proposed_answer": "W7 describes a planned short read-only window and distinct application/database phases. W4 describes a live test accidentally leaving the secondary read-only and subsequent changes affecting both datacenters until reverted. The later guide’s stated expected duration is not the observed 2023 impact duration.",
+      "citations": [
+        {
+          "source_key": "W7",
+          "source_id": "36bd54e1db437198538f",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Switch_Datacenter",
+          "section_path": "Impact",
+          "passage_id": "7a6f0b7daf106ec01f7b",
+          "quote": "Impact of a switchover is expected to be 2-3 minutes of read-only for MediaWiki including extensions. Any other services/features/infrastructures not participating directly in the Switchover will continue to work as usual. However, anything relying on MediaWiki indirectly (e.g. via some data pipeline) may experience some minor impact, for example some delay in receiving events. This is expected."
+        },
+        {
+          "source_key": "W7",
+          "source_id": "36bd54e1db437198538f",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Switch_Datacenter",
+          "section_path": "Impact / What does read-only mean?",
+          "passage_id": "a0934f5cd7b39601510b",
+          "quote": "Read-only is a two-step process: we first set MediaWiki itself read-only and then the MediaWiki databases. We allow an amount of time between the two so as to allow the last in-flight edits to land safely. All read-only functionality will continue to function as usual."
+        },
+        {
+          "source_key": "W4",
+          "source_id": "0cee9e2147b8a6651d9f",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2023-02-22_read_only",
+          "section_path": "Summary",
+          "passage_id": "bd4538c326cc40b35c64",
+          "quote": "While performing a live switchover test in advance of the 2023 WMF datacenter switchover, an existing logical bug on the switchover test script accidentally set the secondary datacenter in read-only mode. While this didn't disrupt most users, mobile editing for people geolocated to codfw app servers (mostly, people in the Americas, and part of Asia and Oceania) had the editing interface disabled (while desktop users were redirected to edit through eqiad). While trying to fix this issue, an tooling interface issue caused all datacenters to be set in read-only mode, disabling editing for all users. This was quickly reverted for both datacenters and editing was restored."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q007",
+      "question": "Compare the documented restoration actions for the 2017 s5 and 2021 Commons database incidents. Which steps differed?",
+      "proposed_answer": "After its OOM crash, W3’s master restarted in read-only mode and was eventually set back to read-write. In W5, after restart and forced termination, the database came back read-only; GlobalUsage was temporarily disabled before restoring read-write. These are reported recovery actions, not proof of durable preventive fixes.",
+      "citations": [
+        {
+          "source_key": "W3",
+          "source_id": "4beae77689f755606b09",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2017-07-28_s5_(WikiData_and_dewiki)_read-only",
+          "section_path": "Summary",
+          "passage_id": "bbc3272fd75f7eceaf02",
+          "quote": "The s5 master MySQL process (containing wikidatawiki and dewiki) was killed at 5:48 due to an Out Of Memory error- which lead to the server automatically reboot in read only, recover its data and stay like that until it was noticed, checked and set back as read-write."
+        },
+        {
+          "source_key": "W5",
+          "source_id": "8dcbaae33b95dd4e5e4e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-04-27_Commons_wiki_primary_db",
+          "section_path": "Summary",
+          "passage_id": "beb1aa23975ff1e674ed",
+          "quote": "From 10:28 to 11:43, Wikimedia Commons was unavailable and/or slow to respond. Additionally, from 10:41 to 11:10, commons was set in unscheduled read only mode (unable to create new users, upload files or edit pages). The immediate cause was large amount of InnoDB contention for read and write queries on the primary s4 database (which serves commonswiki and testcommonswiki writes). After a restart and a forced kill, the database came back cleanly in read only mode. Global usage extension was temporarily disabled (several queries were observed from this extension blocked on the master) before the server was set back up in read write, ending the incident."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q008",
+      "question": "What instruction about runbook links appears on the 2021 Commons incident page, and what does the later MariaDB troubleshooting guide establish without proving an alert update?",
+      "proposed_answer": "The Commons incident page includes an instruction to add relevant responder documentation links or an action item where documentation is missing. That instruction alone is not a verified follow-up task or proof of implementation. A later MariaDB troubleshooting guide exists and explains protective read-only after crashes, but the cited evidence does not establish that any Commons alert URL was updated.",
+      "citations": [
+        {
+          "source_key": "W5",
+          "source_id": "8dcbaae33b95dd4e5e4e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-04-27_Commons_wiki_primary_db",
+          "section_path": "Links to relevant documentation",
+          "passage_id": "bc209f1665c6605db0cf",
+          "quote": "Add links to information that someone responding to this alert should have (runbook, plus supporting docs). If that documentation does not exist, add an action item to create it."
+        },
+        {
+          "source_key": "W6",
+          "source_id": "a80d620c06908c65a45d",
+          "source_url": "https://wikitech.wikimedia.org/wiki/MariaDB%2FTroubleshooting",
+          "section_path": "Document",
+          "passage_id": "c77817fef035954f1848",
+          "quote": "This guide is a work in progress. See also MariaDB/monitoring and MariaDB/Backups#Recovering a Snapshot"
+        },
+        {
+          "source_key": "W6",
+          "source_id": "a80d620c06908c65a45d",
+          "source_url": "https://wikitech.wikimedia.org/wiki/MariaDB%2FTroubleshooting",
+          "section_path": "Master comes back in read only",
+          "passage_id": "49cf0417f9da2f41a15e",
+          "quote": "A master coming back in READ ONLY mode is expected after a crash and it is done to prevent accidental corruption (or even more corruption on a crash)."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q009",
+      "question": "Do the 2017 and 2021 incident descriptions prove that their restorations prevented later similar outages?",
+      "proposed_answer": "No. Both passages describe restoration from specific incidents; neither cited passage gives subsequent longitudinal evidence of nonrecurrence or verified preventive effectiveness. The incidents also have distinct immediate mechanisms. This is an absence-of-evidence finding limited to these passages, not proof that no corrective work ever occurred.",
+      "citations": [
+        {
+          "source_key": "W3",
+          "source_id": "4beae77689f755606b09",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2017-07-28_s5_(WikiData_and_dewiki)_read-only",
+          "section_path": "Summary",
+          "passage_id": "bbc3272fd75f7eceaf02",
+          "quote": "The s5 master MySQL process (containing wikidatawiki and dewiki) was killed at 5:48 due to an Out Of Memory error- which lead to the server automatically reboot in read only, recover its data and stay like that until it was noticed, checked and set back as read-write."
+        },
+        {
+          "source_key": "W5",
+          "source_id": "8dcbaae33b95dd4e5e4e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-04-27_Commons_wiki_primary_db",
+          "section_path": "Summary",
+          "passage_id": "beb1aa23975ff1e674ed",
+          "quote": "From 10:28 to 11:43, Wikimedia Commons was unavailable and/or slow to respond. Additionally, from 10:41 to 11:10, commons was set in unscheduled read only mode (unable to create new users, upload files or edit pages). The immediate cause was large amount of InnoDB contention for read and write queries on the primary s4 database (which serves commonswiki and testcommonswiki writes). After a restart and a forced kill, the database came back cleanly in read only mode. Global usage extension was temporarily disabled (several queries were observed from this extension blocked on the master) before the server was set back up in read write, ending the incident."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q010",
+      "question": "How does the read-only restart in the 2017 incident relate to the later runbook’s explanation of protective read-only state?",
+      "proposed_answer": "W3 reports the s5 master restarting read-only after an OOM crash until returned to read-write. W6 says a primary may return read-only after a crash as protection against corruption, with reads available while writes are blocked. The sources do not prove this specific protection motivation was explicitly recorded in the 2017 incident.",
+      "citations": [
+        {
+          "source_key": "W3",
+          "source_id": "4beae77689f755606b09",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2017-07-28_s5_(WikiData_and_dewiki)_read-only",
+          "section_path": "Summary",
+          "passage_id": "bbc3272fd75f7eceaf02",
+          "quote": "The s5 master MySQL process (containing wikidatawiki and dewiki) was killed at 5:48 due to an Out Of Memory error- which lead to the server automatically reboot in read only, recover its data and stay like that until it was noticed, checked and set back as read-write."
+        },
+        {
+          "source_key": "W6",
+          "source_id": "a80d620c06908c65a45d",
+          "source_url": "https://wikitech.wikimedia.org/wiki/MariaDB%2FTroubleshooting",
+          "section_path": "Master comes back in read only",
+          "passage_id": "49cf0417f9da2f41a15e",
+          "quote": "A master coming back in READ ONLY mode is expected after a crash and it is done to prevent accidental corruption (or even more corruption on a crash)."
+        },
+        {
+          "source_key": "W6",
+          "source_id": "a80d620c06908c65a45d",
+          "source_url": "https://wikitech.wikimedia.org/wiki/MariaDB%2FTroubleshooting",
+          "section_path": "Master comes back in read only / Impact",
+          "passage_id": "157e78b88446aa918ef1",
+          "quote": "Reads will remain unaffected but no writes will be able to go through, the wikis on that master will be on read-only mode."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q011",
+      "question": "Which distinctions in the later MariaDB guidance prevent treating the 2017 s5 read-only restart as a documented replica failover?",
+      "proposed_answer": "W3 reports OOM, restart in read-only, and eventual restoration on the s5 master. W6 explains that master recovery and replica promotion depend on recoverability and replication positions. No source passage cited for W3 establishes that promotion occurred; W6 is general later context.",
+      "citations": [
+        {
+          "source_key": "W3",
+          "source_id": "4beae77689f755606b09",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2017-07-28_s5_(WikiData_and_dewiki)_read-only",
+          "section_path": "Summary",
+          "passage_id": "bbc3272fd75f7eceaf02",
+          "quote": "The s5 master MySQL process (containing wikidatawiki and dewiki) was killed at 5:48 due to an Out Of Memory error- which lead to the server automatically reboot in read only, recover its data and stay like that until it was noticed, checked and set back as read-write."
+        },
+        {
+          "source_key": "W6",
+          "source_id": "a80d620c06908c65a45d",
+          "source_url": "https://wikitech.wikimedia.org/wiki/MariaDB%2FTroubleshooting",
+          "section_path": "Depooling a master (a.k.a. promoting a new replica to master) / Emergency failover",
+          "passage_id": "3abfa35ce58076e6d8bd",
+          "quote": "If the master is not available, or replication is broken, this is a more complex case. The reason is that replicas will have executed different amount of transactions and will be in a close, but different state. E.g. slave1 has executed transactions A, while slave2 has executed transactions A, B and C. In addition to that, if we do not have access to the master's binary log (or it has not properly been synchronized to disk after a crash), we will have to recover from a replica. In theory, with semi-sync replication, no transaction will be lost, and at least one replica will have the change, but all other replicas will be on different coordinates (and binary log position is only local to the masters)."
+        },
+        {
+          "source_key": "W6",
+          "source_id": "a80d620c06908c65a45d",
+          "source_url": "https://wikitech.wikimedia.org/wiki/MariaDB%2FTroubleshooting",
+          "section_path": "Depooling a master (a.k.a. promoting a new replica to master) / Emergency failover",
+          "passage_id": "065aae695cdd4a878567",
+          "quote": "Scenario 1 -master is recoverable: just wait until the master restarts, it will avoid headaches and be faster and less disruptive than trying to failover it."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q012",
+      "question": "How do the 2017 s5, 2021 Commons and 2021 CirrusSearch reports differ in certainty about their triggering or contributing conditions?",
+      "proposed_answer": "W3 directly attributes the s5 crash to an OOM event. W5 states that GlobalUsage was the most probable source of troublesome queries, with uncertainty over the deeper cause. W9 records a high volume of queries and index recreation, explicitly saying the exact reason for index recreation was not yet understood. Distinguish stated events from uncertain contributors or mechanisms.",
+      "citations": [
+        {
+          "source_key": "W3",
+          "source_id": "4beae77689f755606b09",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2017-07-28_s5_(WikiData_and_dewiki)_read-only",
+          "section_path": "Summary",
+          "passage_id": "bbc3272fd75f7eceaf02",
+          "quote": "The s5 master MySQL process (containing wikidatawiki and dewiki) was killed at 5:48 due to an Out Of Memory error- which lead to the server automatically reboot in read only, recover its data and stay like that until it was noticed, checked and set back as read-write."
+        },
+        {
+          "source_key": "W5",
+          "source_id": "8dcbaae33b95dd4e5e4e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-04-27_Commons_wiki_primary_db",
+          "section_path": "Summary",
+          "passage_id": "8d300bddb41249b0611d",
+          "quote": "GlobalUsage was signaled as the most probable cause, as it was sending large amount of long-running queries at the moment of the issue to the primary DB server. Because of the general InnoDB error obtained -contention on an Innodb index (on an engine where everything, including data, are indexes)- it is difficult to say if this was the primary cause, or another underlying cause caused them to block, leading the the outage. Other scaling problems are known to occur on commonswiki (e.g. large image table). Work has been done to send as much traffic as possible to the replicas."
+        },
+        {
+          "source_key": "W9",
+          "source_id": "0e0702e1d1a9f789152e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-11-10_cirrussearch_commonsfile_outage",
+          "section_path": "Summary",
+          "passage_id": "d30c979102e8eaa9b74d",
+          "quote": "On 10 November, as part of verifying a bug report, a developer submitted a high volume of search queries against the active production Cirrus cluster (eqiad cirrussearch) via a tunnel from their local mw-vagrant environment. vagrant provision was (probably) later run without the tunnel being properly closed first, which resulted in (for reasons not yet understood) the deletion and recreation of the commonswiki_file_1623767607 index."
+        },
+        {
+          "source_key": "W9",
+          "source_id": "0e0702e1d1a9f789152e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-11-10_cirrussearch_commonsfile_outage",
+          "section_path": "Summary",
+          "passage_id": "d7d61fe70633cbc00757",
+          "quote": "As a direct consequence, any Elasticsearch queries that targetted media files from commonswiki encountered a hard failure."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q013",
+      "question": "Did the three documented read-only/editing incidents share one established technical root cause?",
+      "proposed_answer": "No: W3 reports an OOM-related database restart into read-only, W4 a switchover configuration/script error, and W5 database contention with uncertainty over an upstream contributor. The same user-visible write restriction is insufficient to infer the same root cause.",
+      "citations": [
+        {
+          "source_key": "W3",
+          "source_id": "4beae77689f755606b09",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2017-07-28_s5_(WikiData_and_dewiki)_read-only",
+          "section_path": "Summary",
+          "passage_id": "bbc3272fd75f7eceaf02",
+          "quote": "The s5 master MySQL process (containing wikidatawiki and dewiki) was killed at 5:48 due to an Out Of Memory error- which lead to the server automatically reboot in read only, recover its data and stay like that until it was noticed, checked and set back as read-write."
+        },
+        {
+          "source_key": "W4",
+          "source_id": "0cee9e2147b8a6651d9f",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2023-02-22_read_only",
+          "section_path": "Summary",
+          "passage_id": "bd4538c326cc40b35c64",
+          "quote": "While performing a live switchover test in advance of the 2023 WMF datacenter switchover, an existing logical bug on the switchover test script accidentally set the secondary datacenter in read-only mode. While this didn't disrupt most users, mobile editing for people geolocated to codfw app servers (mostly, people in the Americas, and part of Asia and Oceania) had the editing interface disabled (while desktop users were redirected to edit through eqiad). While trying to fix this issue, an tooling interface issue caused all datacenters to be set in read-only mode, disabling editing for all users. This was quickly reverted for both datacenters and editing was restored."
+        },
+        {
+          "source_key": "W5",
+          "source_id": "8dcbaae33b95dd4e5e4e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-04-27_Commons_wiki_primary_db",
+          "section_path": "Summary",
+          "passage_id": "beb1aa23975ff1e674ed",
+          "quote": "From 10:28 to 11:43, Wikimedia Commons was unavailable and/or slow to respond. Additionally, from 10:41 to 11:10, commons was set in unscheduled read only mode (unable to create new users, upload files or edit pages). The immediate cause was large amount of InnoDB contention for read and write queries on the primary s4 database (which serves commonswiki and testcommonswiki writes). After a restart and a forced kill, the database came back cleanly in read only mode. Global usage extension was temporarily disabled (several queries were observed from this extension blocked on the master) before the server was set back up in read write, ending the incident."
+        },
+        {
+          "source_key": "W5",
+          "source_id": "8dcbaae33b95dd4e5e4e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-04-27_Commons_wiki_primary_db",
+          "section_path": "Summary",
+          "passage_id": "8d300bddb41249b0611d",
+          "quote": "GlobalUsage was signaled as the most probable cause, as it was sending large amount of long-running queries at the moment of the issue to the primary DB server. Because of the general InnoDB error obtained -contention on an Innodb index (on an engine where everything, including data, are indexes)- it is difficult to say if this was the primary cause, or another underlying cause caused them to block, leading the the outage. Other scaling problems are known to occur on commonswiki (e.g. large image table). Work has been done to send as much traffic as possible to the replicas."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q014",
+      "question": "Why should the 2017 s5 report not be treated as interchangeable with later MariaDB and datacenter runbooks when explaining a historical outage?",
+      "proposed_answer": "W3 documents what was reported about the 2017 OOM event. W6 describes an evolving troubleshooting procedure, and W7 describes operational switchover practices; their snapshot revisions are from 2026. Such guides provide context but do not establish what was documented or done in 2017. Check document revision dates in the manifest.",
+      "citations": [
+        {
+          "source_key": "W3",
+          "source_id": "4beae77689f755606b09",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2017-07-28_s5_(WikiData_and_dewiki)_read-only",
+          "section_path": "Summary",
+          "passage_id": "bbc3272fd75f7eceaf02",
+          "quote": "The s5 master MySQL process (containing wikidatawiki and dewiki) was killed at 5:48 due to an Out Of Memory error- which lead to the server automatically reboot in read only, recover its data and stay like that until it was noticed, checked and set back as read-write."
+        },
+        {
+          "source_key": "W6",
+          "source_id": "a80d620c06908c65a45d",
+          "source_url": "https://wikitech.wikimedia.org/wiki/MariaDB%2FTroubleshooting",
+          "section_path": "Document",
+          "passage_id": "c77817fef035954f1848",
+          "quote": "This guide is a work in progress. See also MariaDB/monitoring and MariaDB/Backups#Recovering a Snapshot"
+        },
+        {
+          "source_key": "W6",
+          "source_id": "a80d620c06908c65a45d",
+          "source_url": "https://wikitech.wikimedia.org/wiki/MariaDB%2FTroubleshooting",
+          "section_path": "Master comes back in read only",
+          "passage_id": "49cf0417f9da2f41a15e",
+          "quote": "A master coming back in READ ONLY mode is expected after a crash and it is done to prevent accidental corruption (or even more corruption on a crash)."
+        },
+        {
+          "source_key": "W7",
+          "source_id": "36bd54e1db437198538f",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Switch_Datacenter",
+          "section_path": "Impact / What does read-only mean?",
+          "passage_id": "a0934f5cd7b39601510b",
+          "quote": "Read-only is a two-step process: we first set MediaWiki itself read-only and then the MediaWiki databases. We allow an amount of time between the two so as to allow the last in-flight edits to land safely. All read-only functionality will continue to function as usual."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q015",
+      "question": "Do the documentation-link instruction in the Commons incident page and the later MariaDB guide establish that a Commons alert was updated?",
+      "proposed_answer": "No. The Commons page contains an instruction to add links or raise an action item; the later MariaDB guide exists and is marked work in progress. These passages do not provide a completed task/change record or timestamp demonstrating any alert-link update.",
+      "citations": [
+        {
+          "source_key": "W5",
+          "source_id": "8dcbaae33b95dd4e5e4e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-04-27_Commons_wiki_primary_db",
+          "section_path": "Links to relevant documentation",
+          "passage_id": "bc209f1665c6605db0cf",
+          "quote": "Add links to information that someone responding to this alert should have (runbook, plus supporting docs). If that documentation does not exist, add an action item to create it."
+        },
+        {
+          "source_key": "W6",
+          "source_id": "a80d620c06908c65a45d",
+          "source_url": "https://wikitech.wikimedia.org/wiki/MariaDB%2FTroubleshooting",
+          "section_path": "Document",
+          "passage_id": "c77817fef035954f1848",
+          "quote": "This guide is a work in progress. See also MariaDB/monitoring and MariaDB/Backups#Recovering a Snapshot"
+        },
+        {
+          "source_key": "W6",
+          "source_id": "a80d620c06908c65a45d",
+          "source_url": "https://wikitech.wikimedia.org/wiki/MariaDB%2FTroubleshooting",
+          "section_path": "Master comes back in read only",
+          "passage_id": "49cf0417f9da2f41a15e",
+          "quote": "A master coming back in READ ONLY mode is expected after a crash and it is done to prevent accidental corruption (or even more corruption on a crash)."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q016",
+      "question": "What knowledge-sharing benefit does Wikimedia’s proposed incident-review ritual seek beyond publishing incident reports?",
+      "proposed_answer": "W1 proposes regular shared reviews so more engineers become familiar with infrastructure and can challenge misunderstandings and inherited assumptions. The passage is evidence of a proposed process goal, not proof the process was adopted or improved outcomes.",
+      "citations": [
+        {
+          "source_key": "W1",
+          "source_id": "c7d966e88daf97c00334",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incident_review_ritual",
+          "section_path": "Ritual walkthrough / Sharing knowledge",
+          "passage_id": "c2c53ca85e4a382a3250",
+          "quote": "Sharing knowledge is a big part of the incident review process. The aim is that more people get acquainted with the infrastructure, leading to them feeling more comfortable with it, owning it more and hopefully leading to shorter incident durations. We suggest this part of the ritual is split in 2 sections, a quick walkthrough and a section with questions."
+        },
+        {
+          "source_key": "W1",
+          "source_id": "c7d966e88daf97c00334",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incident_review_ritual",
+          "section_path": "Ritual walkthrough / Leave space for questions",
+          "passage_id": "9f195aec0d7e5eff5768",
+          "quote": "This is a pretty important part of the ritual. People should ask questions to help them clarify their understanding of the situation and the infrastructure. Better understanding of the infrastructure and the situation will avoid hearsay and Cargo Culting as well as allow us to attack assumptions, made in times past, that no longer apply. This will become especially important if people that are not part of SRE participate in the ritual."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q017",
+      "question": "How does the Wikimedia incident-status page direct readers toward older incident reports?",
+      "proposed_answer": "W10 says it tracks reports about Wikimedia Foundation properties and points readers to the “Incident documentation” category for older incidents. The retrieved excerpt does not establish complete coverage, a precise count, or document quality.",
+      "citations": [
+        {
+          "source_key": "W10",
+          "source_id": "2493c360096ef6df7499",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incident_status",
+          "section_path": "Past incidents",
+          "passage_id": "d2d0b0e07654cb60c232",
+          "quote": "This page tracks incident reports about Wikimedia Foundation properties, such as Wikipedia."
+        },
+        {
+          "source_key": "W10",
+          "source_id": "2493c360096ef6df7499",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incident_status",
+          "section_path": "Past incidents / Incident history",
+          "passage_id": "6757e5281a42baa76930",
+          "quote": "Check Category:Incident documentation for older incident reports."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q018",
+      "question": "What should the incident coordinator document after an incident is resolved, according to the incident-response runbook?",
+      "proposed_answer": "After an incident is resolved, the incident coordinator should follow post-incident documentation to write an incident report and action items.",
+      "citations": [
+        {
+          "source_key": "W11",
+          "source_id": "71b147a6287113592d33",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incident_response%2FRunbook",
+          "section_path": "Post-incident follow-up",
+          "passage_id": "80bb945916cee8f517a1",
+          "quote": "After an incident is resolved, the incident coordinator should follow the post-incident documentation to write a report and action items."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q019",
+      "question": "What maintenance mistake triggered the February 2023 draft wiki outage and what traffic impacts are reported?",
+      "proposed_answer": "The draft W8 report describes HAProxy maintenance that inadvertently depooled ATS backends in esams/eqiad. It reports errors affecting both cached and uncached requests to backed services, with notable geographic differences and unaffected categories. Preserve draft status and do not generalize its figures beyond that source.",
+      "citations": [
+        {
+          "source_key": "W8",
+          "source_id": "f42ec2b72f2037e0ba35",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2023-02-22_wiki_outage",
+          "section_path": "Summary",
+          "passage_id": "911114cca64609a7acb7",
+          "quote": "During a routine maintenance consisting of upgrading HAProxy on cache hosts, all of the backends (ATS) in the text cache cluster in esams and eqiad were accidentally depooled due to a mismatch on the maintenance run between depooling the hosts individually and pooling back the cdn. This caused both cached and uncached traffic requests for wikis and other ATS-backed services to fail and return errors to clients, mostly in parts of Europe, Africa and Asia. Approximately 17 million HTTP requests (according to varnish) / 5 million user requests (according to NEL estimation) errored out in total. Editing rate was reduced to less than half. Upload cluster, clients geolocated to drmrs, codfw, ulsfo or eqsin, and GET requests cached in memory were not affected."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q020",
+      "question": "Which search surfaces were affected and unaffected in the November 2021 Commons/CirrusSearch incident?",
+      "proposed_answer": "W9 reports that media searches on Commons failed and cross-wiki search-sidebars affected other projects. It separately notes that ordinary search suggestions generally continued to work outside Commons. This does not establish that every Wikipedia search was down.",
+      "citations": [
+        {
+          "source_key": "W9",
+          "source_id": "0e0702e1d1a9f789152e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-11-10_cirrussearch_commonsfile_outage",
+          "section_path": "Summary",
+          "passage_id": "160062b35f38f85c8f2d",
+          "quote": "During the incident, all media searches on Wikimedia Commons failed. Wikipedia projects were impacted as well,[1] through the \"cross-wiki\" feature of the sidebar on Search results pages. This cross-wiki feature is enabled on most wikis by default, though notably not on English Wikipedia where the community disabled search integration to Commons."
+        },
+        {
+          "source_key": "W9",
+          "source_id": "0e0702e1d1a9f789152e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-11-10_cirrussearch_commonsfile_outage",
+          "section_path": "Summary",
+          "passage_id": "0043e6864d6bee6fc619",
+          "quote": "Note that the search suggestions feature, as present on all article pages was not affected (except on Wikimedia Commons itself). The search suggestions field is how how most searches are performed on Wikipedia, and was not impacted. Rather, it impacted the dedicated Search results page (\"Special:Search\", which consistently failed to return results on wikis where the rendering of that page includes a sidebar with results from Wikimedia Commons."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q021",
+      "question": "What capacity condition produced maps request timeouts, and what detection/impact timings are reported?",
+      "proposed_answer": "W13 says reimaging the last pooled kartotherian node left codfw with no backend to route to. It reports Icinga alerts beginning at 08:21 and user impact of about six minutes (based on Logstash). The excerpt does not establish the exact first failing request or exact detection delay.",
+      "citations": [
+        {
+          "source_key": "W13",
+          "source_id": "0ca602b66d40fb32a655",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2019-06-11_maps",
+          "section_path": "Summary",
+          "passage_id": "46026f4f2587d9195bf6",
+          "quote": "While https://phabricator.wikimedia.org/T224395 is on which led to depooling codfw. Codfw was pooled back and only two nodes were available (see Incident documentation/20190603-maps). It was necessary to reimage all codfw servers to pickup the new partitioning scheme. And when maps2003 was reimaged which was the last to reimage, kartotherian codfw which is pooled had no node to route traffic to hence request timeouts and SREs were paged. Icinga started alerting from 8:21am"
+        },
+        {
+          "source_key": "W13",
+          "source_id": "0ca602b66d40fb32a655",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2019-06-11_maps",
+          "section_path": "Summary / Impact",
+          "passage_id": "ec835b9def2e5008f149",
+          "quote": "Users who were currently served from codfw were affect. They were affected for about 6min(from logstash)"
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q022",
+      "question": "Why was the May 2011 network maintenance scheduled, and what interruptions were reported during it?",
+      "proposed_answer": "W14 describes persistent router slowdowns/packet-loss and a planned router software upgrade. During the scheduled work, the site was intermittently unavailable from reboots, a replica DB went down, and some servers needed recovery after a network-driver problem. A report’s “success” assessment should not erase the documented interruptions.",
+      "citations": [
+        {
+          "source_key": "W14",
+          "source_id": "aafcb8b94578b0a54a01",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20110524-PlannedMaintenance",
+          "section_path": "Document",
+          "passage_id": "921d9cd7184fdcc304ef",
+          "quote": "The following day, Mark noticed there were packet losses with that router. Users were again commenting and complaining about page load lag. Upon further investigation, he decided the router software needed to be upgraded and tuned. However that would required substantial amount of work and downtime and since many of our operations engineers were either enroute or preparing for the trip to Berlin, Mark decided to perform another temporary (and unfortunately intrusive) fix, a short reboot on one of the routers. That reboot took 3 minutes. That seems to clear the problem."
+        },
+        {
+          "source_key": "W14",
+          "source_id": "aafcb8b94578b0a54a01",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20110524-PlannedMaintenance",
+          "section_path": "Document",
+          "passage_id": "259cc4030c52c827786e",
+          "quote": "The plan to address the router problem was finalized. The maintenance was scheduled on Tuesday, 24th May. The plan consists of:"
+        },
+        {
+          "source_key": "W14",
+          "source_id": "aafcb8b94578b0a54a01",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20110524-PlannedMaintenance",
+          "section_path": "Document",
+          "passage_id": "39eeaa5ca2e96f48e27d",
+          "quote": "Shortly after 13:00 UTC, Mark started the upgrade. It took 1 hour to perform all but 1 of the above. The Juniper EX stack was not upgraded (not a problem) because he ran out of the maintenance window. During the maintenance window, the site was intermittently unavailable because of the reboots. One of the (slave) databases went down and was taken out of the cluster. Some of the database servers did not recover gracefully and Domas determined the 'Forcedeth' driver for the NIC (network interface card) was the culprit. Together with the help of RobH and Ariel, all the impacted servers recovered."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q023",
+      "question": "How did replacement of a non-production management switch disrupt a rack of production application servers and affect wider services?",
+      "proposed_answer": "W15 says proximity to a production access switch caused its power lead to loosen during replacement of a management switch. About forty application servers lost network connectivity; reduced capacity and lost memcached cache contributed to additional load and secondary service disruption.",
+      "citations": [
+        {
+          "source_key": "W15",
+          "source_id": "9354eda28b449247d0a7",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20110926-DBandPower",
+          "section_path": "Documentation by Mark Bergsma / Access switch power outage at 14:12 UTC",
+          "passage_id": "26d7c0c92284f42c0bad",
+          "quote": "Chris, our Tampa data center contractor, was replacing the broken management switch msw-d2-sdtpa in sdtpa rack D2. Our management network is completely unrelated to our production network, and doesn't carry any important, production traffic. However, the management switch is mounted directly under the production network access switch (asw-d2-sdtpa). During the replacement, at 14:12 UTC, the power cable of asw-d2-sdtpa came slightly loose, as it was very close to the switch and cables being replaced. Chris didn't notice this, as all LEDs of the switch are on the other side."
+        },
+        {
+          "source_key": "W15",
+          "source_id": "9354eda28b449247d0a7",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20110926-DBandPower",
+          "section_path": "Documentation by Mark Bergsma / Access switch power outage at 14:12 UTC",
+          "passage_id": "84b470b585e1dd524380",
+          "quote": "As a result, the entire rack, consisting of about 40 MediaWiki application servers, lost network connectivity. Nagios complained about all servers in the rack, and due to all kinds of second order effects, many other services were (briefly) disrupted or overloaded, leading to many other Nagios downtime reports. Several Ops and Engineering members were looking at the downtime, but had difficulty pinpointing exactly what was going down."
+        },
+        {
+          "source_key": "W15",
+          "source_id": "9354eda28b449247d0a7",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20110926-DBandPower",
+          "section_path": "Documentation by Mark Bergsma / Access switch power outage at 14:12 UTC",
+          "passage_id": "7cc3fec973d548b81856",
+          "quote": "The main problem with a rack of application servers going down, besides the significant reduction in capacity, is the loss of memcached caching - meaning that MediaWiki on the remaining servers will be parsing/regenerating many pages and objects, resulting in a much higher load at reduced capacity for a while. memcached redundancy/resiliency is definitely something that could need improvement for this reason."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q024",
+      "question": "What immediate mitigation restored bits.wikimedia.org after the Varnish overload, and what future improvements were proposed?",
+      "proposed_answer": "W16 reports moving bits traffic from Ashburn/EQIAD to Tampa/SDTPA and restarting affected Varnish instances, with service restored. It also says operations planned to investigate automatic failover and overload limits; those were proposals, not proof of completed implementation.",
+      "citations": [
+        {
+          "source_key": "W16",
+          "source_id": "65d1733fbae92c90a624",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20120120-Varnish",
+          "section_path": "Fix",
+          "passage_id": "6afd4877c61878342f3d",
+          "quote": "We redirected the bits.wikimedia.org traffic from our Ashburn (EQIAD) site to our Tampa (SDTPA) site and that resolved the issue instantly. At the same time, we restarted the affected EQIAD Varnish instances. (We switched back to EQIAD shortly after that.)"
+        },
+        {
+          "source_key": "W16",
+          "source_id": "65d1733fbae92c90a624",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20120120-Varnish",
+          "section_path": "Recommendation",
+          "passage_id": "c5071e6eb4debd201546",
+          "quote": "Operations will look into a way to implement an automatic failover solution (from EQIAD to SDTPA and vice-versa). Ops is also investigating limits within varnish to prevent this type of query overload from bringing down the servers (similar to the use of Apache max clients)."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q025",
+      "question": "What triggered the memcached failure chain, and what subsequent twemproxy observation was reported?",
+      "proposed_answer": "W17 says a failing mc1009 SFP+ module triggered partial switch reboot, blocked application servers on memcached, and cascaded into cache clusters. Later, after routing through twemproxy, a deliberate mc1009 reboot reportedly did not affect site availability or PHP latency, although this remained a provisional rollout and is not proof of permanent resilience.",
+      "citations": [
+        {
+          "source_key": "W17",
+          "source_id": "25ee624f72dd282d67d9",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20130508-memcached",
+          "section_path": "Problem",
+          "passage_id": "a8e3bb6fa340c465df9c",
+          "quote": "We had an outage today, due to a SFP+ module for a single memcached server (mc1009) going bad in a switch, causing the switch to partially reboot, and causing all application servers to get blocked due to a single down memcached. As usual this caused all kinds of cascading failures on other clusters such as Squid/Varnish. When not overloaded, these clusters would only serve cached pages at that point."
+        },
+        {
+          "source_key": "W17",
+          "source_id": "25ee624f72dd282d67d9",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20130508-memcached",
+          "section_path": "Solution",
+          "passage_id": "41f855f21482d02cb914",
+          "quote": "As of last night, we've been routing all memcached requests in eqiad via twemproxy. A short while ago, I rebooted mc1009 without any other preparation. The main impact was just log noise (libmemcached can be misleading when logging \"SERVER HAS FAILED AND IS DISABLED UNTIL TIMED\") but as far as I've been able to tell, there was no impact to site availability or general performance. Graphite showed an increase in external store selects as I'd expect but php request latency (at the average, 50th, and 90th percentiles) was unimpacted, as were memcached get times. Using enwiki as a logged in user seemed completely normal, and I found no user reports of issues during that time frame either. Huge difference vs. the mc1009 failure on May 6 that started this thread! It also helps shave around 12ms of setup time from every request."
+        },
+        {
+          "source_key": "W17",
+          "source_id": "25ee624f72dd282d67d9",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20130508-memcached",
+          "section_path": "Solution",
+          "passage_id": "eb445fcfa4df05b5315f",
+          "quote": "The twemproxy deployment is still provisional and needs additional work (mostly around logging and stats collection) but I'm pleased so far and am going to proceed."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q026",
+      "question": "How did redundancy configuration and Elasticsearch versions complicate the November 2013 CirrusSearch recovery?",
+      "proposed_answer": "W18 reports that a redundancy setting intended to restore replicas had not taken effect; a node’s data were then removed in the mistaken belief that replicas remained. Later attempts to restore replicas were complicated by errors moving replicas between Elasticsearch 0.90.7 and 0.90.4. Do not infer all the data loss from the initial deletion alone.",
+      "citations": [
+        {
+          "source_key": "W18",
+          "source_id": "9dc571a5930bf9ea0822",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131118-CirrusSearch",
+          "section_path": "Timeline",
+          "passage_id": "6d99443f4145afdb35e7",
+          "quote": "A few weeks ago we disabled redundancy by default in CirrusSearch because it was causing issues with puppet. We enabled it via configuration in production. This configuration didn't take."
+        },
+        {
+          "source_key": "W18",
+          "source_id": "9dc571a5930bf9ea0822",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131118-CirrusSearch",
+          "section_path": "Timeline",
+          "passage_id": "1103417dec6e33f5f86b",
+          "quote": "Around 16:00 UTC to properly set up the partition on the Elasticsearch machines Andrew Otto took down elastic1001 and blasted the data directory and mounted the appropriate disk there. I had assured him this would be ok as Elasticsearch had two other copies of this data and would replicate it back out. I also assured him that keeping the data around wouldn't really help with anything because Elasticsearch tends to not take into account the old shard state when assigning shards to machines that join back up. It is a long standing complaint folks have with Elasticsearch."
+        },
+        {
+          "source_key": "W18",
+          "source_id": "9dc571a5930bf9ea0822",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131118-CirrusSearch",
+          "section_path": "Timeline",
+          "passage_id": "fea52bd88707620956c1",
+          "quote": "At 16:15 UTC icinga warned that Elasticsearch was in \"red\" state, meaning there were unassigned master shards. I started investigating and I discovered that we'd turned off all the redundancy. The records that Andrew had deleted were gone. In hindsight it is at this point I should have switch back to lsearchd. We'd lost 1/15 of the search index in such a way rebuilding it will take a few hours at minimum."
+        },
+        {
+          "source_key": "W18",
+          "source_id": "9dc571a5930bf9ea0822",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131118-CirrusSearch",
+          "section_path": "Timeline",
+          "passage_id": "af10e4fd0828a5f6b956",
+          "quote": "At 18:09 UTC icinga warned again of Elasticsearch having unassigned master shards. I spent a while digging into this and discovered that there was some kind of error moving replicas from Elasticsearch 0.90.7 to 0.90.4. It looked like a bug caused by them upgrading Lucene. I haven't dug into it yet. This problem caused nodes to stay unassigned."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q027",
+      "question": "What failure chain connected verbose logging to Parsoid unavailability and reported user impact?",
+      "proposed_answer": "W19 attributes filled disks on roughly three quarters of Parsoid nodes to verbose logging and broken rotation, stopping daemons from accepting requests and creating some VisualEditor errors over a 17-minute interval. The reported percentage is an estimate and should be labeled as such.",
+      "citations": [
+        {
+          "source_key": "W19",
+          "source_id": "fe3b1cf3ea388d8af40b",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20140211-Parsoid",
+          "section_path": "Summary",
+          "passage_id": "6271b79698e236830bf6",
+          "quote": "Verbose logging combined with broken log rotation led to disks on about 3/4 of the Parsoid nodes filling up, which caused the Parsoid daemons to stop accepting requests. This led to some user-visible errors for VisualEditor users in a 17-minute window. An estimate is that less than 10% of VE page loads / saves were affected during this period."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q028",
+      "question": "How did the Puppet-managed rsyslog upgrade lead to failures propagating from Swift to image rendering?",
+      "proposed_answer": "W20 reports that Puppet upgraded rsyslog, the package restart caused Swift to lose its socket and busy-loop, and overloaded Swift returned errors that affected the imagescaler cluster. The report’s recovery timeline has uncertainty and should not be overinterpreted.",
+      "citations": [
+        {
+          "source_key": "W20",
+          "source_id": "d473b9b21f31ea49e920",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131205-Swift",
+          "section_path": "Summary",
+          "passage_id": "15f3723e395e662fecec",
+          "quote": "rsyslog was automatically upgraded via puppet (\"ensure => latest\") which triggered a known bug in Swift (media storage) causing it to hang thus cascading down to the imagescalers."
+        },
+        {
+          "source_key": "W20",
+          "source_id": "d473b9b21f31ea49e920",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131205-Swift",
+          "section_path": "What happened",
+          "passage_id": "ec8ddb95dc4939599daf",
+          "quote": "puppet ran across all boxes in the 30' window; the rsyslog package was upgraded, the package's postinst restarted the service, Swift lost the socket, busy looped, got overloaded and caused all kinds of errorenous responses, including cascading into the imagescaler cluster."
+        },
+        {
+          "source_key": "W20",
+          "source_id": "d473b9b21f31ea49e920",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131205-Swift",
+          "section_path": "What happened",
+          "passage_id": "77134b9044f2f2d91dc5",
+          "quote": "Service recovered with no manual action(?) at ~19:40 UTC but still at an increased system load. I fixed this by restarting Swift front/back daemons at about 01:00 UTC."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q029",
+      "question": "What sysctl configuration precedence issue caused the LVS outage and why could external checks miss it?",
+      "proposed_answer": "W21 attributes failure to a Puppet refactor which lowered the LVS-specific sysctl priority, letting Ubuntu defaults reenable rp_filter. After reboot this broke internal forwarding while many external probes still appeared normal. The operator initially considered and then rejected another suspected HTTPS issue.",
+      "citations": [
+        {
+          "source_key": "W21",
+          "source_id": "04f7feb3457423073737",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20140203-LVS",
+          "section_path": "Timeline",
+          "passage_id": "7042420fad7393cedde5",
+          "quote": "This is a big puppet wide change that modularises and improves the handling of sysctl parameter values across our infrastructure. Our LVS balancers rely heavily on specific sysctl settings, including disabling rp_filter. Unfortunately, despite reviews by 3 different people on multiple patch sets, it hadn't been noticed that this patch failed to explicitly set the priority of (at least) the LVS specific sysctl settings. Before, the sysctl priority was set at 50, and now it was at the default of 10 - equal to the priority used by the default Ubuntu sysctl settings. Due to alphabetic naming order, the Ubuntu sysctl file runs last, and reenables rp_filter again."
+        },
+        {
+          "source_key": "W21",
+          "source_id": "04f7feb3457423073737",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20140203-LVS",
+          "section_path": "Timeline",
+          "passage_id": "6025ccc2c63d3591c9e1",
+          "quote": "The net effect of this configuration error was that LVS services were broken for _most_ hosts inside of our network after reboot of the respective balancer hosts, but working fine for all external traffic. This implies that most LVS services appeared to work fine from the outside, including any manual tests run across the Internet. But services that internally forward to other services, such as HTTPS (in eqiad), Parsoid and Swift didn’t work."
+        },
+        {
+          "source_key": "W21",
+          "source_id": "04f7feb3457423073737",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20140203-LVS",
+          "section_path": "Timeline",
+          "passage_id": "29625b20a33642cfaf10",
+          "quote": "Then around 10:55 UTC I moved on to the active LVS balancer, lvs1001 and lvs1002, which are responsible for balancing all public traffic. I failed over traffic to lvs1004 and lvs1005, and verified that the LVS services were still working by telnetting to some of the TCP ports. However, soon after I commenced the reboot, I received Icinga and Nimsoft pages, for HTTPS services in particular. I attributed this to an issue we’ve had with the way we’ve configured HTTPS services on separate HTTPS terminator systems in esams, and expected this problem to be present in eqiad as well. (However, this is a configuration we’ve already moved away from recently and wasn’t the cause of this issue.) The rebooting LVS server returned a few minutes later, and diagnostic routing output and outside TCP port connects indicated that the LVS services were functional."
+        },
+        {
+          "source_key": "W21",
+          "source_id": "04f7feb3457423073737",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20140203-LVS",
+          "section_path": "Timeline",
+          "passage_id": "f75f2242893e48ad271e",
+          "quote": "I traced the underlying problem back to this Puppet change: https://gerrit.wikimedia.org/r/#/c/75087/"
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q030",
+      "question": "How did the maps and Parsoid outages differ in failed layer, observed impact, and available detection evidence?",
+      "proposed_answer": "W13 describes a maps/kartotherian routing-capacity gap during reimaging, request timeouts, Icinga alerting and about six minutes of impact. W19 describes Parsoid daemons refusing requests after log-driven disks filled, affecting VisualEditor users over a reported 17-minute period. W19’s cited passage does not give an exact alert time, so detection speed cannot be compared numerically.",
+      "citations": [
+        {
+          "source_key": "W13",
+          "source_id": "0ca602b66d40fb32a655",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2019-06-11_maps",
+          "section_path": "Summary",
+          "passage_id": "46026f4f2587d9195bf6",
+          "quote": "While https://phabricator.wikimedia.org/T224395 is on which led to depooling codfw. Codfw was pooled back and only two nodes were available (see Incident documentation/20190603-maps). It was necessary to reimage all codfw servers to pickup the new partitioning scheme. And when maps2003 was reimaged which was the last to reimage, kartotherian codfw which is pooled had no node to route traffic to hence request timeouts and SREs were paged. Icinga started alerting from 8:21am"
+        },
+        {
+          "source_key": "W13",
+          "source_id": "0ca602b66d40fb32a655",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2019-06-11_maps",
+          "section_path": "Summary / Impact",
+          "passage_id": "ec835b9def2e5008f149",
+          "quote": "Users who were currently served from codfw were affect. They were affected for about 6min(from logstash)"
+        },
+        {
+          "source_key": "W19",
+          "source_id": "fe3b1cf3ea388d8af40b",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20140211-Parsoid",
+          "section_path": "Summary",
+          "passage_id": "6271b79698e236830bf6",
+          "quote": "Verbose logging combined with broken log rotation led to disks on about 3/4 of the Parsoid nodes filling up, which caused the Parsoid daemons to stop accepting requests. This led to some user-visible errors for VisualEditor users in a 17-minute window. An estimate is that less than 10% of VE page loads / saves were affected during this period."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q031",
+      "question": "How did the Varnish overload and mc1009 memcached failure propagate through caching infrastructure by different mechanisms?",
+      "proposed_answer": "W16 describes a network bonding/configuration operation that temporarily disrupted Varnish connectivity and overloaded bits servers, mitigated by redirecting traffic. W17 describes a failed SFP+ module and switch disruption affecting a memcached server, blocking applications and cascading into Squid/Varnish. Shared “cache” vocabulary does not imply identical initiating faults.",
+      "citations": [
+        {
+          "source_key": "W16",
+          "source_id": "65d1733fbae92c90a624",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20120120-Varnish",
+          "section_path": "Root Cause",
+          "passage_id": "db1aeb1c4ff529500f76",
+          "quote": "After putting in the fix into Puppet and pushing out the interface bonding interface, we had to a \"ifdown/ifup\" on all the bonded interfaces. When the loss of connectivity happened, the varnish processes on both of these servers spiralled upwards out of control. (Note: Varnish has this behavior of spawning threads when it experiences network package lost.)"
+        },
+        {
+          "source_key": "W16",
+          "source_id": "65d1733fbae92c90a624",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20120120-Varnish",
+          "section_path": "Fix",
+          "passage_id": "6afd4877c61878342f3d",
+          "quote": "We redirected the bits.wikimedia.org traffic from our Ashburn (EQIAD) site to our Tampa (SDTPA) site and that resolved the issue instantly. At the same time, we restarted the affected EQIAD Varnish instances. (We switched back to EQIAD shortly after that.)"
+        },
+        {
+          "source_key": "W17",
+          "source_id": "25ee624f72dd282d67d9",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20130508-memcached",
+          "section_path": "Problem",
+          "passage_id": "a8e3bb6fa340c465df9c",
+          "quote": "We had an outage today, due to a SFP+ module for a single memcached server (mc1009) going bad in a switch, causing the switch to partially reboot, and causing all application servers to get blocked due to a single down memcached. As usual this caused all kinds of cascading failures on other clusters such as Squid/Varnish. When not overloaded, these clusters would only serve cached pages at that point."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q032",
+      "question": "How did the 2013 CirrusSearch outage and 2021 Commons-file search failure differ in initiating mechanism and scope?",
+      "proposed_answer": "W18 describes disabled/inoperative shard redundancy and deletion of data under an incorrect belief that copies existed; a later version mismatch complicated recovery. W9 describes high-volume queries during bug verification, followed by index deletion/recreation for reasons not fully understood, affecting Commons media search and some cross-wiki search pages. These are different data/index incidents.",
+      "citations": [
+        {
+          "source_key": "W18",
+          "source_id": "9dc571a5930bf9ea0822",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131118-CirrusSearch",
+          "section_path": "Timeline",
+          "passage_id": "6d99443f4145afdb35e7",
+          "quote": "A few weeks ago we disabled redundancy by default in CirrusSearch because it was causing issues with puppet. We enabled it via configuration in production. This configuration didn't take."
+        },
+        {
+          "source_key": "W18",
+          "source_id": "9dc571a5930bf9ea0822",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131118-CirrusSearch",
+          "section_path": "Timeline",
+          "passage_id": "fea52bd88707620956c1",
+          "quote": "At 16:15 UTC icinga warned that Elasticsearch was in \"red\" state, meaning there were unassigned master shards. I started investigating and I discovered that we'd turned off all the redundancy. The records that Andrew had deleted were gone. In hindsight it is at this point I should have switch back to lsearchd. We'd lost 1/15 of the search index in such a way rebuilding it will take a few hours at minimum."
+        },
+        {
+          "source_key": "W9",
+          "source_id": "0e0702e1d1a9f789152e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-11-10_cirrussearch_commonsfile_outage",
+          "section_path": "Summary",
+          "passage_id": "d30c979102e8eaa9b74d",
+          "quote": "On 10 November, as part of verifying a bug report, a developer submitted a high volume of search queries against the active production Cirrus cluster (eqiad cirrussearch) via a tunnel from their local mw-vagrant environment. vagrant provision was (probably) later run without the tunnel being properly closed first, which resulted in (for reasons not yet understood) the deletion and recreation of the commonswiki_file_1623767607 index."
+        },
+        {
+          "source_key": "W9",
+          "source_id": "0e0702e1d1a9f789152e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-11-10_cirrussearch_commonsfile_outage",
+          "section_path": "Summary",
+          "passage_id": "160062b35f38f85c8f2d",
+          "quote": "During the incident, all media searches on Wikimedia Commons failed. Wikipedia projects were impacted as well,[1] through the \"cross-wiki\" feature of the sidebar on Search results pages. This cross-wiki feature is enabled on most wikis by default, though notably not on English Wikipedia where the community disabled search integration to Commons."
+        },
+        {
+          "source_key": "W18",
+          "source_id": "9dc571a5930bf9ea0822",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131118-CirrusSearch",
+          "section_path": "Timeline",
+          "passage_id": "af10e4fd0828a5f6b956",
+          "quote": "At 18:09 UTC icinga warned again of Elasticsearch having unassigned master shards. I spent a while digging into this and discovered that there was some kind of error moving replicas from Elasticsearch 0.90.7 to 0.90.4. It looked like a bug caused by them upgrading Lucene. I haven't dug into it yet. This problem caused nodes to stay unassigned."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q033",
+      "question": "Which two incident reports show a failure propagating into other services through an intermediate dependency rather than a defect in each affected application?",
+      "proposed_answer": "W20 reports Swift socket/busy-loop errors after an rsyslog restart propagating into image rendering. W15 reports network loss to a rack of application servers, reducing capacity and memcached caching, which burdened the remaining application services. These are reported dependency paths, not proof that the same software defect caused both.",
+      "citations": [
+        {
+          "source_key": "W20",
+          "source_id": "d473b9b21f31ea49e920",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131205-Swift",
+          "section_path": "What happened",
+          "passage_id": "ec8ddb95dc4939599daf",
+          "quote": "puppet ran across all boxes in the 30' window; the rsyslog package was upgraded, the package's postinst restarted the service, Swift lost the socket, busy looped, got overloaded and caused all kinds of errorenous responses, including cascading into the imagescaler cluster."
+        },
+        {
+          "source_key": "W15",
+          "source_id": "9354eda28b449247d0a7",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20110926-DBandPower",
+          "section_path": "Documentation by Mark Bergsma / Access switch power outage at 14:12 UTC",
+          "passage_id": "84b470b585e1dd524380",
+          "quote": "As a result, the entire rack, consisting of about 40 MediaWiki application servers, lost network connectivity. Nagios complained about all servers in the rack, and due to all kinds of second order effects, many other services were (briefly) disrupted or overloaded, leading to many other Nagios downtime reports. Several Ops and Engineering members were looking at the downtime, but had difficulty pinpointing exactly what was going down."
+        },
+        {
+          "source_key": "W15",
+          "source_id": "9354eda28b449247d0a7",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20110926-DBandPower",
+          "section_path": "Documentation by Mark Bergsma / Access switch power outage at 14:12 UTC",
+          "passage_id": "7cc3fec973d548b81856",
+          "quote": "The main problem with a rack of application servers going down, besides the significant reduction in capacity, is the loss of memcached caching - meaning that MediaWiki on the remaining servers will be parsing/regenerating many pages and objects, resulting in a much higher load at reduced capacity for a while. memcached redundancy/resiliency is definitely something that could need improvement for this reason."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q034",
+      "question": "How do the 2012 Varnish and 2013 Swift reports distinguish proposed follow-up from an author-reported change?",
+      "proposed_answer": "W16 says automatic failover and Varnish limits were to be investigated, without evidence in that passage that they were completed. W20 states the author had fixed one Swift-related behavior in a linked code change and would examine another upstream issue. A source claim of a fix is not independent evidence of deployment or later effectiveness.",
+      "citations": [
+        {
+          "source_key": "W16",
+          "source_id": "65d1733fbae92c90a624",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20120120-Varnish",
+          "section_path": "Recommendation",
+          "passage_id": "c5071e6eb4debd201546",
+          "quote": "Operations will look into a way to implement an automatic failover solution (from EQIAD to SDTPA and vice-versa). Ops is also investigating limits within varnish to prevent this type of query overload from bringing down the servers (similar to the use of Apache max clients)."
+        },
+        {
+          "source_key": "W20",
+          "source_id": "d473b9b21f31ea49e920",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131205-Swift",
+          "section_path": "What happened",
+          "passage_id": "20a3d98cab9b3bc21717",
+          "quote": "Iv'e fixed the evil (3) behavior with https://gerrit.wikimedia.org/r/99576. I'll have a look at (1) and see if it's fixed in newer upstream."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q035",
+      "question": "Can GlobalUsage be labeled the conclusively proven root cause of the Commons DB incident, and does the LVS investigation illustrate why initial hypotheses require checking?",
+      "proposed_answer": "No. W5 names GlobalUsage as a most probable contributor while retaining underlying causal uncertainty. In W21, the operator initially suspected an HTTPS termination issue before tracing the actual failure to rp_filter/sysctl precedence. Similar diagnostic uncertainty does not mean the technical causes of these incidents were related.",
+      "citations": [
+        {
+          "source_key": "W5",
+          "source_id": "8dcbaae33b95dd4e5e4e",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2021-04-27_Commons_wiki_primary_db",
+          "section_path": "Summary",
+          "passage_id": "8d300bddb41249b0611d",
+          "quote": "GlobalUsage was signaled as the most probable cause, as it was sending large amount of long-running queries at the moment of the issue to the primary DB server. Because of the general InnoDB error obtained -contention on an Innodb index (on an engine where everything, including data, are indexes)- it is difficult to say if this was the primary cause, or another underlying cause caused them to block, leading the the outage. Other scaling problems are known to occur on commonswiki (e.g. large image table). Work has been done to send as much traffic as possible to the replicas."
+        },
+        {
+          "source_key": "W21",
+          "source_id": "04f7feb3457423073737",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20140203-LVS",
+          "section_path": "Timeline",
+          "passage_id": "29625b20a33642cfaf10",
+          "quote": "Then around 10:55 UTC I moved on to the active LVS balancer, lvs1001 and lvs1002, which are responsible for balancing all public traffic. I failed over traffic to lvs1004 and lvs1005, and verified that the LVS services were still working by telnetting to some of the TCP ports. However, soon after I commenced the reboot, I received Icinga and Nimsoft pages, for HTTPS services in particular. I attributed this to an issue we’ve had with the way we’ve configured HTTPS services on separate HTTPS terminator systems in esams, and expected this problem to be present in eqiad as well. (However, this is a configuration we’ve already moved away from recently and wasn’t the cause of this issue.) The rebooting LVS server returned a few minutes later, and diagnostic routing output and outside TCP port connects indicated that the LVS services were functional."
+        },
+        {
+          "source_key": "W21",
+          "source_id": "04f7feb3457423073737",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20140203-LVS",
+          "section_path": "Timeline",
+          "passage_id": "7042420fad7393cedde5",
+          "quote": "This is a big puppet wide change that modularises and improves the handling of sysctl parameter values across our infrastructure. Our LVS balancers rely heavily on specific sysctl settings, including disabling rp_filter. Unfortunately, despite reviews by 3 different people on multiple patch sets, it hadn't been noticed that this patch failed to explicitly set the priority of (at least) the LVS specific sysctl settings. Before, the sysctl priority was set at 50, and now it was at the default of 10 - equal to the priority used by the default Ubuntu sysctl settings. Due to alphabetic naming order, the Ubuntu sysctl file runs last, and reenables rp_filter again."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q036",
+      "question": "How does the documented planned network maintenance in 2011 differ from the accidental backend depooling during 2023 cache maintenance?",
+      "proposed_answer": "W14 describes scheduled router work addressing packet loss/latency, with planned reboots and intermittent impact during the window. W8, a draft report, describes HAProxy maintenance which accidentally depooled ATS text-cache backends across sites and caused unexpected request errors. Planned maintenance can still have disruption, but the source-described changes and unexpected failure mechanisms differ.",
+      "citations": [
+        {
+          "source_key": "W14",
+          "source_id": "aafcb8b94578b0a54a01",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20110524-PlannedMaintenance",
+          "section_path": "Document",
+          "passage_id": "259cc4030c52c827786e",
+          "quote": "The plan to address the router problem was finalized. The maintenance was scheduled on Tuesday, 24th May. The plan consists of:"
+        },
+        {
+          "source_key": "W14",
+          "source_id": "aafcb8b94578b0a54a01",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20110524-PlannedMaintenance",
+          "section_path": "Document",
+          "passage_id": "39eeaa5ca2e96f48e27d",
+          "quote": "Shortly after 13:00 UTC, Mark started the upgrade. It took 1 hour to perform all but 1 of the above. The Juniper EX stack was not upgraded (not a problem) because he ran out of the maintenance window. During the maintenance window, the site was intermittently unavailable because of the reboots. One of the (slave) databases went down and was taken out of the cluster. Some of the database servers did not recover gracefully and Domas determined the 'Forcedeth' driver for the NIC (network interface card) was the culprit. Together with the help of RobH and Ariel, all the impacted servers recovered."
+        },
+        {
+          "source_key": "W8",
+          "source_id": "f42ec2b72f2037e0ba35",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2023-02-22_wiki_outage",
+          "section_path": "Summary",
+          "passage_id": "911114cca64609a7acb7",
+          "quote": "During a routine maintenance consisting of upgrading HAProxy on cache hosts, all of the backends (ATS) in the text cache cluster in esams and eqiad were accidentally depooled due to a mismatch on the maintenance run between depooling the hosts individually and pooling back the cdn. This caused both cached and uncached traffic requests for wikis and other ATS-backed services to fail and return errors to clients, mostly in parts of Europe, Africa and Asia. Approximately 17 million HTTP requests (according to varnish) / 5 million user requests (according to NEL estimation) errored out in total. Editing rate was reduced to less than half. Upload cluster, clients geolocated to drmrs, codfw, ulsfo or eqsin, and GET requests cached in memory were not affected."
+        },
+        {
+          "source_key": "W14",
+          "source_id": "aafcb8b94578b0a54a01",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20110524-PlannedMaintenance",
+          "section_path": "Document",
+          "passage_id": "921d9cd7184fdcc304ef",
+          "quote": "The following day, Mark noticed there were packet losses with that router. Users were again commenting and complaining about page load lag. Upon further investigation, he decided the router software needed to be upgraded and tuned. However that would required substantial amount of work and downtime and since many of our operations engineers were either enroute or preparing for the trip to Berlin, Mark decided to perform another temporary (and unfortunately intrusive) fix, a short reboot on one of the routers. That reboot took 3 minutes. That seems to clear the problem."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q037",
+      "question": "How does the post-incident reporting obligation in the incident-response runbook relate to the documented Varnish response and proposed follow-ups?",
+      "proposed_answer": "W11 states that after resolving an incident the coordinator should prepare an incident report and action items. W16 documents traffic redirection and Varnish restarts during one historical outage, and lists future investigation of automatic failover and overload limits. W11’s current procedure does not prove the historical operators followed it at that time.",
+      "citations": [
+        {
+          "source_key": "W11",
+          "source_id": "71b147a6287113592d33",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incident_response%2FRunbook",
+          "section_path": "Post-incident follow-up",
+          "passage_id": "80bb945916cee8f517a1",
+          "quote": "After an incident is resolved, the incident coordinator should follow the post-incident documentation to write a report and action items."
+        },
+        {
+          "source_key": "W16",
+          "source_id": "65d1733fbae92c90a624",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20120120-Varnish",
+          "section_path": "Fix",
+          "passage_id": "6afd4877c61878342f3d",
+          "quote": "We redirected the bits.wikimedia.org traffic from our Ashburn (EQIAD) site to our Tampa (SDTPA) site and that resolved the issue instantly. At the same time, we restarted the affected EQIAD Varnish instances. (We switched back to EQIAD shortly after that.)"
+        },
+        {
+          "source_key": "W16",
+          "source_id": "65d1733fbae92c90a624",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20120120-Varnish",
+          "section_path": "Recommendation",
+          "passage_id": "c5071e6eb4debd201546",
+          "quote": "Operations will look into a way to implement an automatic failover solution (from EQIAD to SDTPA and vice-versa). Ops is also investigating limits within varnish to prevent this type of query overload from bringing down the servers (similar to the use of Apache max clients)."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q038",
+      "question": "What can and cannot be inferred about detection and restoration timelines from the 2017 s5 and 2013 CirrusSearch incident descriptions?",
+      "proposed_answer": "W3 records an impact interval from 05:48 to 07:04 and a recovery after the read-only state was noticed, but the cited passages give no timestamp for the first alert or human recognition. W18 reports an Icinga “red” alert at 16:15, a partial assignment milestone at 17:01, and further recovery work later. The evidence permits reporting these timings, not equating time-to-alert with time-to-full-remediation.",
+      "citations": [
+        {
+          "source_key": "W3",
+          "source_id": "4beae77689f755606b09",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2017-07-28_s5_(WikiData_and_dewiki)_read-only",
+          "section_path": "Summary",
+          "passage_id": "bbc3272fd75f7eceaf02",
+          "quote": "The s5 master MySQL process (containing wikidatawiki and dewiki) was killed at 5:48 due to an Out Of Memory error- which lead to the server automatically reboot in read only, recover its data and stay like that until it was noticed, checked and set back as read-write."
+        },
+        {
+          "source_key": "W3",
+          "source_id": "4beae77689f755606b09",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F2017-07-28_s5_(WikiData_and_dewiki)_read-only",
+          "section_path": "Document",
+          "passage_id": "a6c5831a40f60dc47c7f",
+          "quote": "Wikidata and the German Wikipedia were in read-only mode from 5:48 to 7:04 on 2017-07-28. No edits, user creations were possible between these two timestamps."
+        },
+        {
+          "source_key": "W18",
+          "source_id": "9dc571a5930bf9ea0822",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131118-CirrusSearch",
+          "section_path": "Timeline",
+          "passage_id": "fea52bd88707620956c1",
+          "quote": "At 16:15 UTC icinga warned that Elasticsearch was in \"red\" state, meaning there were unassigned master shards. I started investigating and I discovered that we'd turned off all the redundancy. The records that Andrew had deleted were gone. In hindsight it is at this point I should have switch back to lsearchd. We'd lost 1/15 of the search index in such a way rebuilding it will take a few hours at minimum."
+        },
+        {
+          "source_key": "W18",
+          "source_id": "9dc571a5930bf9ea0822",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131118-CirrusSearch",
+          "section_path": "Timeline",
+          "passage_id": "2907bf4f46963bf83327",
+          "quote": "At 17:01 UTC I got all the shards assigned. They were empty but we were going to perform a rebuild anyway. All elasticsearch wikis were limping along now."
+        },
+        {
+          "source_key": "W18",
+          "source_id": "9dc571a5930bf9ea0822",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20131118-CirrusSearch",
+          "section_path": "Timeline",
+          "passage_id": "826085c64bfd7bd69bdd",
+          "quote": "Around 18:40 UTC I configured Elasticsearch to remove any data on those nodes and at 18:50 UTC Elasticsearch recovered again, having assigned all nodes replicas."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q039",
+      "question": "What does the post-twemproxy mc1009 reboot test show about immediate resilience, and what remains unproven?",
+      "proposed_answer": "W17 reports that after traffic was routed via twemproxy a deliberate mc1009 reboot caused no observed site availability or general latency impact during that test. The same report describes the deployment as provisional and still requiring logging/statistics work. This supports one observed improvement, not demonstrated permanent immunity to future memcached failures.",
+      "citations": [
+        {
+          "source_key": "W17",
+          "source_id": "25ee624f72dd282d67d9",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20130508-memcached",
+          "section_path": "Solution",
+          "passage_id": "41f855f21482d02cb914",
+          "quote": "As of last night, we've been routing all memcached requests in eqiad via twemproxy. A short while ago, I rebooted mc1009 without any other preparation. The main impact was just log noise (libmemcached can be misleading when logging \"SERVER HAS FAILED AND IS DISABLED UNTIL TIMED\") but as far as I've been able to tell, there was no impact to site availability or general performance. Graphite showed an increase in external store selects as I'd expect but php request latency (at the average, 50th, and 90th percentiles) was unimpacted, as were memcached get times. Using enwiki as a logged in user seemed completely normal, and I found no user reports of issues during that time frame either. Huge difference vs. the mc1009 failure on May 6 that started this thread! It also helps shave around 12ms of setup time from every request."
+        },
+        {
+          "source_key": "W17",
+          "source_id": "25ee624f72dd282d67d9",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20130508-memcached",
+          "section_path": "Solution",
+          "passage_id": "eb445fcfa4df05b5315f",
+          "quote": "The twemproxy deployment is still provisional and needs additional work (mostly around logging and stats collection) but I'm pleased so far and am going to proceed."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    },
+    {
+      "question_id": "Q040",
+      "question": "Does the incident-review ritual alone establish that the proposed Varnish failover and overload measures were implemented?",
+      "proposed_answer": "No. W1 proposes shared incident review to improve organizational learning; W16 proposes investigating automatic failover and Varnish limits. The passages contain no verified later implementation or effect record. The system should report the proposal and abstain from claiming completion.",
+      "citations": [
+        {
+          "source_key": "W1",
+          "source_id": "c7d966e88daf97c00334",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incident_review_ritual",
+          "section_path": "Ritual walkthrough / Sharing knowledge",
+          "passage_id": "c2c53ca85e4a382a3250",
+          "quote": "Sharing knowledge is a big part of the incident review process. The aim is that more people get acquainted with the infrastructure, leading to them feeling more comfortable with it, owning it more and hopefully leading to shorter incident durations. We suggest this part of the ritual is split in 2 sections, a quick walkthrough and a section with questions."
+        },
+        {
+          "source_key": "W16",
+          "source_id": "65d1733fbae92c90a624",
+          "source_url": "https://wikitech.wikimedia.org/wiki/Incidents%2F20120120-Varnish",
+          "section_path": "Recommendation",
+          "passage_id": "c5071e6eb4debd201546",
+          "quote": "Operations will look into a way to implement an automatic failover solution (from EQIAD to SDTPA and vice-versa). Ops is also investigating limits within varnish to prevent this type of query overload from bringing down the servers (similar to the use of Apache max clients)."
+        }
+      ],
+      "review_status": "pending",
+      "reviewer_notes": ""
+    }
+  ]
+}

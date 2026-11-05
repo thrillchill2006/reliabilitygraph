@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "scope": "entire 19-source pilot",
+  "status": "pending_manual_annotation",
+  "person_minutes": 0,
+  "uncertain_judgments": 0,
+  "source_count": 19,
+  "annotated_source_count": 0,
+  "verified_metadata_relation_count": 1,
+  "note": "The single verified relation is an explicit included-source hyperlink; claims and additional relations require manual document-level annotation."
+}

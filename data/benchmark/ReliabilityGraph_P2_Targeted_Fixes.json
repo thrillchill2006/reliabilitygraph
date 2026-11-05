@@ -1,0 +1,46 @@
+{
+  "status": "proposed-not-approved",
+  "based_on": "human_review_package.md 2026-11-05",
+  "changes": [
+    {
+      "question_id": "Q008",
+      "reason": "W5 text is an instruction/template-style placeholder, not proof of an incident-specific follow-up task or completion.",
+      "question": "What instruction about runbook links appears on the 2021 Commons incident page, and what does the later MariaDB troubleshooting guide establish without proving an alert update?",
+      "proposed_answer": "The Commons incident page includes an instruction to add relevant responder documentation links or an action item where documentation is missing. That instruction alone is not a verified follow-up task or proof of implementation. A later MariaDB troubleshooting guide exists and explains protective read-only after crashes, but the cited evidence does not establish that any Commons alert URL was updated.",
+      "add_evidence_span_ids": []
+    },
+    {
+      "question_id": "Q015",
+      "reason": "A later runbook and a template-style instruction do not establish completion of an incident-specific corrective action.",
+      "question": "Do the documentation-link instruction in the Commons incident page and the later MariaDB guide establish that a Commons alert was updated?",
+      "proposed_answer": "No. The Commons page contains an instruction to add links or raise an action item; the later MariaDB guide exists and is marked work in progress. These passages do not provide a completed task/change record or timestamp demonstrating any alert-link update.",
+      "add_evidence_span_ids": []
+    },
+    {
+      "question_id": "Q018",
+      "reason": "Remove extraneous commentary about W6; cited W11 passage answers the question directly.",
+      "question": null,
+      "proposed_answer": "After an incident is resolved, the incident coordinator should follow post-incident documentation to write an incident report and action items.",
+      "add_evidence_span_ids": []
+    },
+    {
+      "question_id": "Q032",
+      "reason": "The proposed answer mentions an Elasticsearch 0.90.7/0.90.4 replica-transfer issue, but the current evidence set omits the W18 passage supporting it.",
+      "question": null,
+      "proposed_answer": null,
+      "add_evidence_span_ids": [
+        "af10e4fd0828a5f6b956"
+      ]
+    },
+    {
+      "question_id": "Q036",
+      "reason": "The proposed answer says the router work addressed packet loss/latency, but the current evidence set omits the W14 passage showing those prior symptoms.",
+      "question": null,
+      "proposed_answer": null,
+      "add_evidence_span_ids": [
+        "921d9cd7184fdcc304ef"
+      ]
+    }
+  ],
+  "instructions": "Apply only these changes after verifying against the snapshot; preserve IDs, status=pending and reference_answer=null until explicit human approval. Derive source IDs, quotes and provenance from passage IDs. Run all checks. Do not freeze."
+}

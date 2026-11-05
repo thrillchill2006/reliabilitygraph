@@ -19,3 +19,6 @@ build/
 *.egg-info/
 artifacts/
 logs/
+
+data/corpus/raw/
+data/corpus/parsed/

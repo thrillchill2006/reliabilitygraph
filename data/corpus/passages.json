@@ -1,0 +1,3332 @@
+[
+  {
+    "passage_id": "823de62ad20762339407",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "967f28e006833e07a51a",
+    "ordinal": 0,
+    "text": "Incident response",
+    "anchor": "feb6c6e758dc30892a93",
+    "token_estimate": 5
+  },
+  {
+    "passage_id": "977dd5e0c0fcb71e850c",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "967f28e006833e07a51a",
+    "ordinal": 1,
+    "text": "Escalate",
+    "anchor": "6484588e012e04e962d3",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "81dde1d4ca53b0d0e560",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "967f28e006833e07a51a",
+    "ordinal": 2,
+    "text": "[edit]",
+    "anchor": "20c8434caed5760d80b5",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "89bdba3a195d4695d7c5",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "f1d586bc590cf7f63217",
+    "ordinal": 3,
+    "text": "This document examines the current status quo regarding incident reviewing techniques, identifies weaknesses and suggests a new process (hereby called “the ritual”) to address some of the shortcomings.",
+    "anchor": "59c60627239885499f02",
+    "token_estimate": 51
+  },
+  {
+    "passage_id": "6d1248e18dac279640fb",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "e0064bf088108b767ba9",
+    "ordinal": 4,
+    "text": "WMF has a wealth of information in the form of Incident Reports that are fully public. This spans back years and is relatively well structured as there are 2 templates, lightweight and full that are consistently used to populate them. However the templates go so far as to create the documents and share it more widely. To make matters worse, the Incident Documents are meant to be widely public. That ended up creating the need for a coordination process during the incident, which currently is in the form of another document template",
+    "anchor": "5c2447165abd59658b72",
+    "token_estimate": 134
+  },
+  {
+    "passage_id": "8017dfc19be421634b51",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "e0064bf088108b767ba9",
+    "ordinal": 5,
+    "text": "There are a number of shortcomings regarding the process. A non exhaustive list can be found below:",
+    "anchor": "ab0a4d877f3a21ff438d",
+    "token_estimate": 25
+  },
+  {
+    "passage_id": "9fff2324561ba74f3221",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "e0064bf088108b767ba9",
+    "ordinal": 6,
+    "text": "The aim of this document is to provide a proposal for solving some of the above shortcomings, but not all.",
+    "anchor": "78526e795659f1e0728b",
+    "token_estimate": 27
+  },
+  {
+    "passage_id": "b8eb0210b504b365afc9",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "e9a736e607bb5d1fe1ef",
+    "ordinal": 7,
+    "text": "Establish a bi-weekly (that is happening every 2 weeks) “Ritual” (meeting that is) where incident docs will be reviewed. We suggest the following:",
+    "anchor": "9b06b00397a41a819bc8",
+    "token_estimate": 37
+  },
+  {
+    "passage_id": "1f418e259065b2543c2f",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "c1c265816a47f38535a7",
+    "ordinal": 8,
+    "text": "A different person should be running the ritual every time, the “RitualRunner”. The role duties generally include:",
+    "anchor": "cee7c22d6f1c12246695",
+    "token_estimate": 29
+  },
+  {
+    "passage_id": "a7db9f0b14c17896e7f0",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "c1c265816a47f38535a7",
+    "ordinal": 9,
+    "text": "Advice to the Ritual Runner",
+    "anchor": "aeb88bb67e65fe2d24b5",
+    "token_estimate": 7
+  },
+  {
+    "passage_id": "5cd954e15ebae7eac265",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "6f8b86d5ce14d30097a2",
+    "ordinal": 10,
+    "text": "The previously agreed upon Metadata Scorecard should be filled.",
+    "anchor": "33051a96ccf358d6669e",
+    "token_estimate": 16
+  },
+  {
+    "passage_id": "53c9cded949f9856302f",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "b3d9b305c5f45c9fa85d",
+    "ordinal": 11,
+    "text": "Some of the above fields are easy to fill in retrospectively, others not so much. Below we have some proposal on how to fill these in during the ritual",
+    "anchor": "7a894f1bf9e37fe46175",
+    "token_estimate": 38
+  },
+  {
+    "passage_id": "9be2dc6ae67d945b192b",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "cb86dcebcc5c437ff391",
+    "ordinal": 12,
+    "text": "Filling in the scorecard should not be costly. Try to get the easy fields pre-populated before the meeting. Chasing down numbers and timelines during the review is not a good use of high bandwidth collective engineering time so be sure to collect that information beforehand. Mark the fields you want to talk more about during the meeting. Allow others to bring up fields for extra discussion too, but be conservative.",
+    "anchor": "1f77f5cff456673a896d",
+    "token_estimate": 105
+  },
+  {
+    "passage_id": "305d124eaf4a80660dc2",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "cb86dcebcc5c437ff391",
+    "ordinal": 13,
+    "text": "Make sure the scorecard filling part of the process does not take too long. It’s important that people feel comfortable in these meetings and are not getting the impression we are delving too much into minutiae. A good rule of thumb is to time box the scorecard discussion to something like 15-20 minutes.",
+    "anchor": "37e934a95f12406ed952",
+    "token_estimate": 77
+  },
+  {
+    "passage_id": "c2c53ca85e4a382a3250",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "ca9179c8cc2b6dff1420",
+    "ordinal": 14,
+    "text": "Sharing knowledge is a big part of the incident review process. The aim is that more people get acquainted with the infrastructure, leading to them feeling more comfortable with it, owning it more and hopefully leading to shorter incident durations. We suggest this part of the ritual is split in 2 sections, a quick walkthrough and a section with questions.",
+    "anchor": "7283de2fc5ea9cac241e",
+    "token_estimate": 90
+  },
+  {
+    "passage_id": "681b4c51c36def040fa3",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "6c20a3f8b55383e46dc1",
+    "ordinal": 15,
+    "text": "There are benefits in reflecting on the timeline and what was done in a synchronous way. Increasing inter-team support, communication, learning and cultivating a healthy culture are some obvious ones.",
+    "anchor": "04f27dc46dbe1e1cabdb",
+    "token_estimate": 50
+  },
+  {
+    "passage_id": "fc3dad002021937e69bb",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "f4402e1a4b7e4b793faf",
+    "ordinal": 16,
+    "text": "Below is a template of the various items that will probably need to be discussed and talked about. The list is not exhaustive, but a good starting point.",
+    "anchor": "9e95668cd3d45e3db5f8",
+    "token_estimate": 39
+  },
+  {
+    "passage_id": "9f195aec0d7e5eff5768",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "68bd33a8f2cdc6dfdc76",
+    "ordinal": 17,
+    "text": "This is a pretty important part of the ritual. People should ask questions to help them clarify their understanding of the situation and the infrastructure. Better understanding of the infrastructure and the situation will avoid hearsay and Cargo Culting as well as allow us to attack assumptions, made in times past, that no longer apply. This will become especially important if people that are not part of SRE participate in the ritual.",
+    "anchor": "2621799f9f437665159e",
+    "token_estimate": 110
+  },
+  {
+    "passage_id": "c6df08ee45e91c07716f",
+    "source_id": "c7d966e88daf97c00334",
+    "section_id": "68bd33a8f2cdc6dfdc76",
+    "ordinal": 18,
+    "text": "To accomplish the above we suggest that as the ritual runner:",
+    "anchor": "984d332ff2d6ddfd242f",
+    "token_estimate": 16
+  },
+  {
+    "passage_id": "d2d0b0e07654cb60c232",
+    "source_id": "2493c360096ef6df7499",
+    "section_id": "b095ab1f44b3601b594d",
+    "ordinal": 0,
+    "text": "This page tracks incident reports about Wikimedia Foundation properties, such as Wikipedia.",
+    "anchor": "9f02a0c886ccc1e7ea61",
+    "token_estimate": 23
+  },
+  {
+    "passage_id": "6757e5281a42baa76930",
+    "source_id": "2493c360096ef6df7499",
+    "section_id": "8d4a2db886bec801eae9",
+    "ordinal": 1,
+    "text": "Check Category:Incident documentation for older incident reports.",
+    "anchor": "35ce18a751bf0143d8cc",
+    "token_estimate": 17
+  },
+  {
+    "passage_id": "fc19b9e911b84420aea1",
+    "source_id": "71b147a6287113592d33",
+    "section_id": "c45bd5bb288ca44088a8",
+    "ordinal": 0,
+    "text": "Incident response",
+    "anchor": "8df9bd99b2f95c4f045d",
+    "token_estimate": 5
+  },
+  {
+    "passage_id": "5666ea7ca2c6cab993f1",
+    "source_id": "71b147a6287113592d33",
+    "section_id": "c45bd5bb288ca44088a8",
+    "ordinal": 1,
+    "text": "Escalate",
+    "anchor": "e249b5587780e2d6c9a9",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "fd524857952384b41bae",
+    "source_id": "71b147a6287113592d33",
+    "section_id": "c45bd5bb288ca44088a8",
+    "ordinal": 2,
+    "text": "[edit]",
+    "anchor": "9c2804a4266904528911",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "d52b54d0770e4746ce9e",
+    "source_id": "71b147a6287113592d33",
+    "section_id": "c45bd5bb288ca44088a8",
+    "ordinal": 3,
+    "text": "This is a brief, at-a-glance description of what steps to take when responding to an on-going incident.",
+    "anchor": "624e2396581e0adea582",
+    "token_estimate": 26
+  },
+  {
+    "passage_id": "5d014de9cbb4fc2338c9",
+    "source_id": "71b147a6287113592d33",
+    "section_id": "c45bd5bb288ca44088a8",
+    "ordinal": 4,
+    "text": "Don’t panic. Even when the wikis are down, you have time to communicate.",
+    "anchor": "63cdedc3f6e4bb7bc849",
+    "token_estimate": 18
+  },
+  {
+    "passage_id": "80bb945916cee8f517a1",
+    "source_id": "71b147a6287113592d33",
+    "section_id": "65a87c71f2279c567bef",
+    "ordinal": 5,
+    "text": "After an incident is resolved, the incident coordinator should follow the post-incident documentation to write a report and action items.",
+    "anchor": "d5339809d08f5279e839",
+    "token_estimate": 35
+  },
+  {
+    "passage_id": "30fba062a6a5116ea8c5",
+    "source_id": "71b147a6287113592d33",
+    "section_id": "5f0ef4b8e1aacd056c88",
+    "ordinal": 6,
+    "text": "An incident should go through the following states, mapping to the columns in Wikimedia-incident Phabricator board:",
+    "anchor": "a41c85cc3c6f7f79f592",
+    "token_estimate": 29
+  },
+  {
+    "passage_id": "a6c5831a40f60dc47c7f",
+    "source_id": "4beae77689f755606b09",
+    "section_id": "f7ebba691706d47bc031",
+    "ordinal": 0,
+    "text": "Wikidata and the German Wikipedia were in read-only mode from 5:48 to 7:04 on 2017-07-28. No edits, user creations were possible between these two timestamps.",
+    "anchor": "477e4d89196be49918c1",
+    "token_estimate": 40
+  },
+  {
+    "passage_id": "bbc3272fd75f7eceaf02",
+    "source_id": "4beae77689f755606b09",
+    "section_id": "5f9c4f8928b86658a93f",
+    "ordinal": 1,
+    "text": "The s5 master MySQL process (containing wikidatawiki and dewiki) was killed at 5:48 due to an Out Of Memory error- which lead to the server automatically reboot in read only, recover its data and stay like that until it was noticed, checked and set back as read-write.",
+    "anchor": "e3ba213c1d89a2ac55f7",
+    "token_estimate": 67
+  },
+  {
+    "passage_id": "6d0ebd096e6413da19a3",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "43ee4c3565810d8df0a1",
+    "ordinal": 0,
+    "text": "document status: final",
+    "anchor": "30d4854b3031f190177f",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "bd4538c326cc40b35c64",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "d485336f816667ee0629",
+    "ordinal": 1,
+    "text": "While performing a live switchover test in advance of the 2023 WMF datacenter switchover, an existing logical bug on the switchover test script accidentally set the secondary datacenter in read-only mode. While this didn't disrupt most users, mobile editing for people geolocated to codfw app servers (mostly, people in the Americas, and part of Asia and Oceania) had the editing interface disabled (while desktop users were redirected to edit through eqiad). While trying to fix this issue, an tooling interface issue caused all datacenters to be set in read-only mode, disabling editing for all users. This was quickly reverted for both datacenters and editing was restored.",
+    "anchor": "8d032efbb845ebce46d7",
+    "token_estimate": 169
+  },
+  {
+    "passage_id": "26a2715823d9e5a2508f",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "05840fff259927198349",
+    "ordinal": 2,
+    "text": "All times in UTC.",
+    "anchor": "1d8ef80d8280e1c33eae",
+    "token_estimate": 5
+  },
+  {
+    "passage_id": "6877dc1645ec5251c7a4",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "05840fff259927198349",
+    "ordinal": 3,
+    "text": "Only sets read-write in eqiad - Codfw is still read-only with the switchover message",
+    "anchor": "c89f731cbbff60446e92",
+    "token_estimate": 21
+  },
+  {
+    "passage_id": "2853457cad1d35a40996",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "05840fff259927198349",
+    "ordinal": 4,
+    "text": "User reports warn of ongoing issues (most edits from eqiad app servers and desktop-codfw can flow normally):",
+    "anchor": "4bbea6a49894387ec78e",
+    "token_estimate": 27
+  },
+  {
+    "passage_id": "bdabb3517a2a60955a3d",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "05840fff259927198349",
+    "ordinal": 5,
+    "text": "Debugging ensues, as well as potential unrelated causes.",
+    "anchor": "70172e5f8740461219ce",
+    "token_estimate": 14
+  },
+  {
+    "passage_id": "3333cdc089fa5c167d5e",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "05840fff259927198349",
+    "ordinal": 6,
+    "text": "The cause of read-only is confctl not setting the right type and putting a string instead of a boolean",
+    "anchor": "91d25b23ec32f41347c7",
+    "token_estimate": 26
+  },
+  {
+    "passage_id": "83680b68ff1e48d86204",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "05840fff259927198349",
+    "ordinal": 7,
+    "text": "Multiple combinations of confctl set tried:",
+    "anchor": "989746aab469ee3cc8c1",
+    "token_estimate": 11
+  },
+  {
+    "passage_id": "19531a68d993c92f9796",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "05840fff259927198349",
+    "ordinal": 8,
+    "text": "This last one sets eqiad read-only by the same mechanism, the variable is now a string instead of a boolean, which is interpreted by mw as being \"true\"",
+    "anchor": "77fd648edabfa7dd64d5",
+    "token_estimate": 38
+  },
+  {
+    "passage_id": "cef5ecb4dbad93ba381f",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "05840fff259927198349",
+    "ordinal": 9,
+    "text": "Eqiad is now read-only too - Major editing outage starts now",
+    "anchor": "80f73a79eb2e2bb5b947",
+    "token_estimate": 15
+  },
+  {
+    "passage_id": "873ede523809f40e96bb",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "05840fff259927198349",
+    "ordinal": 10,
+    "text": "Using the sre.switchdc.mediawiki.07-set-readwrite cookbook to set the right value type, running it once with codfw -> eqiad and once with eqiad -> codfw to set them both.",
+    "anchor": "ea8463c46462dba0077d",
+    "token_estimate": 43
+  },
+  {
+    "passage_id": "176f6113a8a331ed6d9e",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "5f0f4f35417435f73642",
+    "ordinal": 11,
+    "text": "Editing issue from mobile + codfw:",
+    "anchor": "359bb030e3f701773a9e",
+    "token_estimate": 9
+  },
+  {
+    "passage_id": "0a8cc8fe23abfa319530",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "5f0f4f35417435f73642",
+    "ordinal": 12,
+    "text": "Full read only mode issue:",
+    "anchor": "6392dda4577c5e9de463",
+    "token_estimate": 7
+  },
+  {
+    "passage_id": "051c928748e46af57438",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "5f0f4f35417435f73642",
+    "ordinal": 13,
+    "text": "Although by this time the issue had been already corrected.",
+    "anchor": "a45be0cfc0e343f826c0",
+    "token_estimate": 15
+  },
+  {
+    "passage_id": "d59b610cfe7cf1f8831b",
+    "source_id": "0cee9e2147b8a6651d9f",
+    "section_id": "5f0f4f35417435f73642",
+    "ordinal": 14,
+    "text": "Specifically, failing to set codfw as read-write wasn't detected as failing until some time passed and reports confirm the issue persisted.",
+    "anchor": "1798c820d4dbae1ed144",
+    "token_estimate": 35
+  },
+  {
+    "passage_id": "abbfbe2bda125657d5c1",
+    "source_id": "8dcbaae33b95dd4e5e4e",
+    "section_id": "e0ad56b7abbbaf203d4f",
+    "ordinal": 0,
+    "text": "document status: final",
+    "anchor": "a27e51d3c8a514192e28",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "beb1aa23975ff1e674ed",
+    "source_id": "8dcbaae33b95dd4e5e4e",
+    "section_id": "a0d16f367ccdd1d15833",
+    "ordinal": 1,
+    "text": "From 10:28 to 11:43, Wikimedia Commons was unavailable and/or slow to respond. Additionally, from 10:41 to 11:10, commons was set in unscheduled read only mode (unable to create new users, upload files or edit pages). The immediate cause was large amount of InnoDB contention for read and write queries on the primary s4 database (which serves commonswiki and testcommonswiki writes). After a restart and a forced kill, the database came back cleanly in read only mode. Global usage extension was temporarily disabled (several queries were observed from this extension blocked on the master) before the server was set back up in read write, ending the incident.",
+    "anchor": "93a8cd24e1624a869c80",
+    "token_estimate": 166
+  },
+  {
+    "passage_id": "8d300bddb41249b0611d",
+    "source_id": "8dcbaae33b95dd4e5e4e",
+    "section_id": "a0d16f367ccdd1d15833",
+    "ordinal": 2,
+    "text": "GlobalUsage was signaled as the most probable cause, as it was sending large amount of long-running queries at the moment of the issue to the primary DB server. Because of the general InnoDB error obtained -contention on an Innodb index (on an engine where everything, including data, are indexes)- it is difficult to say if this was the primary cause, or another underlying cause caused them to block, leading the the outage. Other scaling problems are known to occur on commonswiki (e.g. large image table). Work has been done to send as much traffic as possible to the replicas.",
+    "anchor": "918d4487a541f535f3a1",
+    "token_estimate": 146
+  },
+  {
+    "passage_id": "6b1f8b451dc78060a1a8",
+    "source_id": "8dcbaae33b95dd4e5e4e",
+    "section_id": "1d8a0cc0125380cc6390",
+    "ordinal": 3,
+    "text": "All times in UTC.",
+    "anchor": "362f902da431dbe41e96",
+    "token_estimate": 5
+  },
+  {
+    "passage_id": "b1df4f65091d882846a4",
+    "source_id": "8dcbaae33b95dd4e5e4e",
+    "section_id": "0aee855e3f4e5491e4a0",
+    "ordinal": 4,
+    "text": "On the database error log, it was seen:",
+    "anchor": "0299f453d592a3cd78dd",
+    "token_estimate": 10
+  },
+  {
+    "passage_id": "000047cb23c14f267212",
+    "source_id": "8dcbaae33b95dd4e5e4e",
+    "section_id": "0aee855e3f4e5491e4a0",
+    "ordinal": 5,
+    "text": "Which ended up blocking any operation, even killing threads for a clean shutdown.",
+    "anchor": "7d19208245aa669f5f61",
+    "token_estimate": 21
+  },
+  {
+    "passage_id": "bc209f1665c6605db0cf",
+    "source_id": "8dcbaae33b95dd4e5e4e",
+    "section_id": "5838cf70015218fa8b36",
+    "ordinal": 6,
+    "text": "Add links to information that someone responding to this alert should have (runbook, plus supporting docs). If that documentation does not exist, add an action item to create it.",
+    "anchor": "1cd6fce9652e7625ff3f",
+    "token_estimate": 45
+  },
+  {
+    "passage_id": "32a560583e1f1236999c",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 0,
+    "text": "Wikimedia infrastructure",
+    "anchor": "f62872d996a9e36f3016",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "f506069e712afde3eea0",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 1,
+    "text": "Data centers",
+    "anchor": "27609458b7b9ce732f4b",
+    "token_estimate": 3
+  },
+  {
+    "passage_id": "65a0447f0ccc8cb0191f",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 2,
+    "text": "Networking",
+    "anchor": "e6804af204b66a5608e2",
+    "token_estimate": 3
+  },
+  {
+    "passage_id": "a72a7e5e8459957700dd",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 3,
+    "text": "Global traffic routing",
+    "anchor": "b73679ca98d688599f4a",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "ec12c949042b495d2f24",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 4,
+    "text": "MediaWiki SRE",
+    "anchor": "52d876fb081ce4b4f085",
+    "token_estimate": 4
+  },
+  {
+    "passage_id": "2c259b5c187475f47ca0",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 5,
+    "text": "MediaWiki Engineering",
+    "anchor": "99a1b0e73c36407d98d9",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "c4c148625e096f72fd19",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 6,
+    "text": "Multimedia",
+    "anchor": "569af65bc6dcdb68732b",
+    "token_estimate": 3
+  },
+  {
+    "passage_id": "1033a1fa461a4bc23de9",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 7,
+    "text": "Data Engineering",
+    "anchor": "8fb5cd13495b76d1f8f2",
+    "token_estimate": 4
+  },
+  {
+    "passage_id": "1cdb45946e5c9e935772",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 8,
+    "text": "Search",
+    "anchor": "50fbe17925f5f216ef9a",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "41218b77e16288a40442",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 9,
+    "text": "SRE Data Persistence",
+    "anchor": "8cbefe242e0e348ba405",
+    "token_estimate": 5
+  },
+  {
+    "passage_id": "c3d5c31b80f01992087a",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 10,
+    "text": "SRE Infra Foundations",
+    "anchor": "0db987a28a1fc1a722bc",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "a8d8dab77705b047a693",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 11,
+    "text": "SRE Observability",
+    "anchor": "2721bd748c998161803d",
+    "token_estimate": 5
+  },
+  {
+    "passage_id": "a2a38a09c06e3d9b94a5",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 12,
+    "text": "Wikidata Platform",
+    "anchor": "cba18c33f418819c8fee",
+    "token_estimate": 5
+  },
+  {
+    "passage_id": "6b56e2ba26c55443a064",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 13,
+    "text": "Wikimedia Performance",
+    "anchor": "30ab0a213939316d4316",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "68a697ea7b7ac38f29a4",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 14,
+    "text": "Event Platform",
+    "anchor": "c4dc272b7f8ca920bade",
+    "token_estimate": 4
+  },
+  {
+    "passage_id": "87f1f1d5d10b2905d711",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 15,
+    "text": "Release Engineering",
+    "anchor": "fc4208fb3bef1b05938d",
+    "token_estimate": 5
+  },
+  {
+    "passage_id": "5e84c76f69db7cfd86e3",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 16,
+    "text": "Fundraising",
+    "anchor": "f127dea52f160ac9e312",
+    "token_estimate": 3
+  },
+  {
+    "passage_id": "99297c848ec7afc2126c",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 17,
+    "text": "[edit]",
+    "anchor": "087add0d65b6cb61b077",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "c77817fef035954f1848",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d5b27af41680b26e08ad",
+    "ordinal": 18,
+    "text": "This guide is a work in progress. See also MariaDB/monitoring and MariaDB/Backups#Recovering a Snapshot",
+    "anchor": "66df56c8016a33bd7dad",
+    "token_estimate": 26
+  },
+  {
+    "passage_id": "e7879713b59ddd5aafa2",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "8c1f3d84928c5929eeb0",
+    "ordinal": 19,
+    "text": "Check the role of the failing DB host using Orchestrator. This is not necessarily the host the alert is for, a replica alert can indicate a master failure.",
+    "anchor": "69b037403c372e3685bf",
+    "token_estimate": 39
+  },
+  {
+    "passage_id": "4b65cd981419998e1c51",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "8c1f3d84928c5929eeb0",
+    "ordinal": 20,
+    "text": "If the host is a master, stop and escalate to a DBA. If out of hours escalate to the manager oncall.",
+    "anchor": "fd03de80c8e0ba58c6d4",
+    "token_estimate": 25
+  },
+  {
+    "passage_id": "9af7295c059e057ca3fd",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "8c1f3d84928c5929eeb0",
+    "ordinal": 21,
+    "text": "If the host is a replica, proceed to #Depooling_a_replica",
+    "anchor": "cb5d6e62f91cbe5a98ed",
+    "token_estimate": 15
+  },
+  {
+    "passage_id": "bb15533c42cb49ad505a",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "77045386f38560218ae5",
+    "ordinal": 22,
+    "text": "From one of the cluster management hosts (cumin1003.eqiad.wmnet, cumin2002.codfw.wmnet), in a screen or tmux session:",
+    "anchor": "df65ea11dfc0e5bbda46",
+    "token_estimate": 30
+  },
+  {
+    "passage_id": "9c0483d0fa029b0dc7c7",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "77045386f38560218ae5",
+    "ordinal": 23,
+    "text": "The cookbook will automatically depool the host if it is depoolable. Note that it will not depool a master — if the master is the one that has crashed, please call a DBA directly instead.",
+    "anchor": "45a21031e3c1dff693ac",
+    "token_estimate": 47
+  },
+  {
+    "passage_id": "0c71279eab764e4c92a5",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "77045386f38560218ae5",
+    "ordinal": 24,
+    "text": "If you depool a host, please create a task tagging #DBA so we can take a look at what happened.",
+    "anchor": "788b0c619ab6f1d581a0",
+    "token_estimate": 24
+  },
+  {
+    "passage_id": "c974006f952bec5d8344",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "893e9436b821a1906591",
+    "ordinal": 25,
+    "text": "Tip: If you're unsure which section a failed host is in, you can quickly identify it with a command like dbctl section all get | jq 'select(.. | .master? == \"pc2011\")' (replace with the right host).",
+    "anchor": "75d6f2b1120f385642b9",
+    "token_estimate": 50
+  },
+  {
+    "passage_id": "700aac47f2385ff89f9e",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "893e9436b821a1906591",
+    "ordinal": 26,
+    "text": "Using orchestrator (example) you can find other host in the remote dc. Then depool both hosts.",
+    "anchor": "5a6814822ba15dc22a04",
+    "token_estimate": 24
+  },
+  {
+    "passage_id": "77b307bdafcb90d9bf5b",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "893e9436b821a1906591",
+    "ordinal": 27,
+    "text": "Note: There is a safety check in dbctl that will ensure at least 2 parsercache sections are pooled. Before depooling a section, you can confirm how many are already depooled by checking https://noc.wikimedia.org/dbconfig/eqiad.json for pc section with weight of 0 for the primary db.",
+    "anchor": "e1fd710c4e25a69b74df",
+    "token_estimate": 71
+  },
+  {
+    "passage_id": "c3e6d79909425dc11606",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "893e9436b821a1906591",
+    "ordinal": 28,
+    "text": "If this threshold (at least 2 sections pooled) needs adjusted, this can be done by adding a dbctlconfig that maps parsercache_min_pooled_sections to the desired value in conftool extensions_config managed in puppet.",
+    "anchor": "fc8419d92877c258cf60",
+    "token_estimate": 54
+  },
+  {
+    "passage_id": "32f55f3c2efc34756d6f",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "205102023a1b572768cc",
+    "ordinal": 29,
+    "text": "The following cookbook runs Icinga checks and performs the pooling:",
+    "anchor": "91d2a2f456d1bb524b4f",
+    "token_estimate": 17
+  },
+  {
+    "passage_id": "7f0455e362e262969f53",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "6d1863eb5f66700cfffe",
+    "ordinal": 30,
+    "text": "To repool, simply just set the weight back to 1:",
+    "anchor": "9fc14f939d86e6899b84",
+    "token_estimate": 12
+  },
+  {
+    "passage_id": "214158cd20e6abc3f493",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "65a06c04f44bc7eef445",
+    "ordinal": 31,
+    "text": "This is a last-resort tool, use with CAUTION.",
+    "anchor": "cd1732da6718836d492e",
+    "token_estimate": 12
+  },
+  {
+    "passage_id": "ff74f844b099619717ec",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "65a06c04f44bc7eef445",
+    "ordinal": 32,
+    "text": "Use the sre.mysql.global-read-only cookbook to set/unset sections as read-only in both dbctl and on MariaDB.",
+    "anchor": "770faf17914da725c8ff",
+    "token_estimate": 27
+  },
+  {
+    "passage_id": "6ac708aa531de1538815",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "65a06c04f44bc7eef445",
+    "ordinal": 33,
+    "text": "The tool is idempotent. It makes changes on dbctl (if needed), runs `SET GLOBAL read_only=...` on MariaDB and updates Phabricator.",
+    "anchor": "f91a5228b88681323d35",
+    "token_estimate": 33
+  },
+  {
+    "passage_id": "a8c78160fb416a6086e0",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "65a06c04f44bc7eef445",
+    "ordinal": 34,
+    "text": "--sections section1,section2 is optional. Without it all sections are changed.",
+    "anchor": "124283aa7082f83340a9",
+    "token_estimate": 20
+  },
+  {
+    "passage_id": "15a02cde65106c5b641c",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "65a06c04f44bc7eef445",
+    "ordinal": 35,
+    "text": "Optional: --ignore-dirty-dbctl Force change without waiting for clean `dbctl` diff.",
+    "anchor": "75d8b549fd41a00ec2ab",
+    "token_estimate": 21
+  },
+  {
+    "passage_id": "49cf0417f9da2f41a15e",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d74b29c2cb2950fe070b",
+    "ordinal": 36,
+    "text": "A master coming back in READ ONLY mode is expected after a crash and it is done to prevent accidental corruption (or even more corruption on a crash).",
+    "anchor": "5f1f6b8434f1314e98c1",
+    "token_estimate": 38
+  },
+  {
+    "passage_id": "5a098da383eae7970f9e",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d74b29c2cb2950fe070b",
+    "ordinal": 37,
+    "text": "Unless you know what you are doing, do not set it back to writable: if unsure, call a DBA",
+    "anchor": "49acee7312b2b00f942d",
+    "token_estimate": 23
+  },
+  {
+    "passage_id": "157e78b88446aa918ef1",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "734951a936a2a587a082",
+    "ordinal": 38,
+    "text": "Reads will remain unaffected but no writes will be able to go through, the wikis on that master will be on read-only mode.",
+    "anchor": "ad8d17093701316165a6",
+    "token_estimate": 31
+  },
+  {
+    "passage_id": "d2a35f5235e1645973bf",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "734951a936a2a587a082",
+    "ordinal": 39,
+    "text": "To find out which wikis are those:",
+    "anchor": "3eaeba9bba484afaecef",
+    "token_estimate": 9
+  },
+  {
+    "passage_id": "16ee7d4960ca9285b4c6",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "e55cef405ea822bf599e",
+    "ordinal": 40,
+    "text": "If unsure, call a DBA",
+    "anchor": "3fd0e13bf727d64435ff",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "1a4723b414319392501d",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "e55cef405ea822bf599e",
+    "ordinal": 41,
+    "text": "If you know what you are doing:",
+    "anchor": "c81a129d7e38071175fc",
+    "token_estimate": 8
+  },
+  {
+    "passage_id": "998310476fded12dd1e9",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "e55cef405ea822bf599e",
+    "ordinal": 42,
+    "text": "If this is part of a maintenance and pages it could be due to expired downtime or because it was forgotten to be downtimed. If that is the case, contact whoever is doing the maintenance, if it is you, remember to:",
+    "anchor": "0014babe9e53a591edd0",
+    "token_estimate": 54
+  },
+  {
+    "passage_id": "aefe91b3b12ae16dd692",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "2c02e1d75985d1e34423",
+    "ordinal": 43,
+    "text": "The alert is shared between masters and replicas, but replicas should never have read_only=OFF.",
+    "anchor": "a30f92e9fa45a8a8d628",
+    "token_estimate": 24
+  },
+  {
+    "passage_id": "722dae29dddeb9b878e4",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "2c02e1d75985d1e34423",
+    "ordinal": 44,
+    "text": "Puppet controls the read_only flag during start, and if the alert fires it means it was manually changed, and should be set back to ON as soon as possible. But again If unsure, call a DBA",
+    "anchor": "b13c5695ef62f3ad1c1d",
+    "token_estimate": 47
+  },
+  {
+    "passage_id": "2617c51735e09b80db80",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d66ee3db8abbca9cd012",
+    "ordinal": 45,
+    "text": "See an example task and checklist at: https://phabricator.wikimedia.org/T313383",
+    "anchor": "5faf7c0682194d524d1a",
+    "token_estimate": 20
+  },
+  {
+    "passage_id": "7876113ca60cddfebcaa",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d66ee3db8abbca9cd012",
+    "ordinal": 46,
+    "text": "See: Primary database switchover",
+    "anchor": "78abec749ee9318c70d4",
+    "token_estimate": 8
+  },
+  {
+    "passage_id": "3abfa35ce58076e6d8bd",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "2e82ce30641146b48681",
+    "ordinal": 47,
+    "text": "If the master is not available, or replication is broken, this is a more complex case. The reason is that replicas will have executed different amount of transactions and will be in a close, but different state. E.g. slave1 has executed transactions A, while slave2 has executed transactions A, B and C. In addition to that, if we do not have access to the master's binary log (or it has not properly been synchronized to disk after a crash), we will have to recover from a replica. In theory, with semi-sync replication, no transaction will be lost, and at least one replica will have the change, but all other replicas will be on different coordinates (and binary log position is only local to the masters).",
+    "anchor": "81b6ea875dd7cd39f16d",
+    "token_estimate": 178
+  },
+  {
+    "passage_id": "065aae695cdd4a878567",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "2e82ce30641146b48681",
+    "ordinal": 48,
+    "text": "Scenario 1 -master is recoverable: just wait until the master restarts, it will avoid headaches and be faster and less disruptive than trying to failover it.",
+    "anchor": "c6ece9671268c80414e0",
+    "token_estimate": 40
+  },
+  {
+    "passage_id": "28cd899f4a6ee301aed4",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "2e82ce30641146b48681",
+    "ordinal": 49,
+    "text": "Scenario 2 -master is not recoverable, but its binary log is (and all replicas have a less or equal amount of data):",
+    "anchor": "47160055a63a6b29c6dc",
+    "token_estimate": 29
+  },
+  {
+    "passage_id": "cd442553d13385bd8c29",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "2e82ce30641146b48681",
+    "ordinal": 50,
+    "text": "Scenario 3 -neither master is recoverable nor its binary logs (or a master binary log is behind a replica binary log): We need to put all servers in the same state, using the most up-to-date replica, then perform the regular failover process. This is the most complicated part without using GTIDs:",
+    "anchor": "d24a393d13392ff7e820",
+    "token_estimate": 75
+  },
+  {
+    "passage_id": "cd1c7c1b7e1be7560643",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "2e82ce30641146b48681",
+    "ordinal": 51,
+    "text": "Again, these steps can be automated.",
+    "anchor": "b90f9baf93f131de499a",
+    "token_estimate": 9
+  },
+  {
+    "passage_id": "dbba0e021eb28aa80f7d",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "692d593c259262a1a969",
+    "ordinal": 52,
+    "text": "See also MySQL#Replication lag for additional tips.",
+    "anchor": "ff12402f7241b129e666",
+    "token_estimate": 13
+  },
+  {
+    "passage_id": "9f9dd9aef898bfd62610",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "1bd59870c0949b7a0ec1",
+    "ordinal": 53,
+    "text": "One common cause of lag that is easy to check and repair is hardware issues.",
+    "anchor": "12e58426f296c8b50ec0",
+    "token_estimate": 19
+  },
+  {
+    "passage_id": "78aa7cdb1e10eee0f3cf",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "5f32f2536225ab618b38",
+    "ordinal": 54,
+    "text": "Databases have a lot (and I mean a lot) of IO pressure, and while it is not insane, it means that 3-year old drives are very prone to fail.",
+    "anchor": "75a5c58d4a6ed1b9b2f7",
+    "token_estimate": 35
+  },
+  {
+    "passage_id": "b5d85a1267273df5aee9",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "5f32f2536225ab618b38",
+    "ordinal": 55,
+    "text": "As an operator, you are already familiar with the way drives fail (not very reliably, to be honest). All important databases have a hardware RAID, which means 1 disk can fail at a time, usually with very little impact. When that happens, the icinga alert \"1 failed LD(s) (Degraded)\" should tell you it is time to replace at least one disk. Usually there are spares onsite or the servers are under warranty, which means you can create a ticket to ops-eqiad or ops-codfw and let Chris or Papaul know that should take it off and insert a new one, the hw RAID should automatically reconstruct itself.",
+    "anchor": "9d0c695b7de8ece1b969",
+    "token_estimate": 149
+  },
+  {
+    "passage_id": "caf6377144f553f52ebc",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "5f32f2536225ab618b38",
+    "ordinal": 56,
+    "text": "To check the RAID status, execute (please also check PERCCli as the new databases are using a new RAID controller and that is the tool to use:",
+    "anchor": "f18fad9089df516aafcc",
+    "token_estimate": 36
+  },
+  {
+    "passage_id": "89e3c92cad99b7c1bb4e",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "5f32f2536225ab618b38",
+    "ordinal": 57,
+    "text": "You can simply use the wrapper that would pick the right tool for you:",
+    "anchor": "40502bde1afac22d253c",
+    "token_estimate": 18
+  },
+  {
+    "passage_id": "4d65b0793a49dbee0a1d",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "5f32f2536225ab618b38",
+    "ordinal": 58,
+    "text": "Alternatively, the megacli command is:",
+    "anchor": "4404ccc1e6f1072057be",
+    "token_estimate": 10
+  },
+  {
+    "passage_id": "18f49c4600eeec51e5e4",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "5f32f2536225ab618b38",
+    "ordinal": 59,
+    "text": "And check the section \"Devices present\"",
+    "anchor": "6eef1463463c013eb824",
+    "token_estimate": 10
+  },
+  {
+    "passage_id": "97a60a9d7fb08b27153b",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "5f32f2536225ab618b38",
+    "ordinal": 60,
+    "text": "To identify the particular disk",
+    "anchor": "9fac6c1bb1a5306e8c24",
+    "token_estimate": 8
+  },
+  {
+    "passage_id": "b823047192632a401c28",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "5f32f2536225ab618b38",
+    "ordinal": 61,
+    "text": "Check in particular for the Firmware State (on or off), the S.M.A.R.T alerts, and the number of medium errors (a few, like a dozen, should not affect much performance, but when there are hundreds of errors in a short timespan, that is an issue).",
+    "anchor": "c6c67b643dd9b7182a18",
+    "token_estimate": 62
+  },
+  {
+    "passage_id": "c44c7ba8efab7ad419fa",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "5f32f2536225ab618b38",
+    "ordinal": 62,
+    "text": "Sadly, disks fail in a very creative way, and while our RAIDs controllers are reliable enough to 1) continue despite medium errors and 2) disable the disk when it fails completely; in a state of \"almost failing\", there could be lag issues. If that is the case, executing:",
+    "anchor": "48f3afd5f443cd9e7ccf",
+    "token_estimate": 68
+  },
+  {
+    "passage_id": "42fcaf82e2a11cd5790c",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "5f32f2536225ab618b38",
+    "ordinal": 63,
+    "text": "where #:# is enclosure:slot, will take the particular physical drive offline so that it can be replaced later.",
+    "anchor": "087e29692e962d32cb33",
+    "token_estimate": 28
+  },
+  {
+    "passage_id": "da23ef7596ae46ec46f1",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "5f32f2536225ab618b38",
+    "ordinal": 64,
+    "text": "For perccli commands check PERCCli",
+    "anchor": "f05c1311e27d2af27c5f",
+    "token_estimate": 9
+  },
+  {
+    "passage_id": "c71af85075897d344955",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "1a1cc2cc406dbaa017ee",
+    "ordinal": 65,
+    "text": "If all the disks are looking good, it can be that the RAID controller went to WriteThrough mode because of a failed BBU or because it is in a learning cycle (which should not because it is disabled in our environment). If the Cache Policy is set to WriteThrough it will dramatically affect performance. In order to check the Current Policy (that is it, the active one):",
+    "anchor": "1e8d1e73a7043ed3f9bc",
+    "token_estimate": 93
+  },
+  {
+    "passage_id": "91866a41015d37768cf7",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "1a1cc2cc406dbaa017ee",
+    "ordinal": 66,
+    "text": "If it is not in WriteBack mode, it means (most likely) that the BBU has failed for some reason and the default is to switch back to WriteThrough as it is safer. You can check the BBU status with:",
+    "anchor": "847581eaebaa2f3631a6",
+    "token_estimate": 49
+  },
+  {
+    "passage_id": "9d1063a6662c1a9e020d",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "1a1cc2cc406dbaa017ee",
+    "ordinal": 67,
+    "text": "If you are in an emergency, you can always force WriteBack, but this can lead to data loss if there is a power failure, so use it carefully",
+    "anchor": "009a8668b8b4becb0c1f",
+    "token_estimate": 35
+  },
+  {
+    "passage_id": "8042fdbe26f3de9fa488",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "1a1cc2cc406dbaa017ee",
+    "ordinal": 68,
+    "text": "For Perccli run the following command, where /c0 is controller 0 (the first controller):",
+    "anchor": "7d87e72815ead54cc1e0",
+    "token_estimate": 22
+  },
+  {
+    "passage_id": "97b0971c8fbc4682aab1",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "1a1cc2cc406dbaa017ee",
+    "ordinal": 69,
+    "text": "To check the relearn cycle status:",
+    "anchor": "3046b6b3f180fb8dc356",
+    "token_estimate": 9
+  },
+  {
+    "passage_id": "9cd4a6de26fef6eb9158",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "c944bbd34f1c576dfcf8",
+    "ordinal": 70,
+    "text": "If you need to kill queries from a host, connect to any cumin host (cumin1001.eqiad.wmnet or cumin2001.codfw.wmnet) and run:",
+    "anchor": "f1748caede78bcc2311f",
+    "token_estimate": 31
+  },
+  {
+    "passage_id": "68b6179ccc70eceb2226",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "c944bbd34f1c576dfcf8",
+    "ordinal": 71,
+    "text": "Please note that this can alleviate the symptoms, but will not fix the root cause.",
+    "anchor": "f0f284e5e634070169b0",
+    "token_estimate": 21
+  },
+  {
+    "passage_id": "e6c18efdadbc3de660e4",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "c944bbd34f1c576dfcf8",
+    "ordinal": 72,
+    "text": "If a host or several of them are complaining due to max_connection limit as seen by the processlist and max_connection errors on the mysql graphs or on application server logs (sometimes causing also \"Not enough idle PHP-FPM workers for Mediawiki\" as a cascade error), it is possible that one or several queries run by mysql are taking over all mysql resources, snowballing into blocking others for execution. While mysql server will likely stay up, as they use a queue to avoid executing many of them at the same time, the queing will increase extra latency on execution, affecting application servers resources, too.",
+    "anchor": "c5766e0a043e017d1d1e",
+    "token_estimate": 155
+  },
+  {
+    "passage_id": "12aaad2271976f529363",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "c944bbd34f1c576dfcf8",
+    "ordinal": 73,
+    "text": "This can be caused by a deliberate abuse of expensive functionality or API call, by a bug on application code sending poorly-optimized queries, or a change on the query planner that makes old fast queries now slower.",
+    "anchor": "a05090aa254aa84e52f8",
+    "token_estimate": 54
+  },
+  {
+    "passage_id": "a47893f2fb1b4e06a9d4",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "c944bbd34f1c576dfcf8",
+    "ordinal": 74,
+    "text": "To fix the issue, the best way is disabling on mediawiki the functionality that is sending the long running queries.",
+    "anchor": "bc424f5021abf2ef135a",
+    "token_estimate": 29
+  },
+  {
+    "passage_id": "059b5234992d6661a566",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "c944bbd34f1c576dfcf8",
+    "ordinal": 75,
+    "text": "MariaDB mediawiki instances have a query killer enabled that kicks in when it detects idle queries or queries executing for longer than 60 seconds (agreed as the maximum query time allowed by web requests). If a connection overload is detected (by monitoring current connections), an overload killer also kicks in.",
+    "anchor": "0cbb947c293b8bc07a9e",
+    "token_estimate": 79
+  },
+  {
+    "passage_id": "df69cae77bed9270dcc9",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "c944bbd34f1c576dfcf8",
+    "ordinal": 76,
+    "text": "You can also login to the database and do `show processlist`. Find the long-running queries and run `kill QUERY ID` (replace QUERY ID with the id given in show processlist).",
+    "anchor": "16d2c53fc7c8a8676f85",
+    "token_estimate": 44
+  },
+  {
+    "passage_id": "3b395355c6632796cb59",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "3b93f1e7e42bfcfa92dc",
+    "ordinal": 77,
+    "text": "There is an alert \"MariaDB memory\", that checks that there is not memory over-commitment due to a missconfiguration, heavy activity or a leak. For now the alert is just a check that there is enough free memory (not counting filesystem cache) for client connections, utilities and background tasks. If a host starts alerting (or starts OOMing), reduce the buffer pool or load to go back to the 80-90% memory usage.",
+    "anchor": "6e9a1fe1875ed8a0596f",
+    "token_estimate": 104
+  },
+  {
+    "passage_id": "f07ca8c103068e6bcb68",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "3b93f1e7e42bfcfa92dc",
+    "ordinal": 78,
+    "text": "While MariaDB can reduce the buffer pool in a hot way, just by typing SET GLOBAL innodb_buffer_pool_size = <new size in bytes>;. Not recommended to be run when the host is pooled as it might create stalls/replication lag while the buffer pool is being resized.",
+    "anchor": "587a38c58691e63cd83f",
+    "token_estimate": 65
+  },
+  {
+    "passage_id": "43a6b2c6f5b221a9c9f7",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "3d7f1adb6413a0c2f601",
+    "ordinal": 79,
+    "text": "Clouddb hosts are sometimes alerting because less than 5% of memory is available (more information at phab:T365164). This can be usually fixed by restarting the Systemd service that is using too much memory. Please note that each clouddb* host has more than one mysql service (e.g. mysql@s4.service and mysql@s6.service).",
+    "anchor": "513c3c3bd510d3fa3b4f",
+    "token_estimate": 81
+  },
+  {
+    "passage_id": "561f446deff32a07aec7",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "3d7f1adb6413a0c2f601",
+    "ordinal": 80,
+    "text": "Check the memory usage with systemctl status and restart the service with systemctl restart.",
+    "anchor": "f29ecc70c813d7a29445",
+    "token_estimate": 23
+  },
+  {
+    "passage_id": "81cb348e9222732a93ed",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "3d7f1adb6413a0c2f601",
+    "ordinal": 81,
+    "text": "Important: remember to restart the replication with START SLAVE; after restarting the service, because it does not resume automatically.",
+    "anchor": "0547026bd9fe4956dc16",
+    "token_estimate": 34
+  },
+  {
+    "passage_id": "26997a9964854b57e5bd",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "92989aeac56d840b8c50",
+    "ordinal": 82,
+    "text": "The best (and fastest) way to repair a replica (or a master) is to use the regular provisioning workflow - to copy the latest snapshot from dbprovXXXX hosts. Depending on the section it should take minutes to 1h.",
+    "anchor": "6ca3e732ee219eb408ae",
+    "token_estimate": 53
+  },
+  {
+    "passage_id": "dd0146b4a533a15bc8e7",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "92989aeac56d840b8c50",
+    "ordinal": 83,
+    "text": "If only a partial recovery is needed (single dropped table), logical backups (on the same dbprov* hosts) may be faster and more flexible. A full logical recovery can take from 12 hours to 1 day.",
+    "anchor": "4f965d0edba6408ad78a",
+    "token_estimate": 49
+  },
+  {
+    "passage_id": "b03773a9e74327e6c430",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "92989aeac56d840b8c50",
+    "ordinal": 84,
+    "text": "More info at MariaDB/Backups.",
+    "anchor": "b7b99021df9a0bca8e1a",
+    "token_estimate": 8
+  },
+  {
+    "passage_id": "81adea667f7584a14a64",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "26b778fc237cf1c5cc15",
+    "ordinal": 85,
+    "text": "If for some reason the short term backups/provisioning files are not enough, you can get those from bacula. Recover from bacula to dbprovXXXX then use the same method as above.",
+    "anchor": "8a06ec30f8100bd81b55",
+    "token_estimate": 44
+  },
+  {
+    "passage_id": "13afff463d47f88fc89a",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "26b778fc237cf1c5cc15",
+    "ordinal": 86,
+    "text": "More info at Bacula.",
+    "anchor": "adeaf3b09e7f34b8f47b",
+    "token_estimate": 5
+  },
+  {
+    "passage_id": "cc3e095e2337ec62b1c4",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "dd07366b036e1850cf38",
+    "ordinal": 87,
+    "text": "If for some reason no backups are available, but replicas are, we can clone a running mariadb server with xtrabackup or the files of a stopped one into another host (see transfer.py utility for both file and xtrabackup transfers).",
+    "anchor": "6554387289a96af68986",
+    "token_estimate": 58
+  },
+  {
+    "passage_id": "555429c19fe9dd643eb7",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "fd31744ddfe7d76f0d87",
+    "ordinal": 88,
+    "text": "Binlogs are not a backup method, but they are files containing the transactions in the last month, on every master and replica. They are helpful to do point in time recovery if replication is not working, allowing to move forward a backup until an arbitrary point in time (e.g. before a DROP was sent).",
+    "anchor": "24b23521f8446096d969",
+    "token_estimate": 76
+  },
+  {
+    "passage_id": "9ea741ee237aff384cfd",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "fd31744ddfe7d76f0d87",
+    "ordinal": 89,
+    "text": "Point in time recovery at the moment is fully manual but its automation is a work in progress.",
+    "anchor": "0014f123c7c78fad2a87",
+    "token_estimate": 24
+  },
+  {
+    "passage_id": "183283830a6a824fde6e",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "94eda18b891260149a8e",
+    "ordinal": 90,
+    "text": "db-compare utility allows to manually check the difference between 2 hosts. This is right now manually run, but it is schedule to be constantly running comparing host inconsistencies. It can be run from any cumin host.",
+    "anchor": "6d0d7a6c56adc04cd7e9",
+    "token_estimate": 55
+  },
+  {
+    "passage_id": "1609bc53177020435420",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "94eda18b891260149a8e",
+    "ordinal": 91,
+    "text": "Aside from a manual check, the other most common way to find inconsistencies is for replication to break as a change is applied to a master that cannot be applied to the replica.",
+    "anchor": "e3230b6a1d04d8fdc1bd",
+    "token_estimate": 45
+  },
+  {
+    "passage_id": "ed2a7def5ed32b5940b4",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "94eda18b891260149a8e",
+    "ordinal": 92,
+    "text": "Steps to perform:",
+    "anchor": "aea76882f20189e4cc6a",
+    "token_estimate": 5
+  },
+  {
+    "passage_id": "365dfd5480ac38ccebb9",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "94eda18b891260149a8e",
+    "ordinal": 93,
+    "text": "NEVER use sql_slave_skip_counter! Not only you will skip full transactions (despite maybe a single row being problematic, creating more drift issues), you will make hosts have a different gtid counter. If you have to manually change something on only 1 host, apply the dml with set sql_log_bin=0; so it does not go to the binlog/gtid counter/replication.",
+    "anchor": "f54332000124c0810c53",
+    "token_estimate": 89
+  },
+  {
+    "passage_id": "95ac716698af143fa83d",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d72c08c0af77f2e67fce",
+    "ordinal": 94,
+    "text": "There is an additional case, which is if a \"split brain\" has happened and correct data was written to both master and replicas.",
+    "anchor": "2c3f1091199812d4dfe7",
+    "token_estimate": 32
+  },
+  {
+    "passage_id": "8ac82a4398c3989c61e9",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d72c08c0af77f2e67fce",
+    "ordinal": 95,
+    "text": "This is rare given that all replicas are set in read only to prevent this issue. Also this is difficult to handle- ideally data should be merged into a single unified version.",
+    "anchor": "ddccbcec2793401b7337",
+    "token_estimate": 44
+  },
+  {
+    "passage_id": "ff7c25488ab058dd733e",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d72c08c0af77f2e67fce",
+    "ordinal": 96,
+    "text": "If data affected is derived (non-canonical) \", eg. *links tables, you could temporarily chose a single set of servers, go back to read/write and the try to merge the difference in the background.",
+    "anchor": "2f13a4de75a6bee9c94f",
+    "token_estimate": 49
+  },
+  {
+    "passage_id": "b5d5a8512ff754846e15",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "d72c08c0af77f2e67fce",
+    "ordinal": 97,
+    "text": "If canonical data is affected (page, revision, user), consider setting up the application/section in read only until data is reconciliated, so new versions are not added that could make the 2 data version merging more complicated.",
+    "anchor": "dc8776109597f5d48035",
+    "token_estimate": 58
+  },
+  {
+    "passage_id": "4fa6b7e0ca8a881797b8",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "7249661422774bf0255c",
+    "ordinal": 98,
+    "text": "See Portal:Data Services/Admin/Runbooks/Depool wikireplicas",
+    "anchor": "26b723a68a3ddac4e081",
+    "token_estimate": 15
+  },
+  {
+    "passage_id": "f9a904a1b33290ffd7db",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "8d875b11ec7a5318476b",
+    "ordinal": 99,
+    "text": "binlogs are typically stored at /srv/sqldata/ and called: db$HOSTNAME-bin.XXX If you need to explore them, simply ssh to the host and run:",
+    "anchor": "d2f16affa44b83c506fb",
+    "token_estimate": 35
+  },
+  {
+    "passage_id": "cc06bd767d6d1b09791e",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "61875527db15b09866a0",
+    "ordinal": 100,
+    "text": "Here are quick snippets to help you check a replica's health",
+    "anchor": "2f62621f58c0ab0dff0e",
+    "token_estimate": 15
+  },
+  {
+    "passage_id": "192755aad715968a808d",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "61875527db15b09866a0",
+    "ordinal": 101,
+    "text": "Be sure that Exec_Master_Log_Pos and Read_Master_Log_Pos offset are moving forward. You can also add the snippets to your .rc files for direct usage",
+    "anchor": "b1e667b2394ad0c5908d",
+    "token_estimate": 37
+  },
+  {
+    "passage_id": "710d4b3d95083210ad7c",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "580bfada3b07a65647bb",
+    "ordinal": 102,
+    "text": "If a table gets corrupted, generally the safest thing is to reclone the host.",
+    "anchor": "709f1e566c7249856ee0",
+    "token_estimate": 20
+  },
+  {
+    "passage_id": "8a70af248e01b9c83e8a",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "580bfada3b07a65647bb",
+    "ordinal": 103,
+    "text": "If an index gets corrupted, normally, through replication it will give this error:",
+    "anchor": "0bdf81a7a8c4ee0af743",
+    "token_estimate": 21
+  },
+  {
+    "passage_id": "c3ec8e4bca323807ce1e",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "580bfada3b07a65647bb",
+    "ordinal": 104,
+    "text": "In order to rebuild the index and restart replication the following can be executed from a cumin host:",
+    "anchor": "d3c73a9480abf351c398",
+    "token_estimate": 26
+  },
+  {
+    "passage_id": "ee69425251469ab165e0",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "8f71869cbaf6a983d9f8",
+    "ordinal": 105,
+    "text": "This is not something urgent or critical during an oncall, simply create a task and tag DBA",
+    "anchor": "b64c2b6328b110d78402",
+    "token_estimate": 23
+  },
+  {
+    "passage_id": "95acdf2b7536b5dffd22",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "8f71869cbaf6a983d9f8",
+    "ordinal": 106,
+    "text": "The above alert specifies that the Event Scheduler is OFF and it should be ON, how to check and verify",
+    "anchor": "5238aa7ca54a8bd76aa6",
+    "token_estimate": 26
+  },
+  {
+    "passage_id": "f42c7a1dba70de93c5f9",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "8f71869cbaf6a983d9f8",
+    "ordinal": 107,
+    "text": "It should always be ON",
+    "anchor": "803087587934cd12eabe",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "f5835595a436819c4748",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "c487a26bb1a4394772ca",
+    "ordinal": 108,
+    "text": "This is not something urgent or critical during an oncall, simply create a task and tag DBA",
+    "anchor": "9645caf0119081e18252",
+    "token_estimate": 23
+  },
+  {
+    "passage_id": "7ae95afcb50acf3f1edf",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "c487a26bb1a4394772ca",
+    "ordinal": 109,
+    "text": "This alert complements the existing Event Scheduler check. While the Event Scheduler check verifies that the event_scheduler system variable is ON, it does not verify that the actual events (query killers) are installed and enabled. It is possible for the scheduler to be running while individual events are missing or disabled.",
+    "anchor": "5343c34f703509a01032",
+    "token_estimate": 82
+  },
+  {
+    "passage_id": "a489543154ab4f5383ec",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "c487a26bb1a4394772ca",
+    "ordinal": 110,
+    "text": "In order to check this:",
+    "anchor": "f70d4f3fc6116d6569fa",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "140ac781bc4ee368a917",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "c487a26bb1a4394772ca",
+    "ordinal": 111,
+    "text": "Connect to the affected host and check the state of events in the ops database:",
+    "anchor": "5cdf095f7960059efa0e",
+    "token_estimate": 20
+  },
+  {
+    "passage_id": "0a69924cdaf745bb32ca",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "3063fba74a24eaf9cfa8",
+    "ordinal": 112,
+    "text": "pt-heartbeat-wikimedia is a Wikimedia-customized version of Percona Toolkit's pt-heartbeat. It runs as a systemd service on master-role MariaDB hosts and continuously writes a timestamped heartbeat row to the heartbeat database at 1-second intervals.",
+    "anchor": "0261b217974791c150fc",
+    "token_estimate": 63
+  },
+  {
+    "passage_id": "a1c5c18b82400b48707b",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "3063fba74a24eaf9cfa8",
+    "ordinal": 113,
+    "text": "The NRPE check simply verifies that exactly one pt-heartbeat-wikimedia process is running:",
+    "anchor": "1a7967faa19e0863191f",
+    "token_estimate": 23
+  },
+  {
+    "passage_id": "9461f30b1ce6971a7711",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "3063fba74a24eaf9cfa8",
+    "ordinal": 114,
+    "text": "It fires CRITICAL if zero processes are found (the service is down) If pt-heartbeat-wikimedia is not running on a master:",
+    "anchor": "8e7af706499e61bee649",
+    "token_estimate": 31
+  },
+  {
+    "passage_id": "bf3ef0c56c7b02ed43a6",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "3063fba74a24eaf9cfa8",
+    "ordinal": 115,
+    "text": "This file is deployed by Puppet (mariadb::heartbeat). If missing, run puppet on the host.",
+    "anchor": "9c24a9a3607ac57a267e",
+    "token_estimate": 23
+  },
+  {
+    "passage_id": "e57b264a071185653902",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "3063fba74a24eaf9cfa8",
+    "ordinal": 116,
+    "text": "The monitor is only expected to fire on master role hosts. If this alert fires on a host that is not currently a master (e.g., after a failover), the Puppet role may not have been updated.",
+    "anchor": "742a4930f240d8b78302",
+    "token_estimate": 47
+  },
+  {
+    "passage_id": "fc60f6cffa05dba518c8",
+    "source_id": "a80d620c06908c65a45d",
+    "section_id": "3063fba74a24eaf9cfa8",
+    "ordinal": 117,
+    "text": "This page is a part of the SRE Data Persistence technical documentation (go here for a list of all our pages)",
+    "anchor": "498a79af87d667f6bbf4",
+    "token_estimate": 28
+  },
+  {
+    "passage_id": "42d0597ad2fc5e068ae2",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "1d353a0ed3ffb2faeb4c",
+    "ordinal": 0,
+    "text": "Datacenter switchovers (web search) are a standard response to certain types of situations, and involve changing which data center serves as the primary data center. Technology organizations regularly practice datacenter switchovers to ensure that tooling and hardware will respond appropriately in case of an emergency. Moreover, switching between datacenters makes room for potentially disruptive maintenance work on inactive servers, such as database upgrades/changes, hardware replacement etc. In other words, while we're serving traffic from an active datacentre, we are doing our regular upkeep work on the inactive one to maintain its efficiency and reliability.",
+    "anchor": "0fac8f4c3a11864122e7",
+    "token_estimate": 168
+  },
+  {
+    "passage_id": "4da1103630f373c42782",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "1d353a0ed3ffb2faeb4c",
+    "ordinal": 1,
+    "text": "At Wikimedia a datacentre switchover means switching over different components between our two main datacentres: eqiad and codfw.",
+    "anchor": "d7b87d83796dc62deefe",
+    "token_estimate": 33
+  },
+  {
+    "passage_id": "f71a374226565b880c30",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "1d353a0ed3ffb2faeb4c",
+    "ordinal": 2,
+    "text": "We perform two datacenter switchovers annually, during the week of the solar equinox:",
+    "anchor": "7e6a16d8765727e050b6",
+    "token_estimate": 22
+  },
+  {
+    "passage_id": "d3ad4979f3372672b6e8",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "1d353a0ed3ffb2faeb4c",
+    "ordinal": 3,
+    "text": "See #Upcoming Switches for the next switchover dates, and Switch Datacenter/Switchover Dates for a pre-calculated list of switchover dates through 2050.",
+    "anchor": "de5169dced275601177e",
+    "token_estimate": 38
+  },
+  {
+    "passage_id": "3f2e704e27d2b7610d05",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "1d353a0ed3ffb2faeb4c",
+    "ordinal": 4,
+    "text": "Our switchover process is broken down into stages, where some can progress independently, while others need to progress in lockstep. This page documents all the steps needed for this work broken down by component. SRE/Service Operations is driving the process and maintains the software necessary to run the switchover, with a little help from their friends.",
+    "anchor": "ceadf2b6fb3ab9890cc9",
+    "token_estimate": 90
+  },
+  {
+    "passage_id": "7a6f0b7daf106ec01f7b",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "0f0087d83ab52216255e",
+    "ordinal": 5,
+    "text": "Impact of a switchover is expected to be 2-3 minutes of read-only for MediaWiki including extensions. Any other services/features/infrastructures not participating directly in the Switchover will continue to work as usual. However, anything relying on MediaWiki indirectly (e.g. via some data pipeline) may experience some minor impact, for example some delay in receiving events. This is expected.",
+    "anchor": "525ebd09ce7656632e0c",
+    "token_estimate": 100
+  },
+  {
+    "passage_id": "a0934f5cd7b39601510b",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "8934d492cbcdc6fe76c3",
+    "ordinal": 6,
+    "text": "Read-only is a two-step process: we first set MediaWiki itself read-only and then the MediaWiki databases. We allow an amount of time between the two so as to allow the last in-flight edits to land safely. All read-only functionality will continue to function as usual.",
+    "anchor": "740bb2e9b12bcb3c03de",
+    "token_estimate": 68
+  },
+  {
+    "passage_id": "fe985aca11f511599d12",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "8934d492cbcdc6fe76c3",
+    "ordinal": 7,
+    "text": "During read-only, any kind of writes reaching our MediaWiki databases (UPDATE, DELETE, INSERT in SQL terms) will be denied. Additionally, any features ignoring the global MediaWiki read-only configuration will not function during this time window. This scheduled read-only period adds a 0.001% MediaWiki edit unavailability per year.",
+    "anchor": "74f4d9c1854975c686ff",
+    "token_estimate": 84
+  },
+  {
+    "passage_id": "6b870358409b21d249a7",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "b65b74ecab6d6cc1b744",
+    "ordinal": 8,
+    "text": "Datacenter Switchovers take place twice a year. In March we move northward to Eqiad, and in September we move southward to Codfw. This coincides with the Solar Equinox, where we assume that the Northward Solar Equinox happens on March 21st, and the Southward Solar Equinox on September 21st. (It is on purpose that this does not match the the astronomical event exactly.)",
+    "anchor": "60516a3a7b77f6260fda",
+    "token_estimate": 93
+  },
+  {
+    "passage_id": "0750fbd045f354cc64cc",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "b65b74ecab6d6cc1b744",
+    "ordinal": 9,
+    "text": "Disruptive operations such as the MediaWiki Switchover (see below) will target 14:00 UTC as their start time. However, SRE Service Operations reserves the right to adjust this by up to +/- 2h with sufficient prior notification.",
+    "anchor": "c19aab33cd57add6fa5f",
+    "token_estimate": 57
+  },
+  {
+    "passage_id": "f6899337e5e0fde266f0",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "b65b74ecab6d6cc1b744",
+    "ordinal": 10,
+    "text": "A controlled switchover occurs over a span of 8 days:",
+    "anchor": "1e1eb7221c23ee81b8ec",
+    "token_estimate": 14
+  },
+  {
+    "passage_id": "2bde3a303d3f02c0f84c",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "9fc68351fe87931b17ea",
+    "ordinal": 11,
+    "text": "Non read-only parts of the Switchover always take place on Tuesday. (With the exception of mw-wikifunctions, see note). This process is non-disruptive and lower-risk, and it may be scheduled @ 14:00 UTC, however that is not necessary.",
+    "anchor": "b791f75a49eeef9827bd",
+    "token_estimate": 59
+  },
+  {
+    "passage_id": "aafcf9eaba990de9795e",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "a2417200ad013f0af2e8",
+    "ordinal": 12,
+    "text": "The MediaWiki Switchover (read-only) will always take place on the Wednesday of the above mentioned week. During read-only (2-3 minutes) no Wikis will be editable and editors will be seeing a warning message asking to try again later. Read-only starts @ 14:00 UTC (subject to change with sufficient prior notification, as noted above). Readers should experience no changes for the entirety of the event.",
+    "anchor": "913e88fe0d2edc95596d",
+    "token_estimate": 101
+  },
+  {
+    "passage_id": "50873fb67def8ed27b9b",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "a2417200ad013f0af2e8",
+    "ordinal": 13,
+    "text": "Note: For the next 7 calendar days after the MW read-only phase traffic will be flowing solely to one datacentre (destination), rendering the other datacenter effectively inactive.",
+    "anchor": "e882271c0e6d30475479",
+    "token_estimate": 45
+  },
+  {
+    "passage_id": "f3d9314999cc9ab621c3",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "f5994e2626e8bdaf5616",
+    "ordinal": 14,
+    "text": "At your convenience, after coordinating with deployers, you may switch the Special cases",
+    "anchor": "6b5e3d20653764e57594",
+    "token_estimate": 22
+  },
+  {
+    "passage_id": "3d508901dbc0d07594f5",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "bba1b880b7ae5c3ba6e7",
+    "ordinal": 15,
+    "text": "A week later, we activate caching and services in the inactive/secondary datacenter again. With traffic flowing in both DCs, we are back in the normal Multi-DC mode. This period may be extended, depending how maintenance work progresses at the inactive DC.",
+    "anchor": "c567c1763201455dbbc3",
+    "token_estimate": 64
+  },
+  {
+    "passage_id": "1a8009f6af742d59a2aa",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "1a93c7a6569f1f8ae308",
+    "ordinal": 16,
+    "text": "See Switch Datacenter/Coordination coordinate dates and communication plan with involved groups.",
+    "anchor": "bb56b089f7ae5260c4b1",
+    "token_estimate": 24
+  },
+  {
+    "passage_id": "cc04dc99da2b47198229",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "b33e77db6aaac1d029bc",
+    "ordinal": 17,
+    "text": "Run a \"live test\" of the MediaWiki cookbook and a dry-run for everything.",
+    "anchor": "9d8462e6ee80f754b38f",
+    "token_estimate": 19
+  },
+  {
+    "passage_id": "465bb03c3f211fc1cca4",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "b33e77db6aaac1d029bc",
+    "ordinal": 18,
+    "text": "Depending on what changes have occurred to our infrastructure/production from the previous switchover, code changes in cookbooks are expected. The purpose of the live-test and the dry-run is to test most of the existing and updated codepaths, and identify potential issues there.",
+    "anchor": "15c74776b945e317d601",
+    "token_estimate": 70
+  },
+  {
+    "passage_id": "e9ab9a85ae9ddc252647",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "83a2cae768e6cf6ab347",
+    "ordinal": 19,
+    "text": "A dry-run is available for both cookbooks we use during a switchover: sre.switchdc.mediawiki and sre.discovery.datacenter. During a dry-run the direction is the one we have announced.",
+    "anchor": "b2cd92daf54e02a0babc",
+    "token_estimate": 46
+  },
+  {
+    "passage_id": "4a9033b7e38af92f1db1",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "83a2cae768e6cf6ab347",
+    "ordinal": 20,
+    "text": "For example, if we are currently on codfw and switching over to eqiad, a dry-run's direction would be codfw→eqiad, as follows:",
+    "anchor": "78156ea0749286521207",
+    "token_estimate": 32
+  },
+  {
+    "passage_id": "7975ea9322dad6530fce",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "bd079da146cf722ba001",
+    "ordinal": 21,
+    "text": "A live test ( --live-test) flag will skip actions that could harm the primary DC or perform them on the secondary DC and is available only for the sre.switchdc.mediawiki cookbook. What we should be careful about it is that we \"switch\" from the currently secondary DC to the currently primary DC. While the live-test process will log your actions to SAL please remember to announce to #wikimedia-sre and to #wikimedia-operations too that you will be running this test. Unless something goes really badly this is a non-disruptive test.",
+    "anchor": "f1335b559249e6ea0f1c",
+    "token_estimate": 134
+  },
+  {
+    "passage_id": "80186fd831970fca7b48",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "bd079da146cf722ba001",
+    "ordinal": 22,
+    "text": "For example, if currently our primary DC is codfw and for the upcoming switchover we will be switching to eqiad the direction for a live test is eqiad→codfw:",
+    "anchor": "bf5e0aebb1e6dfe70cdb",
+    "token_estimate": 40
+  },
+  {
+    "passage_id": "bda7a632bf080e56d5d4",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "bd079da146cf722ba001",
+    "ordinal": 23,
+    "text": "Note:",
+    "anchor": "6a86700425a3e75b4466",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "83fe14881cd39cd7fb47",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "e4ecbf03f1f00f51e9ea",
+    "ordinal": 24,
+    "text": "Data Persistence checklist:",
+    "anchor": "a98cfa95a8b4f91b76e2",
+    "token_estimate": 7
+  },
+  {
+    "passage_id": "a45faa2d870de52f27f0",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "e4ecbf03f1f00f51e9ea",
+    "ordinal": 25,
+    "text": "Service Operations checklist:",
+    "anchor": "db847660b303a7a136a7",
+    "token_estimate": 8
+  },
+  {
+    "passage_id": "0630b6923a2d953e2d72",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "116b232414a6e5b7177d",
+    "ordinal": 26,
+    "text": "See: Global traffic routing.",
+    "anchor": "c37b6a851c0e0825dece",
+    "token_estimate": 7
+  },
+  {
+    "passage_id": "a77fa00a2ee9c99258d3",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "f7993575fc548fbabbc0",
+    "ordinal": 27,
+    "text": "GeoDNS (User-facing) Routing:",
+    "anchor": "32bce72f4c1a90788e60",
+    "token_estimate": 8
+  },
+  {
+    "passage_id": "c426d66e833048aca022",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "f7993575fc548fbabbc0",
+    "ordinal": 28,
+    "text": "Use the sre.dns.admin cookbook to depool all GeoDNS services from the source DC. See Change GeoDNS / Depool a Site for details. Example run: if you are depooling eqiad,",
+    "anchor": "2cc80796d2e35e61b29e",
+    "token_estimate": 42
+  },
+  {
+    "passage_id": "015b15e969163b9ddfc1",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "f7993575fc548fbabbc0",
+    "ordinal": 29,
+    "text": "(authdns-update is not required, you only need to run the cookbook)",
+    "anchor": "b3cb20bd646bc6f35f84",
+    "token_estimate": 17
+  },
+  {
+    "passage_id": "529082946533bceed135",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "f7993575fc548fbabbc0",
+    "ordinal": 30,
+    "text": "The TTL for dyna.wikimedia.org and upload.wikimedia.org is 3 minutes or 180 seconds as of May 2025.",
+    "anchor": "6f860eb9daeeffc9638f",
+    "token_estimate": 25
+  },
+  {
+    "passage_id": "54b45764a280e9ac0bce",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "1cce88ba62051e9d9d7f",
+    "ordinal": 31,
+    "text": "Same procedure as above, just using the pool command rather than depool.",
+    "anchor": "f03d1273b97d2b477af9",
+    "token_estimate": 18
+  },
+  {
+    "passage_id": "7ba5009500d4e1150938",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "b9232763439188facf29",
+    "ordinal": 32,
+    "text": "For a global switchover we are using the sre.discovery.datacenter to depool all services from a DC:",
+    "anchor": "826857f25644cf3d1f8a",
+    "token_estimate": 25
+  },
+  {
+    "passage_id": "0a6e9f4a3b58e3f9e150",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "b9232763439188facf29",
+    "ordinal": 33,
+    "text": "However, there are a few services we completely exclude from this process.",
+    "anchor": "fb72d7bca9598606d501",
+    "token_estimate": 19
+  },
+  {
+    "passage_id": "811a33c80b38fb96af88",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "b9232763439188facf29",
+    "ordinal": 34,
+    "text": "Excluded services are configured in hieradata, using the exclude_from_switchover property.",
+    "anchor": "1555cced7dc32aa500fa",
+    "token_estimate": 23
+  },
+  {
+    "passage_id": "a1f5c5dd3f98cb385579",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "b9232763439188facf29",
+    "ordinal": 35,
+    "text": "MediaWiki On Kubernetes deployment are excluded as well through the MEDIAWIKI_SERVICES constant in sre.switchdc.mediawiki and a check in sre.discovery.datacenter",
+    "anchor": "37a1f20f1168ead6ab0c",
+    "token_estimate": 41
+  },
+  {
+    "passage_id": "0c61f5e8d8c455879c1c",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "b9232763439188facf29",
+    "ordinal": 36,
+    "text": "What the cookbook does is, for each service:",
+    "anchor": "37893b4b3b735562e828",
+    "token_estimate": 11
+  },
+  {
+    "passage_id": "0fb3dffc91f10911735f",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "0f39af6adf5cd42f3d6f",
+    "ordinal": 37,
+    "text": "Before depooling any service, do not forget to review (and copy/paste) the current status of all services, but running:",
+    "anchor": "ab96abc3f98dfa7bfa37",
+    "token_estimate": 30
+  },
+  {
+    "passage_id": "d108f5af65357e0e5803",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "0f39af6adf5cd42f3d6f",
+    "ordinal": 38,
+    "text": "The following command will depool all active/active services from a DC, and will prompt to move or skip the active/passive ones.",
+    "anchor": "938d04a7f1ffc300c410",
+    "token_estimate": 32
+  },
+  {
+    "passage_id": "0cd91b1119f45808cae5",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "54f233d1a23223c20279",
+    "ordinal": 39,
+    "text": "The following command will repool all active/active services to a DC, and will prompt to move or skip the active/passive ones.",
+    "anchor": "97a6023f03802b4c2c70",
+    "token_estimate": 32
+  },
+  {
+    "passage_id": "f57fa6afec345e2a4790",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "a56e3d7af7d5531e5edd",
+    "ordinal": 40,
+    "text": "We divide the process in logical phases that should be executed sequentially. Within any phase, top-level tasks can be executed in parallel to each other, while subtasks are to be executed sequentially to each other. The phase number is referred to in the names of the tasks in the operations/cookbooks repository, in the cookbooks/sre/switchdc/mediawiki/ path.",
+    "anchor": "ff8455c50db8b4425dbc",
+    "token_estimate": 91
+  },
+  {
+    "passage_id": "85848fdd301c2fbd4f09",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "40c45e8cd09ee08544dc",
+    "ordinal": 41,
+    "text": "sudo cookbook sre.switchdc.mediawiki --ro-reason 'DC switchover (TXXXXXX)' codfw eqiad and proceed through the steps",
+    "anchor": "3f0b03a539d64a87a41d",
+    "token_estimate": 29
+  },
+  {
+    "passage_id": "656248a0aeb48c38dc2b",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "eec65e3623f445792f23",
+    "ordinal": 42,
+    "text": "After this, DNS will be changed for the source DC and internal applications (except mediawiki) will start hitting the new DC",
+    "anchor": "02546002f03a29b5735e",
+    "token_estimate": 31
+  },
+  {
+    "passage_id": "0f0157344bd845a98fca",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "ad27ca864f5d986a2157",
+    "ordinal": 43,
+    "text": "Take a breath, smile!",
+    "anchor": "d36c1fc56351c548b21a",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "201298188d8c7633bbc6",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "24a8779bbd4c1f7a2329",
+    "ordinal": 44,
+    "text": "Attention: During the March 2026 switchover, we discovered and issue where some traffic was still flowing to the inactive DC T421343.",
+    "anchor": "4de23804c791f8aab60a",
+    "token_estimate": 34
+  },
+  {
+    "passage_id": "243d7a816de993bd5353",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "6098f4e1fcfe5c189dfb",
+    "ordinal": 45,
+    "text": "CirrusSearch talks by default to the local datacenter ($wmgDatacenter). No special actions are required when disabling a datacenter.",
+    "anchor": "1b423766de5ba74935cd",
+    "token_estimate": 33
+  },
+  {
+    "passage_id": "e992bb244db68ad3b03c",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "6098f4e1fcfe5c189dfb",
+    "ordinal": 46,
+    "text": "Manually switching CirrusSearch to a specific datacenter can always be done. Point CirrusSearch to codfw by editing wgCirrusSearchDefaultCluster ext-CirrusSearch.php.",
+    "anchor": "1ae215c867b7204d73cc",
+    "token_estimate": 42
+  },
+  {
+    "passage_id": "6adbafde4d28caef168c",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "6098f4e1fcfe5c189dfb",
+    "ordinal": 47,
+    "text": "To ensure coherence in case of lost updates, a reindex of the pages modified during the switch can be done by following Recovering from an Elasticsearch outage / interruption in updates.",
+    "anchor": "3efa84c897f6d78ec139",
+    "token_estimate": 47
+  },
+  {
+    "passage_id": "5051796dfd9f43eea68c",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "fb19c7dc1309733446bc",
+    "ordinal": 48,
+    "text": "If you are switching only one service, consider using conftool, rather than a cookbook.",
+    "anchor": "1cb937afb30abd0f7463",
+    "token_estimate": 22
+  },
+  {
+    "passage_id": "4b5a05160e29432699dc",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "a77b42d5a2a355ba0c6e",
+    "ordinal": 49,
+    "text": "apt.wikimedia.org needs a Puppet change.",
+    "anchor": "5d99364f9b2cfe5c6373",
+    "token_estimate": 10
+  },
+  {
+    "passage_id": "7198dfa36d22e6e34811",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "402dd772c78f52baa4ee",
+    "ordinal": 50,
+    "text": "As of March 2026, apus is now excluded from the switchover, as it requires some manual intervention (see T422166 for context). When changing the pooled state of apus, docker-registry needs to be restarted.",
+    "anchor": "71c8492de7d95c9cd1b3",
+    "token_estimate": 52
+  },
+  {
+    "passage_id": "9c7bbb62a01cd83fffe0",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "059bba36aa9feeb9af0c",
+    "ordinal": 51,
+    "text": "These services require manual changes to be switched over and have not yet been included in service::catalog",
+    "anchor": "abcb83ae0b6abe92240c",
+    "token_estimate": 27
+  },
+  {
+    "passage_id": "a8c9260155db7f2de35b",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "059bba36aa9feeb9af0c",
+    "ordinal": 52,
+    "text": "These services should be switched by Collaboration Services:",
+    "anchor": "790dbd8ccc5da6024c66",
+    "token_estimate": 15
+  },
+  {
+    "passage_id": "c7f7e5ef45aebd1a32a6",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "c999d4efe027e26a95e4",
+    "ordinal": 53,
+    "text": "Main document: MariaDB/Switch Datacenter",
+    "anchor": "3748ce90d1bde585daed",
+    "token_estimate": 10
+  },
+  {
+    "passage_id": "fda5b2a2618e1b3515fc",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "c999d4efe027e26a95e4",
+    "ordinal": 54,
+    "text": "Once we're confident that the switchover will not be rolled back run the sre.switchdc.databases.finalize cookbook.",
+    "anchor": "1056eff7f04049a21fe3",
+    "token_estimate": 29
+  },
+  {
+    "passage_id": "b2bfc7e1c1eb9a5f4821",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "23454509280e17da1c0c",
+    "ordinal": 55,
+    "text": "These references are to aid discovery and as reminder to avoid ambiguity.",
+    "anchor": "55004324e38face3ada2",
+    "token_estimate": 19
+  },
+  {
+    "passage_id": "517b48a4526b853c8c08",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "fa32d688c9b4ef4a4eb5",
+    "ordinal": 56,
+    "text": "A few months after the Switchback of 2023, and following a feedback gathering process, a proposal to move to a predictable set of dates for the dates while also increasing the Switchover duration to 6 months was adopted and turned into a process. The document can be found in the link below:",
+    "anchor": "704f647ad3716d5aa8d9",
+    "token_estimate": 73
+  },
+  {
+    "passage_id": "e8d5597eb12452474619",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "fa32d688c9b4ef4a4eb5",
+    "ordinal": 57,
+    "text": "Recurring, Equinox-based, Data Center Switchovers",
+    "anchor": "8ae725b65229505d4d2b",
+    "token_estimate": 13
+  },
+  {
+    "passage_id": "0e05b1218310d1b37b9e",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "024e9a73c4e5b7b8a3c6",
+    "ordinal": 58,
+    "text": "See Switch Datacenter/Switchover Dates for a pre-calculated list up to 2050",
+    "anchor": "e6c039e6509a0e41d5a7",
+    "token_estimate": 19
+  },
+  {
+    "passage_id": "e73ca394e690ce6230ab",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "58559dcbd746a11da969",
+    "ordinal": 59,
+    "text": "September",
+    "anchor": "47ab6756429d13cb54f1",
+    "token_estimate": 3
+  },
+  {
+    "passage_id": "1e6039ad8bdec82c90b7",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "58559dcbd746a11da969",
+    "ordinal": 60,
+    "text": "March",
+    "anchor": "98ff0817d5dddf02d333",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "4dfa092cc2ac2d808399",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "cf29c95fee9ef2ba0fb6",
+    "ordinal": 61,
+    "text": "March",
+    "anchor": "af5bed6c2170ba8cd8de",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "efd2bcfe3df9e173bdb6",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "cf29c95fee9ef2ba0fb6",
+    "ordinal": 62,
+    "text": "September",
+    "anchor": "e58e06d44f0abfd2692e",
+    "token_estimate": 3
+  },
+  {
+    "passage_id": "9eb1a5820e7269788338",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "f89dada42b73c4500ff1",
+    "ordinal": 63,
+    "text": "September",
+    "anchor": "587563c47b2517fa532d",
+    "token_estimate": 3
+  },
+  {
+    "passage_id": "286319d9590e1186202f",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "f89dada42b73c4500ff1",
+    "ordinal": 64,
+    "text": "February",
+    "anchor": "73fb8571869aa7560e44",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "1f9d4744581c0461f74a",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "f89dada42b73c4500ff1",
+    "ordinal": 65,
+    "text": "April (switching back):",
+    "anchor": "55d2bbb9a9b0f48ad4ba",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "e73361f91362458faf4d",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "f3f0576851fd827ec52f",
+    "ordinal": 66,
+    "text": "Schedule:",
+    "anchor": "9d2ccce5bb9d96236c44",
+    "token_estimate": 3
+  },
+  {
+    "passage_id": "f959fec02aaba7584cea",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "f3f0576851fd827ec52f",
+    "ordinal": 67,
+    "text": "Reports:",
+    "anchor": "fdcb11f83c80a64e5c0a",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "038c7389cf11179e6815",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "f3f0576851fd827ec52f",
+    "ordinal": 68,
+    "text": "Switching back:",
+    "anchor": "65955decf96d138683df",
+    "token_estimate": 4
+  },
+  {
+    "passage_id": "6f8dc817df9dffa60e2d",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "f3f0576851fd827ec52f",
+    "ordinal": 69,
+    "text": "Reports:",
+    "anchor": "fdcb11f83c80a64e5c0a",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "76a651c367a32cb5d16a",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "902c3f1f8f6a5d4a5fde",
+    "ordinal": 70,
+    "text": "Schedule:",
+    "anchor": "075a8bcd82480677ebc8",
+    "token_estimate": 3
+  },
+  {
+    "passage_id": "a7f96dc390298411f047",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "902c3f1f8f6a5d4a5fde",
+    "ordinal": 71,
+    "text": "Reports:",
+    "anchor": "b1a833dd38c62f453a77",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "af049e10dd9c1ffbdfad",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "902c3f1f8f6a5d4a5fde",
+    "ordinal": 72,
+    "text": "Switching back:",
+    "anchor": "27d74be8b078d02074f0",
+    "token_estimate": 4
+  },
+  {
+    "passage_id": "b808c1a13459c4bb5d97",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "8cf9ac3ca83bda41a357",
+    "ordinal": 73,
+    "text": "Schedule:",
+    "anchor": "6164f8de961413bb840f",
+    "token_estimate": 3
+  },
+  {
+    "passage_id": "f99bf7fdd0a45317f533",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "8cf9ac3ca83bda41a357",
+    "ordinal": 74,
+    "text": "Reports:",
+    "anchor": "0f3f241a1e54265ba77d",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "7781a0a5b47d3d726367",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "8cf9ac3ca83bda41a357",
+    "ordinal": 75,
+    "text": "Switching back:",
+    "anchor": "8ba3dfe479b8e1257965",
+    "token_estimate": 4
+  },
+  {
+    "passage_id": "45f12057f08a1839308a",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "8cf9ac3ca83bda41a357",
+    "ordinal": 76,
+    "text": "Reports:",
+    "anchor": "0f3f241a1e54265ba77d",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "ae901fc0044315bd47b5",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "da31a32a8f0d92103527",
+    "ordinal": 77,
+    "text": "Schedule:",
+    "anchor": "2919edb22a88ecb16fdd",
+    "token_estimate": 3
+  },
+  {
+    "passage_id": "216abfc30d020d539d92",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "da31a32a8f0d92103527",
+    "ordinal": 78,
+    "text": "Reports:",
+    "anchor": "ded848e0a5e66fd08728",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "ec3fd68cc5c5a4d61d39",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "da31a32a8f0d92103527",
+    "ordinal": 79,
+    "text": "Switching back:",
+    "anchor": "0098e3edd474b116fbe0",
+    "token_estimate": 4
+  },
+  {
+    "passage_id": "a22186f8a0b5279adfbe",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "da31a32a8f0d92103527",
+    "ordinal": 80,
+    "text": "Reports:",
+    "anchor": "ded848e0a5e66fd08728",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "73a81d79de9945a6d332",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "0c9cf40f69a16826504a",
+    "ordinal": 81,
+    "text": "Schedule:",
+    "anchor": "15c0cb3abd737755a655",
+    "token_estimate": 3
+  },
+  {
+    "passage_id": "ff78ad9fb7ba4710d129",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "0c9cf40f69a16826504a",
+    "ordinal": 82,
+    "text": "Reports:",
+    "anchor": "2ed799989b7fc67ace59",
+    "token_estimate": 2
+  },
+  {
+    "passage_id": "6092f3020e7710784d30",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "0c9cf40f69a16826504a",
+    "ordinal": 83,
+    "text": "Switching back:",
+    "anchor": "4671f1f995a5a689b25b",
+    "token_estimate": 4
+  },
+  {
+    "passage_id": "ab4e4738e9eae3ee2f72",
+    "source_id": "36bd54e1db437198538f",
+    "section_id": "b279a38c28b3cbe250e1",
+    "ordinal": 84,
+    "text": "Aggregated list of interesting dashboards",
+    "anchor": "2201ba65ea3c81868fab",
+    "token_estimate": 11
+  },
+  {
+    "passage_id": "18b87f3926a06d6969a2",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "5cdad05fe77be327e13a",
+    "ordinal": 0,
+    "text": "document status: draft",
+    "anchor": "dbab57c7b9e12a8b1a3e",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "911114cca64609a7acb7",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "00c2e03214f234b61c76",
+    "ordinal": 1,
+    "text": "During a routine maintenance consisting of upgrading HAProxy on cache hosts, all of the backends (ATS) in the text cache cluster in esams and eqiad were accidentally depooled due to a mismatch on the maintenance run between depooling the hosts individually and pooling back the cdn. This caused both cached and uncached traffic requests for wikis and other ATS-backed services to fail and return errors to clients, mostly in parts of Europe, Africa and Asia. Approximately 17 million HTTP requests (according to varnish) / 5 million user requests (according to NEL estimation) errored out in total. Editing rate was reduced to less than half. Upload cluster, clients geolocated to drmrs, codfw, ulsfo or eqsin, and GET requests cached in memory were not affected.",
+    "anchor": "a00f01f9610b14458bdb",
+    "token_estimate": 191
+  },
+  {
+    "passage_id": "a7486c2107fe75e77489",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "b9f9b62dcd5fdfec2878",
+    "ordinal": 2,
+    "text": "08:57 vgutierrez@cumin1001:~$ sudo -i cumin -b1 -s60 'A:cp-text_esams' 'depool && sleep 30 && DEBIAN_FRONTEND=noninteractive apt-get -q -y --assume-no -o DPkg::Options::=\"--force-confdef\" install haproxy && run-puppet-agent -q && systemctl restart haproxy && sleep 5 && pool cdn' # note the mismatch between depool and pool cdn",
+    "anchor": "cc419cf33312d8bca642",
+    "token_estimate": 82
+  },
+  {
+    "passage_id": "e1772f7462122ad2197d",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "b9f9b62dcd5fdfec2878",
+    "ordinal": 3,
+    "text": "09:18 Esams fully depooled Outage starts here",
+    "anchor": "891cc7bd534961edf832",
+    "token_estimate": 12
+  },
+  {
+    "passage_id": "b67cebab524599679b90",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "b9f9b62dcd5fdfec2878",
+    "ordinal": 4,
+    "text": "09:20 pages start rolling in",
+    "anchor": "6f7b60c43a492435edab",
+    "token_estimate": 7
+  },
+  {
+    "passage_id": "043ef7244765c175778d",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "b9f9b62dcd5fdfec2878",
+    "ordinal": 5,
+    "text": "09:24: <hashar> I am going to rollback to rule out the train",
+    "anchor": "d70bf8c8766144ac0073",
+    "token_estimate": 15
+  },
+  {
+    "passage_id": "c81b8d96dffe80e77b60",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "b9f9b62dcd5fdfec2878",
+    "ordinal": 6,
+    "text": "09:25 Updated https://www.wikimediastatus.net/",
+    "anchor": "3c5f460843976ba9898e",
+    "token_estimate": 12
+  },
+  {
+    "passage_id": "6f270811fcff530191cd",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "b9f9b62dcd5fdfec2878",
+    "ordinal": 7,
+    "text": "09:30 <vgutierrez> esams isn't able to reach appservers-ro or api-ro for some reason",
+    "anchor": "06fcee802e0f9b5238e3",
+    "token_estimate": 21
+  },
+  {
+    "passage_id": "059edd84f892b2242dab",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "b9f9b62dcd5fdfec2878",
+    "ordinal": 8,
+    "text": "09:31 <hashar> (train rolled back)",
+    "anchor": "a582afb5fd9dd3255c84",
+    "token_estimate": 9
+  },
+  {
+    "passage_id": "f0ee7548de40728615ff",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "b9f9b62dcd5fdfec2878",
+    "ordinal": 9,
+    "text": "09:34 <logmsgbot> !log vgutierrez@puppetmaster1001 conftool action : set/pooled=yes; selector: dc=esams,service=ats-be,cluster=cache_text",
+    "anchor": "9eff17bdc3b4083ccaf4",
+    "token_estimate": 35
+  },
+  {
+    "passage_id": "544552cf26d4d653acbf",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "b9f9b62dcd5fdfec2878",
+    "ordinal": 10,
+    "text": "<logmsgbot> !log vgutierrez@puppetmaster1001 conftool action : set/pooled=yes; selector: dc=eqiad,service=ats-be,cluster=cache_text",
+    "anchor": "b09afd799eb9b9951ea5",
+    "token_estimate": 33
+  },
+  {
+    "passage_id": "93e9085769ccb5f012d9",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "b9f9b62dcd5fdfec2878",
+    "ordinal": 11,
+    "text": "09:36 Outage stops here",
+    "anchor": "0fea39af2a0c86ada23e",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "f8378bedc223c93d5ebb",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "b9f9b62dcd5fdfec2878",
+    "ordinal": 12,
+    "text": "09:35 <vgutierrez> I basically depooled ats-be in eqiad and esams by accident",
+    "anchor": "7f13c9aa2f43729f70c9",
+    "token_estimate": 20
+  },
+  {
+    "passage_id": "e98e7e92ab9594458ced",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "b9f9b62dcd5fdfec2878",
+    "ordinal": 13,
+    "text": "09:45 Incident declared resolved",
+    "anchor": "1bc93fa3bcfec8699172",
+    "token_estimate": 8
+  },
+  {
+    "passage_id": "4a0c6e98aa27f8f3f21c",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "b9f9b62dcd5fdfec2878",
+    "ordinal": 14,
+    "text": "09:48 Updated status page",
+    "anchor": "8a804cfe2cf0e4a01b03",
+    "token_estimate": 7
+  },
+  {
+    "passage_id": "5c8ef508937d02fd72a4",
+    "source_id": "f42ec2b72f2037e0ba35",
+    "section_id": "5d86a4089ca7a5747bb7",
+    "ordinal": 15,
+    "text": "Automated alerts / pages fired (FrontendUnavailable)",
+    "anchor": "7b37024f32659fa63f2f",
+    "token_estimate": 13
+  },
+  {
+    "passage_id": "bee2800c98762df41551",
+    "source_id": "0e0702e1d1a9f789152e",
+    "section_id": "fb48825adef302ab5bea",
+    "ordinal": 0,
+    "text": "document status: final",
+    "anchor": "3fcc3bcebfb95e71b12d",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "1705c88b80280b4efb06",
+    "source_id": "0e0702e1d1a9f789152e",
+    "section_id": "0bc56363e77dad23ee36",
+    "ordinal": 1,
+    "text": "The metadata is aimed at helping provide a quick snapshot of context around what happened during the incident.",
+    "anchor": "b9884efb72bb48f40901",
+    "token_estimate": 28
+  },
+  {
+    "passage_id": "d30c979102e8eaa9b74d",
+    "source_id": "0e0702e1d1a9f789152e",
+    "section_id": "0bc56363e77dad23ee36",
+    "ordinal": 2,
+    "text": "On 10 November, as part of verifying a bug report, a developer submitted a high volume of search queries against the active production Cirrus cluster (eqiad cirrussearch) via a tunnel from their local mw-vagrant environment. vagrant provision was (probably) later run without the tunnel being properly closed first, which resulted in (for reasons not yet understood) the deletion and recreation of the commonswiki_file_1623767607 index.",
+    "anchor": "0ae07b1f477252e2e74f",
+    "token_estimate": 109
+  },
+  {
+    "passage_id": "d7d61fe70633cbc00757",
+    "source_id": "0e0702e1d1a9f789152e",
+    "section_id": "0bc56363e77dad23ee36",
+    "ordinal": 3,
+    "text": "As a direct consequence, any Elasticsearch queries that targetted media files from commonswiki encountered a hard failure.",
+    "anchor": "862ee090a1ab214bf062",
+    "token_estimate": 31
+  },
+  {
+    "passage_id": "160062b35f38f85c8f2d",
+    "source_id": "0e0702e1d1a9f789152e",
+    "section_id": "0bc56363e77dad23ee36",
+    "ordinal": 4,
+    "text": "During the incident, all media searches on Wikimedia Commons failed. Wikipedia projects were impacted as well,[1] through the \"cross-wiki\" feature of the sidebar on Search results pages. This cross-wiki feature is enabled on most wikis by default, though notably not on English Wikipedia where the community disabled search integration to Commons.",
+    "anchor": "452ece365cc5c277c558",
+    "token_estimate": 87
+  },
+  {
+    "passage_id": "0043e6864d6bee6fc619",
+    "source_id": "0e0702e1d1a9f789152e",
+    "section_id": "0bc56363e77dad23ee36",
+    "ordinal": 5,
+    "text": "Note that the search suggestions feature, as present on all article pages was not affected (except on Wikimedia Commons itself). The search suggestions field is how how most searches are performed on Wikipedia, and was not impacted. Rather, it impacted the dedicated Search results page (\"Special:Search\", which consistently failed to return results on wikis where the rendering of that page includes a sidebar with results from Wikimedia Commons.",
+    "anchor": "cd1b0a7f741c2b8c8f1a",
+    "token_estimate": 112
+  },
+  {
+    "passage_id": "1deeb76f0bc2e1e9f78d",
+    "source_id": "0ca602b66d40fb32a655",
+    "section_id": "20fdc542929c684fad8b",
+    "ordinal": 0,
+    "text": "document status: in-review",
+    "anchor": "514afb5ad1c5c79db421",
+    "token_estimate": 7
+  },
+  {
+    "passage_id": "46026f4f2587d9195bf6",
+    "source_id": "0ca602b66d40fb32a655",
+    "section_id": "76b056c45b337c57fbe7",
+    "ordinal": 1,
+    "text": "While https://phabricator.wikimedia.org/T224395 is on which led to depooling codfw. Codfw was pooled back and only two nodes were available (see Incident documentation/20190603-maps). It was necessary to reimage all codfw servers to pickup the new partitioning scheme. And when maps2003 was reimaged which was the last to reimage, kartotherian codfw which is pooled had no node to route traffic to hence request timeouts and SREs were paged. Icinga started alerting from 8:21am",
+    "anchor": "6c98e04eeb376f750e29",
+    "token_estimate": 120
+  },
+  {
+    "passage_id": "ec835b9def2e5008f149",
+    "source_id": "0ca602b66d40fb32a655",
+    "section_id": "2b99c393713842734f8d",
+    "ordinal": 2,
+    "text": "Users who were currently served from codfw were affect. They were affected for about 6min(from logstash)",
+    "anchor": "21c8582d2f286a24df75",
+    "token_estimate": 26
+  },
+  {
+    "passage_id": "1584d9ab222035182f21",
+    "source_id": "0ca602b66d40fb32a655",
+    "section_id": "f6c59d7a856fcb4424b5",
+    "ordinal": 3,
+    "text": "Icinga alerts for kartotherian endpoints. Also from pybal, no nodes were pooled at codfw due to",
+    "anchor": "3440fda50c3aa481dcdd",
+    "token_estimate": 24
+  },
+  {
+    "passage_id": "dd39279fd283ea04e09d",
+    "source_id": "0ca602b66d40fb32a655",
+    "section_id": "48b82513a1db4c7051d1",
+    "ordinal": 4,
+    "text": "All times in UTC.",
+    "anchor": "26dac7be46ba2bc9f726",
+    "token_estimate": 5
+  },
+  {
+    "passage_id": "b9cd1fb1b6f83f7b74a6",
+    "source_id": "0ca602b66d40fb32a655",
+    "section_id": "4183ef2de43528447dc1",
+    "ordinal": 5,
+    "text": "What weaknesses did we learn about and how can we address them?",
+    "anchor": "d0251b189369b7e50f12",
+    "token_estimate": 16
+  },
+  {
+    "passage_id": "a34509c1702b2e8ff1e3",
+    "source_id": "0ca602b66d40fb32a655",
+    "section_id": "4183ef2de43528447dc1",
+    "ordinal": 6,
+    "text": "The following sub-sections should have a couple brief bullet points each.",
+    "anchor": "759d66aabfcdcd252d65",
+    "token_estimate": 19
+  },
+  {
+    "passage_id": "15d8f6206dab0cc80e7f",
+    "source_id": "0ca602b66d40fb32a655",
+    "section_id": "5355a385e7fa07bcc466",
+    "ordinal": 7,
+    "text": "We should streamline processes for maps to reduce outages. Maybe via a cookbook to ensure we capture all activities and steps before performing any activity on maps.",
+    "anchor": "e48636a8a302d43f96e8",
+    "token_estimate": 42
+  },
+  {
+    "passage_id": "0869c6ab193f137cad5b",
+    "source_id": "0ca602b66d40fb32a655",
+    "section_id": "2b8a49c6548922897edc",
+    "ordinal": 8,
+    "text": "Explicit next steps to prevent this from happening again as much as possible, with Phabricator tasks linked for every step.",
+    "anchor": "a780b705abd1b83e83b7",
+    "token_estimate": 31
+  },
+  {
+    "passage_id": "9322e6abab7117ca6e4d",
+    "source_id": "aafcb8b94578b0a54a01",
+    "section_id": "9809727c62e38cd693b5",
+    "ordinal": 0,
+    "text": "Summary Report - Planned Network Maintenance, May 24, 2011 (13:00 UTC to 14:00 UTC)",
+    "anchor": "1a95e7476187c4af86fd",
+    "token_estimate": 21
+  },
+  {
+    "passage_id": "93357512fc1a59e85e4f",
+    "source_id": "aafcb8b94578b0a54a01",
+    "section_id": "9809727c62e38cd693b5",
+    "ordinal": 1,
+    "text": "Background",
+    "anchor": "34b2446aafb180479c9c",
+    "token_estimate": 3
+  },
+  {
+    "passage_id": "d557311f5ad5a3b543d2",
+    "source_id": "aafcb8b94578b0a54a01",
+    "section_id": "9809727c62e38cd693b5",
+    "ordinal": 2,
+    "text": "On 10th May, Ops noticed some IRC traffic commenting the site was slow. Mark investigated and concluded it is probably caused by a full in-memory table (CAM) in the router. As an interim measure, he performed some traffic rerouting on the routers and that alleviated the issue. However, the fix was meant to be temporary.",
+    "anchor": "c4d32023ec2baf839653",
+    "token_estimate": 81
+  },
+  {
+    "passage_id": "921d9cd7184fdcc304ef",
+    "source_id": "aafcb8b94578b0a54a01",
+    "section_id": "9809727c62e38cd693b5",
+    "ordinal": 3,
+    "text": "The following day, Mark noticed there were packet losses with that router. Users were again commenting and complaining about page load lag. Upon further investigation, he decided the router software needed to be upgraded and tuned. However that would required substantial amount of work and downtime and since many of our operations engineers were either enroute or preparing for the trip to Berlin, Mark decided to perform another temporary (and unfortunately intrusive) fix, a short reboot on one of the routers. That reboot took 3 minutes. That seems to clear the problem.",
+    "anchor": "4317fb392b0f33d8bfef",
+    "token_estimate": 144
+  },
+  {
+    "passage_id": "0d93be7a6553353c99fd",
+    "source_id": "aafcb8b94578b0a54a01",
+    "section_id": "9809727c62e38cd693b5",
+    "ordinal": 4,
+    "text": "There were again reported long page load lag time surfacing the following week especially on 20th May. Mark investigated and found the problematic router experienced an internal network fail-over. That caused some multicasting failures. (Ganglia reporting was one of the casualties). However, there were insufficient data available to determine the fail-over root cause.",
+    "anchor": "e2c32afb797c56baaaa1",
+    "token_estimate": 93
+  },
+  {
+    "passage_id": "4f55073f89b278a86c72",
+    "source_id": "aafcb8b94578b0a54a01",
+    "section_id": "9809727c62e38cd693b5",
+    "ordinal": 5,
+    "text": "The Plan & Goals",
+    "anchor": "ae0dc0f7f1e36b816d8a",
+    "token_estimate": 4
+  },
+  {
+    "passage_id": "259cc4030c52c827786e",
+    "source_id": "aafcb8b94578b0a54a01",
+    "section_id": "9809727c62e38cd693b5",
+    "ordinal": 6,
+    "text": "The plan to address the router problem was finalized. The maintenance was scheduled on Tuesday, 24th May. The plan consists of:",
+    "anchor": "66f3baed67e882e13ca9",
+    "token_estimate": 32
+  },
+  {
+    "passage_id": "d0cff566839b8569e9db",
+    "source_id": "aafcb8b94578b0a54a01",
+    "section_id": "9809727c62e38cd693b5",
+    "ordinal": 7,
+    "text": "With this maintenance, the goals are to :",
+    "anchor": "ffa13161f6cdb17ff356",
+    "token_estimate": 11
+  },
+  {
+    "passage_id": "a66cb444cc05987fc3f2",
+    "source_id": "aafcb8b94578b0a54a01",
+    "section_id": "9809727c62e38cd693b5",
+    "ordinal": 8,
+    "text": "The Maintenance",
+    "anchor": "788645a0ddedff5ff247",
+    "token_estimate": 4
+  },
+  {
+    "passage_id": "39eeaa5ca2e96f48e27d",
+    "source_id": "aafcb8b94578b0a54a01",
+    "section_id": "9809727c62e38cd693b5",
+    "ordinal": 9,
+    "text": "Shortly after 13:00 UTC, Mark started the upgrade. It took 1 hour to perform all but 1 of the above. The Juniper EX stack was not upgraded (not a problem) because he ran out of the maintenance window. During the maintenance window, the site was intermittently unavailable because of the reboots. One of the (slave) databases went down and was taken out of the cluster. Some of the database servers did not recover gracefully and Domas determined the 'Forcedeth' driver for the NIC (network interface card) was the culprit. Together with the help of RobH and Ariel, all the impacted servers recovered.",
+    "anchor": "4d6cdc3437ab442c3372",
+    "token_estimate": 150
+  },
+  {
+    "passage_id": "ee4fe46bb80e266de6dc",
+    "source_id": "aafcb8b94578b0a54a01",
+    "section_id": "9809727c62e38cd693b5",
+    "ordinal": 10,
+    "text": "24-hour Later",
+    "anchor": "d9a663ddd11a2a44d915",
+    "token_estimate": 4
+  },
+  {
+    "passage_id": "a2cf14a18de01cbee39a",
+    "source_id": "aafcb8b94578b0a54a01",
+    "section_id": "9809727c62e38cd693b5",
+    "ordinal": 11,
+    "text": "The team performed the operation successfully - the upgrades and reboots on those network gears went smoothly and the servers and sites came back up on scheduled. We believe we have also addressed the lag in the page load caused by the network routing problem. Meanwhile, we are continuing to monitor the situation.",
+    "anchor": "89a73ec5436d4d597d80",
+    "token_estimate": 79
+  },
+  {
+    "passage_id": "26d7c0c92284f42c0bad",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "7ac16bcd94c08e9859c4",
+    "ordinal": 0,
+    "text": "Chris, our Tampa data center contractor, was replacing the broken management switch msw-d2-sdtpa in sdtpa rack D2. Our management network is completely unrelated to our production network, and doesn't carry any important, production traffic. However, the management switch is mounted directly under the production network access switch (asw-d2-sdtpa). During the replacement, at 14:12 UTC, the power cable of asw-d2-sdtpa came slightly loose, as it was very close to the switch and cables being replaced. Chris didn't notice this, as all LEDs of the switch are on the other side.",
+    "anchor": "9e49c3337a3af767a1b5",
+    "token_estimate": 145
+  },
+  {
+    "passage_id": "84b470b585e1dd524380",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "7ac16bcd94c08e9859c4",
+    "ordinal": 1,
+    "text": "As a result, the entire rack, consisting of about 40 MediaWiki application servers, lost network connectivity. Nagios complained about all servers in the rack, and due to all kinds of second order effects, many other services were (briefly) disrupted or overloaded, leading to many other Nagios downtime reports. Several Ops and Engineering members were looking at the downtime, but had difficulty pinpointing exactly what was going down.",
+    "anchor": "44a2c6c7f642e15d004b",
+    "token_estimate": 110
+  },
+  {
+    "passage_id": "84346e364e773933b430",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "7ac16bcd94c08e9859c4",
+    "ordinal": 2,
+    "text": "After a few minutes, I noticed that all application servers being reported down were located in the same rack D2 (as I checked in Racktables), and that asw-d2-sdtpa was reported down by Observium (e-mail to root@ and the web interface). A quick check revealed that indeed this switch had gone down. I asked Chris on IRC if this was related to his work, which it was indeed. As soon as Chris restored power, all network connectivity and services were restored within a minute at 14:30 UTC.",
+    "anchor": "97e4a03f6f513febe5d2",
+    "token_estimate": 122
+  },
+  {
+    "passage_id": "7cc3fec973d548b81856",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "7ac16bcd94c08e9859c4",
+    "ordinal": 3,
+    "text": "The main problem with a rack of application servers going down, besides the significant reduction in capacity, is the loss of memcached caching - meaning that MediaWiki on the remaining servers will be parsing/regenerating many pages and objects, resulting in a much higher load at reduced capacity for a while. memcached redundancy/resiliency is definitely something that could need improvement for this reason.",
+    "anchor": "633cd692fcff88c37e6f",
+    "token_estimate": 103
+  },
+  {
+    "passage_id": "d90c8314e3fb574a146d",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "7ac16bcd94c08e9859c4",
+    "ordinal": 4,
+    "text": "In our newer racks and data centers, we also have better redundancy of the network, including redundant power and uplinks for access switches, so this doesn't happen so easily. If we do not intend to move Tampa any time soon, we should look at retrofitting our older racks with that setup as well.",
+    "anchor": "171384acefedcfd2345e",
+    "token_estimate": 75
+  },
+  {
+    "passage_id": "aa23566ba632135c5cd3",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "acf865469a2d74f1ad90",
+    "ordinal": 5,
+    "text": "For the schema changes of the MediaWiki 1.18 release, Asher has been master changes for all core db clusters. Usually this goes automatically without incidents, but cluster s7 also contains the CentralAuth database, used by all wikis. Before changing masters, Asher set cluster s7 to read-only in the MediaWiki db configuration. As soon as he changed the s7 master to a new database server at 18:23, the new master got bombarded with MediaWiki \"slave lag\" queries, i.e. MediaWiki instances trying to determine the replication lag of the slaves compared to the master, to select which db slave to use. Normally, this check is disabled when MediaWiki is in database read-only mode, but as was discovered later, this does not apply to CentralAuth queries - possibly because these are also issued by wikis outside the s7 cluster. Therefore, the new master was immediately overloaded with these queries, and interrupted normal queries and replication traffic, bringing down the sites.",
+    "anchor": "0674e44d49af5ba3e12e",
+    "token_estimate": 245
+  },
+  {
+    "passage_id": "f1b85c98be0b91832a09",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "acf865469a2d74f1ad90",
+    "ordinal": 6,
+    "text": "Asher investigated the situation, and killed all outstanding queries on the new master, which fixed the problem at 18:32. He also filed a bugzilla ticket #31170 to improve MediaWiki's behavior during db read-only situations. Additional measures to avoid this problem in the future could be to split off CentralAuth into its dedicated cluster on dedicated hardware (we could use some old DB servers for that.",
+    "anchor": "a1d5fb4058b881744ae3",
+    "token_estimate": 102
+  },
+  {
+    "passage_id": "0f50ac1b970c427074d6",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "282dc5eea4bb98e58f81",
+    "ordinal": 7,
+    "text": "Apparently there was another master switch related outage at this time with db cluster s5, but I was not around at that time, and haven't had an opportunity to discuss this incident with Asher yet. As far as I understand from the IRC backlog, the MySQL instances unexpectedly hung after Asher issued the \"STOP SLAVE\" command to stop replication, but I don't yet know the details.",
+    "anchor": "bf777d5e5478334ad5dd",
+    "token_estimate": 95
+  },
+  {
+    "passage_id": "57dc1140e1e8f84f3d27",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "282dc5eea4bb98e58f81",
+    "ordinal": 8,
+    "text": "Asher, could you give us a summary on that?",
+    "anchor": "15020468779be4634861",
+    "token_estimate": 11
+  },
+  {
+    "passage_id": "2e7625afb57b3d7df750",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "bcba5a510699a303ab2b",
+    "ordinal": 9,
+    "text": "Our master switch scripts starts off with the following course of action:",
+    "anchor": "04767f72b787b02354a2",
+    "token_estimate": 19
+  },
+  {
+    "passage_id": "608f87d02e1e50ddd7d0",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "bcba5a510699a303ab2b",
+    "ordinal": 10,
+    "text": "db44, one of the two dewiki slaves had the following long running queries in the \"copying to tmp table\" state:",
+    "anchor": "a20f64b7a2eec6a4c2e9",
+    "token_estimate": 28
+  },
+  {
+    "passage_id": "343d81ec6367f1e49aa0",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "bcba5a510699a303ab2b",
+    "ordinal": 11,
+    "text": "It looks like this ~11 hour long query is being run against dewiki every several hours, with the same values in the where clause. It should be returning the same 684 rows each time after apparently examining ~100 billion (!). At the time of the attempted switch, three of these had been running for between 2-8 hours:",
+    "anchor": "3418be2736e0a3c1fe21",
+    "token_estimate": 80
+  },
+  {
+    "passage_id": "a50775dad94b0ca086c8",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "bcba5a510699a303ab2b",
+    "ordinal": 12,
+    "text": "When flush tables ran on this host, it locked all tables and essentially hung there, waiting for the multi-hour temp table writes to complete. Mysql will still happily accept connections and queries, which will be locked in \"waiting for table\" status. After 5 minutes, things looked like:",
+    "anchor": "ddb8dc3d9190d0db492e",
+    "token_estimate": 72
+  },
+  {
+    "passage_id": "f3602112b9ef7447d30c",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "bcba5a510699a303ab2b",
+    "ordinal": 13,
+    "text": "A large number of apache workers were tied up by sending blocked queries to this db, resulting in the actual site outage. A running flush tables cannot truly be killed directly (http://bugs.mysql.com/bug.php?id=44884) - the site was restored by sending mysql on this host a sigterm, preventing it from accepting additional incoming connections and killing everything off. Mysql on db43 was then restarted, and the rest of the replication changes went smoothly.",
+    "anchor": "5d571dd6f6e6fc3f8809",
+    "token_estimate": 115
+  },
+  {
+    "passage_id": "018ecf6ae342fd94c686",
+    "source_id": "9354eda28b449247d0a7",
+    "section_id": "bcba5a510699a303ab2b",
+    "ordinal": 14,
+    "text": "Modifying the switch scripts to prevent the \"flush tables\" statement on the master from replicating, as well as automated killing of long running queries on the slaves (instead of just the old master) should prevent a recurrence of this scenario.",
+    "anchor": "b9a229ffda2b5e51b5da",
+    "token_estimate": 62
+  },
+  {
+    "passage_id": "db8502ed6ec9173143e6",
+    "source_id": "65d1733fbae92c90a624",
+    "section_id": "32d8ab930e2f90b7791c",
+    "ordinal": 0,
+    "text": "Some US users of WP site experienced slow page rendering time for about 10 - 15 minutes (from 23:18 UTC to 23.33 UTC) on 20th Jan, 2012, because the Ashburn (EQIAD) bits.wikimedia.org servers were overloaded. Most however had incorrectly formatted wiki pages due to missing javascript and css.",
+    "anchor": "5d4baee911111f9733d4",
+    "token_estimate": 74
+  },
+  {
+    "passage_id": "c446988ca2ea309dd5b9",
+    "source_id": "65d1733fbae92c90a624",
+    "section_id": "8fb31e2a6f05ff5665f5",
+    "ordinal": 1,
+    "text": "One of the Operations Engineers was investigating an earlier report that the bits servers at ESAM were experiencing occasional network saturation. It turned out that even though there were two bounded network cards, outbound traffic was sent through only one of them due to all the traffic having the same next-hop (the gateway). The fix was to change the kernel's xmit_hash_policy to hash the address destination using layer2+3 in all of our bonding algorithms instead layer2 (default). Correctly balancing the traffic across both links effectively doubled the network throughput of those servers. More detail on xmit_hash_policy can be found on the kernel.org bonding page.",
+    "anchor": "66d6c89b82855f018aab",
+    "token_estimate": 169
+  },
+  {
+    "passage_id": "db1aeb1c4ff529500f76",
+    "source_id": "65d1733fbae92c90a624",
+    "section_id": "3598838f9af7760f4926",
+    "ordinal": 2,
+    "text": "After putting in the fix into Puppet and pushing out the interface bonding interface, we had to a \"ifdown/ifup\" on all the bonded interfaces. When the loss of connectivity happened, the varnish processes on both of these servers spiralled upwards out of control. (Note: Varnish has this behavior of spawning threads when it experiences network package lost.)",
+    "anchor": "6e5a4e2d03fd9f4cf4c0",
+    "token_estimate": 90
+  },
+  {
+    "passage_id": "6afd4877c61878342f3d",
+    "source_id": "65d1733fbae92c90a624",
+    "section_id": "a97f826f6013e0dca1fb",
+    "ordinal": 3,
+    "text": "We redirected the bits.wikimedia.org traffic from our Ashburn (EQIAD) site to our Tampa (SDTPA) site and that resolved the issue instantly. At the same time, we restarted the affected EQIAD Varnish instances. (We switched back to EQIAD shortly after that.)",
+    "anchor": "c310702c3596af551954",
+    "token_estimate": 64
+  },
+  {
+    "passage_id": "c5071e6eb4debd201546",
+    "source_id": "65d1733fbae92c90a624",
+    "section_id": "a089310ebdf07ae59ac9",
+    "ordinal": 4,
+    "text": "Operations will look into a way to implement an automatic failover solution (from EQIAD to SDTPA and vice-versa). Ops is also investigating limits within varnish to prevent this type of query overload from bringing down the servers (similar to the use of Apache max clients).",
+    "anchor": "bc60cbe04b178d3ee2e1",
+    "token_estimate": 69
+  },
+  {
+    "passage_id": "d5d05d9e672bc8f1da50",
+    "source_id": "25ee624f72dd282d67d9",
+    "section_id": "6940321d8287f1be12b5",
+    "ordinal": 0,
+    "text": "copy/pasted from Mark Bergsma's email",
+    "anchor": "445501a18367f84a2dba",
+    "token_estimate": 10
+  },
+  {
+    "passage_id": "a8e3bb6fa340c465df9c",
+    "source_id": "25ee624f72dd282d67d9",
+    "section_id": "6940321d8287f1be12b5",
+    "ordinal": 1,
+    "text": "We had an outage today, due to a SFP+ module for a single memcached server (mc1009) going bad in a switch, causing the switch to partially reboot, and causing all application servers to get blocked due to a single down memcached. As usual this caused all kinds of cascading failures on other clusters such as Squid/Varnish. When not overloaded, these clusters would only serve cached pages at that point.",
+    "anchor": "8956a00feb82aaa2c102",
+    "token_estimate": 101
+  },
+  {
+    "passage_id": "d903a6742ade5279ff62",
+    "source_id": "25ee624f72dd282d67d9",
+    "section_id": "6940321d8287f1be12b5",
+    "ordinal": 2,
+    "text": "At 13:30 UTC, the EEPROM of the SFP+ module for mc1009 on asw2-a5-eqiad became unreadable over the i2c bus, and apparently this caused the switch to reboot its entire ethernet chassis subsystem. This gave a lot of noise, with the entire rack going offline, and lots of monitoring and log messages. Fortunately, the other servers came back up after a minute or two. I noticed the switch problems after a few minutes, but it took me a while to check and wade through everything and determine that in the end only a single memcached server was still missing. At 13:58 I removed mc1009 from the MediaWiki memcached pool, and two minutes later, all services were back up.",
+    "anchor": "58c4462995b1f01ccd22",
+    "token_estimate": 167
+  },
+  {
+    "passage_id": "84d5169f3fcfa5528eb2",
+    "source_id": "25ee624f72dd282d67d9",
+    "section_id": "6940321d8287f1be12b5",
+    "ordinal": 3,
+    "text": "Obviously having all Memcached servers still on a single switch in a single rack is very bad, and I've just restarted our old plans to move half of them (as well as half of Varnish) to another rack in row C.",
+    "anchor": "527a70375b157a18b1a8",
+    "token_estimate": 52
+  },
+  {
+    "passage_id": "0e4d88c2340e06b5c27a",
+    "source_id": "25ee624f72dd282d67d9",
+    "section_id": "6940321d8287f1be12b5",
+    "ordinal": 4,
+    "text": "Also very bad is that the failure of a single memcached server can still knock us over completely. Can we not improve on this, with the new PECL client? Or what's the status of our plans with twemproxy/nutcracker?",
+    "anchor": "ab2d1fcac82e9942951a",
+    "token_estimate": 54
+  },
+  {
+    "passage_id": "d2f24801c857813c94e7",
+    "source_id": "25ee624f72dd282d67d9",
+    "section_id": "85cb2191e3c3df499035",
+    "ordinal": 5,
+    "text": "copy/pasted from Asher Feldman's email",
+    "anchor": "cbb405e6d7c60d272dcc",
+    "token_estimate": 10
+  },
+  {
+    "passage_id": "41f855f21482d02cb914",
+    "source_id": "25ee624f72dd282d67d9",
+    "section_id": "85cb2191e3c3df499035",
+    "ordinal": 6,
+    "text": "As of last night, we've been routing all memcached requests in eqiad via twemproxy. A short while ago, I rebooted mc1009 without any other preparation. The main impact was just log noise (libmemcached can be misleading when logging \"SERVER HAS FAILED AND IS DISABLED UNTIL TIMED\") but as far as I've been able to tell, there was no impact to site availability or general performance. Graphite showed an increase in external store selects as I'd expect but php request latency (at the average, 50th, and 90th percentiles) was unimpacted, as were memcached get times. Using enwiki as a logged in user seemed completely normal, and I found no user reports of issues during that time frame either. Huge difference vs. the mc1009 failure on May 6 that started this thread! It also helps shave around 12ms of setup time from every request.",
+    "anchor": "70b35bd45640cb3defc5",
+    "token_estimate": 209
+  },
+  {
+    "passage_id": "eb445fcfa4df05b5315f",
+    "source_id": "25ee624f72dd282d67d9",
+    "section_id": "85cb2191e3c3df499035",
+    "ordinal": 7,
+    "text": "The twemproxy deployment is still provisional and needs additional work (mostly around logging and stats collection) but I'm pleased so far and am going to proceed.",
+    "anchor": "2d46abd2779e8abcb5f7",
+    "token_estimate": 41
+  },
+  {
+    "passage_id": "d4cbbfe145786070d80f",
+    "source_id": "25ee624f72dd282d67d9",
+    "section_id": "615d5862ba4e516038de",
+    "ordinal": 8,
+    "text": "90th percentile Setup.php-memcached time went from 14.8ms to 4ms as a result of the libmemcached upgrade alone, and to 0.9ms with twemproxy.",
+    "anchor": "a1d1af0f01e38f2d4533",
+    "token_estimate": 35
+  },
+  {
+    "passage_id": "ef5d8d74fce4dd7bb409",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "3a8a6363ac918c2e464f",
+    "ordinal": 0,
+    "text": "From 16:00 UTC to 20:00 UTC CirrusSearch was broken for several periods tens of minutes in length. Wikis with Cirrus as primary experienced search and update problems during that time. Wikis with Cirrus as secondary experienced update problems during that time.",
+    "anchor": "db01f0495a0c0eb425ec",
+    "token_estimate": 66
+  },
+  {
+    "passage_id": "6d99443f4145afdb35e7",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 1,
+    "text": "A few weeks ago we disabled redundancy by default in CirrusSearch because it was causing issues with puppet. We enabled it via configuration in production. This configuration didn't take.",
+    "anchor": "cf58599fbbc019e85583",
+    "token_estimate": 47
+  },
+  {
+    "passage_id": "0a1655e0a040e1174ebf",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 2,
+    "text": "Late last week Elasticsearch 0.90.7 was released and I asked Andrew Otto to add it to apt so I could test it. The testing went perfectly in my development environment and beta including a rolling upgrade during the testing. This testing working is suspicious given that we didn't have any redundancy in either dev or beta at the time. I'm really unsure how this upgrade didn't catch that. As this came late in the week I was not able to secure a window to upgrade production that week.",
+    "anchor": "83412d90ec3590369787",
+    "token_estimate": 122
+  },
+  {
+    "passage_id": "a35ddad4bb473b31d0b8",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 3,
+    "text": "Chris Johnson installed the Elasticsearch machines over last weekend. When he set them up in puppet they automatically joined the Elasticsearch cluster and data was migrated to them like any other node. Note now that we are running both Elasticsearch 0.90.4 and Elasticsearch 0.90.7 in the cluster. This is supposed to work, at least well enough for your to perform a rolling upgrade. When I discovered this I figured we should just finish decommissioning testsearch100[1-3] so we can get them off the cluster.",
+    "anchor": "1a480868df29f50f5b23",
+    "token_estimate": 128
+  },
+  {
+    "passage_id": "1103417dec6e33f5f86b",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 4,
+    "text": "Around 16:00 UTC to properly set up the partition on the Elasticsearch machines Andrew Otto took down elastic1001 and blasted the data directory and mounted the appropriate disk there. I had assured him this would be ok as Elasticsearch had two other copies of this data and would replicate it back out. I also assured him that keeping the data around wouldn't really help with anything because Elasticsearch tends to not take into account the old shard state when assigning shards to machines that join back up. It is a long standing complaint folks have with Elasticsearch.",
+    "anchor": "005eea82c2b4d236f7bf",
+    "token_estimate": 144
+  },
+  {
+    "passage_id": "fea52bd88707620956c1",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 5,
+    "text": "At 16:15 UTC icinga warned that Elasticsearch was in \"red\" state, meaning there were unassigned master shards. I started investigating and I discovered that we'd turned off all the redundancy. The records that Andrew had deleted were gone. In hindsight it is at this point I should have switch back to lsearchd. We'd lost 1/15 of the search index in such a way rebuilding it will take a few hours at minimum.",
+    "anchor": "77346ae2c88ceea08214",
+    "token_estimate": 102
+  },
+  {
+    "passage_id": "ffd5151b62baa37bdbb1",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 6,
+    "text": "Rather than switch to lsearchd I figured I could stop the bleeding by making sure all the nodes were assigned. Some of the search index would be missing but at least things would be moving again. After a few minutes of doing this manually I wrote a script to assign all the unassigned shards. Elaticsearch doesn't have a big \"I've broken it. I know I'm going to lose data, just bring these back online now.\" button and doing each one by hand took too long. The script lives here: https://wikitech.wikimedia.org/wiki/Search/New#Stuck_in_red may it never be useful again.",
+    "anchor": "016e928f44fee7df9c54",
+    "token_estimate": 143
+  },
+  {
+    "passage_id": "2907bf4f46963bf83327",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 7,
+    "text": "At 17:01 UTC I got all the shards assigned. They were empty but we were going to perform a rebuild anyway. All elasticsearch wikis were limping along now.",
+    "anchor": "ac06eb6de2ffcc1ddc67",
+    "token_estimate": 39
+  },
+  {
+    "passage_id": "27ca561176e9365ff0b0",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 8,
+    "text": "At 17:40 UTC Chad fixed the redundancy configuration error and I kicked off a process to bring new replicas on line. I working on something that looked pertinent but ultimately didn't matter.",
+    "anchor": "bb108a18706b32210e9e",
+    "token_estimate": 48
+  },
+  {
+    "passage_id": "af10e4fd0828a5f6b956",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 9,
+    "text": "At 18:09 UTC icinga warned again of Elasticsearch having unassigned master shards. I spent a while digging into this and discovered that there was some kind of error moving replicas from Elasticsearch 0.90.7 to 0.90.4. It looked like a bug caused by them upgrading Lucene. I haven't dug into it yet. This problem caused nodes to stay unassigned.",
+    "anchor": "1df0baed33b12ba103c5",
+    "token_estimate": 87
+  },
+  {
+    "passage_id": "826085c64bfd7bd69bdd",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 10,
+    "text": "Around 18:40 UTC I configured Elasticsearch to remove any data on those nodes and at 18:50 UTC Elasticsearch recovered again, having assigned all nodes replicas.",
+    "anchor": "b80ccb5ba5eb41eb00f0",
+    "token_estimate": 41
+  },
+  {
+    "passage_id": "acf70b5e052acc247761",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 11,
+    "text": "Around 19:00 UTC Andrew Otto and I went back to performing the rolling restarts to fix the partition. We used a command that moves shards off of the node before we shut it down. This seemed to work fine for elastic1002.",
+    "anchor": "ea38f76c85695f1fc726",
+    "token_estimate": 55
+  },
+  {
+    "passage_id": "9b65931646e5b7e080a7",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 12,
+    "text": "testsearch100X now known evil and no longer holding any data I amended a puppet change for properly configuring elastic10XX to decommission testsearch100X as well and asked Andrew to review it again. At the time I believe that testsearch1001 being the cluster master was part of the cause of the replica assignment issue.",
+    "anchor": "c48c51a6c696e299c8a9",
+    "token_estimate": 81
+  },
+  {
+    "passage_id": "a8c95dd74e8f8a4cb80c",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 13,
+    "text": "He merged it at 19:18 UTC. I started seeing fatals around 19:25. Paravoid pointed me to a icinga CRITICAL for the lvs pool. It turns out I never added the new nodes to LVS. At this point testsearch1001 and testsearch1002 had been decommissioned. I thought Chris had added them when he set up the new nodes this weekend. I was convinced adding the lvs::realserver class was enough to do this and that he had added the class when he set up the new machines. Not only had he not added the class, that class doesn't set up lvs! Mutante and paravoid synced a corrected lvs config at 19:31 UTC.",
+    "anchor": "e7e738f611de61e24505",
+    "token_estimate": 147
+  },
+  {
+    "passage_id": "44f9cdfbfca0e3d08cfc",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 14,
+    "text": "At 19:35 UTC it was obvious this fix wasn't working. We were still getting fatals. For a few minutes I believed they were caused by requests being stuck in the queue. Around 19:45 UTC I realized that we had unassigned shards again. I started the process of reassigning them again, with the script. At 19:52 UTC the fix finished and we began talking about removing Cirrus from all wiki until we could figure out what happened. At 19:56 UTC Chad did just that.",
+    "anchor": "be484b7333e19773f509",
+    "token_estimate": 115
+  },
+  {
+    "passage_id": "9ccc25c533252ae216d4",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "db97ab4423d9d728366d",
+    "ordinal": 15,
+    "text": "I started writing this at 19:02 UTC.",
+    "anchor": "ea627548ed5bbf70cc06",
+    "token_estimate": 9
+  },
+  {
+    "passage_id": "6f2ade600f87641d6fc5",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "2856dbb6caf4776be61f",
+    "ordinal": 16,
+    "text": "Original cause:",
+    "anchor": "d77a4adf2e201e346c16",
+    "token_estimate": 4
+  },
+  {
+    "passage_id": "75c029556ae5d65a76cd",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "2856dbb6caf4776be61f",
+    "ordinal": 17,
+    "text": "Cause of delay in recovery:",
+    "anchor": "c3cd65bdf07b0268fdc0",
+    "token_estimate": 7
+  },
+  {
+    "passage_id": "f0daa7ff520dc01e85c5",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "2856dbb6caf4776be61f",
+    "ordinal": 18,
+    "text": "Cause of second outage:",
+    "anchor": "b56430a8b194dd394da5",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "09cd4412752f2e85bd24",
+    "source_id": "9dc571a5930bf9ea0822",
+    "section_id": "2856dbb6caf4776be61f",
+    "ordinal": 19,
+    "text": "Cause of third outage:",
+    "anchor": "da27017eedf366a2dbd0",
+    "token_estimate": 6
+  },
+  {
+    "passage_id": "6271b79698e236830bf6",
+    "source_id": "fe3b1cf3ea388d8af40b",
+    "section_id": "19fae1dfe7b8f82f4cfc",
+    "ordinal": 0,
+    "text": "Verbose logging combined with broken log rotation led to disks on about 3/4 of the Parsoid nodes filling up, which caused the Parsoid daemons to stop accepting requests. This led to some user-visible errors for VisualEditor users in a 17-minute window. An estimate is that less than 10% of VE page loads / saves were affected during this period.",
+    "anchor": "1f2deb763f94e389629e",
+    "token_estimate": 87
+  },
+  {
+    "passage_id": "aa42af7373186764f59b",
+    "source_id": "fe3b1cf3ea388d8af40b",
+    "section_id": "b8f12ec25f05feb88f78",
+    "ordinal": 1,
+    "text": "All times UTC on Tuesday the 11th (03:00 UTC = 7pm PST on Monday evening):",
+    "anchor": "9a2b038af3a9c82025c5",
+    "token_estimate": 19
+  },
+  {
+    "passage_id": "15f3723e395e662fecec",
+    "source_id": "d473b9b21f31ea49e920",
+    "section_id": "63f674546d19163a9b20",
+    "ordinal": 0,
+    "text": "rsyslog was automatically upgraded via puppet (\"ensure => latest\") which triggered a known bug in Swift (media storage) causing it to hang thus cascading down to the imagescalers.",
+    "anchor": "3653fe08c14d0679674a",
+    "token_estimate": 45
+  },
+  {
+    "passage_id": "a011711076cd440fd466",
+    "source_id": "d473b9b21f31ea49e920",
+    "section_id": "c819ef0756fc54217941",
+    "ordinal": 1,
+    "text": "written by Faidon",
+    "anchor": "ef801867cddfea095178",
+    "token_estimate": 5
+  },
+  {
+    "passage_id": "ce45c36a95e226fee3c3",
+    "source_id": "d473b9b21f31ea49e920",
+    "section_id": "c819ef0756fc54217941",
+    "ordinal": 2,
+    "text": "At about 18:55 UTC, the imagescaler (rendering) cluster started being unresponsive, ultimately throwing a LVS rendering CRITICAL alert. The error was cascading from Swift, on both pmtpa & eqiad and eventually a CRITICAL alert for ms-fe LVS as well was also issued.",
+    "anchor": "f5d5f5116537c2ae7599",
+    "token_estimate": 66
+  },
+  {
+    "passage_id": "77134b9044f2f2d91dc5",
+    "source_id": "d473b9b21f31ea49e920",
+    "section_id": "c819ef0756fc54217941",
+    "ordinal": 3,
+    "text": "Service recovered with no manual action(?) at ~19:40 UTC but still at an increased system load. I fixed this by restarting Swift front/back daemons at about 01:00 UTC.",
+    "anchor": "17f60a5a207139a1f4b0",
+    "token_estimate": 42
+  },
+  {
+    "passage_id": "ba60a2e252ceef9b5432",
+    "source_id": "d473b9b21f31ea49e920",
+    "section_id": "c819ef0756fc54217941",
+    "ordinal": 4,
+    "text": "The root cause was a combination of:",
+    "anchor": "bfb1ada33d5e6e012b4c",
+    "token_estimate": 9
+  },
+  {
+    "passage_id": "ec8ddb95dc4939599daf",
+    "source_id": "d473b9b21f31ea49e920",
+    "section_id": "c819ef0756fc54217941",
+    "ordinal": 5,
+    "text": "puppet ran across all boxes in the 30' window; the rsyslog package was upgraded, the package's postinst restarted the service, Swift lost the socket, busy looped, got overloaded and caused all kinds of errorenous responses, including cascading into the imagescaler cluster.",
+    "anchor": "c32a1cdff29de8803113",
+    "token_estimate": 69
+  },
+  {
+    "passage_id": "20a3d98cab9b3bc21717",
+    "source_id": "d473b9b21f31ea49e920",
+    "section_id": "c819ef0756fc54217941",
+    "ordinal": 6,
+    "text": "Iv'e fixed the evil (3) behavior with https://gerrit.wikimedia.org/r/99576. I'll have a look at (1) and see if it's fixed in newer upstream.",
+    "anchor": "2672c034eba650d38123",
+    "token_estimate": 35
+  },
+  {
+    "passage_id": "e11a2d760a53f0c9d490",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "091831e22475867d81dd",
+    "ordinal": 0,
+    "text": "copy/pasted from Mark's email to Ops list",
+    "anchor": "62f493e9c1f410c14f8c",
+    "token_estimate": 11
+  },
+  {
+    "passage_id": "768f7cb558bdaa2c81a3",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "af0f4850583bbbf73adc",
+    "ordinal": 1,
+    "text": "TL;DR : A bad Puppet change regarding sysctl & RP filtering broke LVS balancers and went undetected until we hit today’s large scale outage.",
+    "anchor": "f25445d05deae4e5bfb7",
+    "token_estimate": 35
+  },
+  {
+    "passage_id": "8a8b3b687ebb5ac11121",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "14e909f39af17def3600",
+    "ordinal": 2,
+    "text": "On Monday February 3 2013 around 10:15 UTC, while investigating other network issues, I decided to do fail overs on our LVS load balancers in eqiad. I wanted to update the clocks on these systems to aid my investigation, as they are explicitly not running ntpd for performance reasons. System reboots seemed an easy solution, as I could use the opportunity to upgrade their kernels with the latest security patches as well. We have extensive failover in place for or LVS load balancing infrastructure, so system reboots are normally not disruptive and not a problem. I started with a passive (standby) balancer, lvs1004, which showed no issues during the reboot.",
+    "anchor": "22544a424ea22225af78",
+    "token_estimate": 166
+  },
+  {
+    "passage_id": "29625b20a33642cfaf10",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "14e909f39af17def3600",
+    "ordinal": 3,
+    "text": "Then around 10:55 UTC I moved on to the active LVS balancer, lvs1001 and lvs1002, which are responsible for balancing all public traffic. I failed over traffic to lvs1004 and lvs1005, and verified that the LVS services were still working by telnetting to some of the TCP ports. However, soon after I commenced the reboot, I received Icinga and Nimsoft pages, for HTTPS services in particular. I attributed this to an issue we’ve had with the way we’ve configured HTTPS services on separate HTTPS terminator systems in esams, and expected this problem to be present in eqiad as well. (However, this is a configuration we’ve already moved away from recently and wasn’t the cause of this issue.) The rebooting LVS server returned a few minutes later, and diagnostic routing output and outside TCP port connects indicated that the LVS services were functional.",
+    "anchor": "8f8ce99ab94f08e4e44f",
+    "token_estimate": 214
+  },
+  {
+    "passage_id": "05b2a32b0430a361e79c",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "14e909f39af17def3600",
+    "ordinal": 4,
+    "text": "Well after lvs1001 and lvs1002 had returned from reboot and restored BGP sessions, around 11:15 UTC, it became clear that LVS still wasn’t working correctly. HTTP services seemed to function, but HTTPS users were still receiving 503 errors. I suspected that the internal LVS service IPs, used by the SSL terminators to communicate to the HTTP Varnish caches, were not working while the public service IPs did work. Some internal reachability tests confirmed this, even though all routing configuration and diagnostic output showed no problems. Further debugging (packet captures) showed that packets were arriving correctly on the relevant LVS balancer hosts, but they didn't respond.",
+    "anchor": "a7f1dcddbf026c29bc01",
+    "token_estimate": 171
+  },
+  {
+    "passage_id": "9ee975d2ce09b70ebdd5",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "14e909f39af17def3600",
+    "ordinal": 5,
+    "text": "At this point I suspected Linux’s rp_filter, the Reverse Path forwarding filter. This is a sysctl setting that filters any traffic received from an interface that is not also configured as the destination outbound interface for this (source) IP - essentially making sure asymmetric routing is forbidden, for security reasons. This default setting is appropriate for most hosts (including servers), but not for Linux hosts configured as advanced routers with multiple interfaces, such as our LVS balancers. Therefore we explicitly disable this filter in configuration management. I quickly verified whether this configuration was still present in sysctl.d (it was), and also manually disabled rp_filter on one LVS balancer to be sure. It didn’t change anything. Unfortunately I had used sysctl net.conf.ipv4.all…",
+    "anchor": "704eef61f0854913eb67",
+    "token_estimate": 203
+  },
+  {
+    "passage_id": "c30182bffdbc23d4daeb",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "14e909f39af17def3600",
+    "ordinal": 6,
+    "text": "At this point I suspected there was some other configuration issue on the LVS balancers that I had rebooted. There was one remaining LVS balancer for public traffic (lvs1005) that hadn’t been rebooted yet, and 2 for internal traffic. Around 11:30 UTC, I manually copied relevant LVS service configuration to lvs1005, assigned some LVS service IPs to the host and configured a static route on the active router for internal traffic. This quick & dirty hack ensured that at least HTTPS traffic for wikis started to work again, while I could diagnose the underlying problem.",
+    "anchor": "886fd9466a0fbb36d68a",
+    "token_estimate": 143
+  },
+  {
+    "passage_id": "6c8d6e72267bf504db6d",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "14e909f39af17def3600",
+    "ordinal": 7,
+    "text": "However, lacking any iptables firewalling on these hosts and all routing output looking correct, there was little else I could think of besides rp_filter, so I decided to investigate that again. I found that rp_filter was still enabled despite having manually disabled it before - or so I thought. When I disabled rp_filter for eth0 explicitly, immediately LVS service IP reachability for this balancer was restored. After I manually disabled rp_filter for eth0 for the other balancers, all problems were immediately resolved at 11:44 UTC.",
+    "anchor": "db03a140f230b637e3e2",
+    "token_estimate": 135
+  },
+  {
+    "passage_id": "6025ccc2c63d3591c9e1",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "14e909f39af17def3600",
+    "ordinal": 8,
+    "text": "The net effect of this configuration error was that LVS services were broken for _most_ hosts inside of our network after reboot of the respective balancer hosts, but working fine for all external traffic. This implies that most LVS services appeared to work fine from the outside, including any manual tests run across the Internet. But services that internally forward to other services, such as HTTPS (in eqiad), Parsoid and Swift didn’t work.",
+    "anchor": "18a358bd680ecd41a97d",
+    "token_estimate": 112
+  },
+  {
+    "passage_id": "f75f2242893e48ad271e",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "14e909f39af17def3600",
+    "ordinal": 9,
+    "text": "I traced the underlying problem back to this Puppet change: https://gerrit.wikimedia.org/r/#/c/75087/",
+    "anchor": "cd5d16dbbea2b75ee299",
+    "token_estimate": 26
+  },
+  {
+    "passage_id": "7042420fad7393cedde5",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "14e909f39af17def3600",
+    "ordinal": 10,
+    "text": "This is a big puppet wide change that modularises and improves the handling of sysctl parameter values across our infrastructure. Our LVS balancers rely heavily on specific sysctl settings, including disabling rp_filter. Unfortunately, despite reviews by 3 different people on multiple patch sets, it hadn't been noticed that this patch failed to explicitly set the priority of (at least) the LVS specific sysctl settings. Before, the sysctl priority was set at 50, and now it was at the default of 10 - equal to the priority used by the default Ubuntu sysctl settings. Due to alphabetic naming order, the Ubuntu sysctl file runs last, and reenables rp_filter again.",
+    "anchor": "d311d1dc8aec1009d23d",
+    "token_estimate": 167
+  },
+  {
+    "passage_id": "0778eb942ea225e9e70a",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "14e909f39af17def3600",
+    "ordinal": 11,
+    "text": "I’ve now corrected this in: https://gerrit.wikimedia.org/r/#/c/110940/",
+    "anchor": "74d4cc0fc1bfa07e8805",
+    "token_estimate": 18
+  },
+  {
+    "passage_id": "4043c9068482f0669c99",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "14e909f39af17def3600",
+    "ordinal": 12,
+    "text": "As for sysctl net.conf.ipv4.all.rp_filter, the kernel uses the max() value for {all,interface}, which is not very intuitive. So to reliably turn it off, it needs to be set to 0 everywhere. I've run into this several times before in the past and I should know this, but unfortunately I didn’t think of it immediately, which extended this outage by some 10-15 minutes. :(",
+    "anchor": "d70f661e06ea73e08a03",
+    "token_estimate": 93
+  },
+  {
+    "passage_id": "6e7b0bfc79928fdfffdc",
+    "source_id": "04f7feb3457423073737",
+    "section_id": "a367a2e7596219a70c9f",
+    "ordinal": 13,
+    "text": "Most of the issues addressed (as of 2014-03-19), the rest of the things like are good to haves, not critical.",
+    "anchor": "3c1184f5f7b703d11438",
+    "token_estimate": 28
+  }
+]

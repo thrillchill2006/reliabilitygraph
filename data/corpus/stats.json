@@ -1,0 +1,34 @@
+{
+  "eligible_documents": 19,
+  "incident_families": [
+    "cache-dependency-outage",
+    "cache-maintenance-outage",
+    "cache-network-outage",
+    "configuration-read-only",
+    "database-contention-read-only",
+    "database-crash-read-only",
+    "dependency-cascade-outage",
+    "incident-index",
+    "incident-response-runbook",
+    "incident-review-process",
+    "load-balancer-outage",
+    "network-maintenance",
+    "network-power-outage",
+    "operational-runbook",
+    "planned-read-only",
+    "search-cluster-outage",
+    "search-index-outage",
+    "service-capacity-outage",
+    "service-disk-outage"
+  ],
+  "sections": 218,
+  "passages": 370,
+  "links": 98,
+  "content_tokens": 15891,
+  "link_classes": {
+    "external": 6,
+    "phabricator": 10,
+    "wikimedia": 17,
+    "wikitech": 65
+  }
+}

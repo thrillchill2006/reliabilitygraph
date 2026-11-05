@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "annotation_scope": "entire 19-source pilot",
+  "annotation_status": "partial; only explicit included-source link is verified",
+  "relations": [
+    {
+      "relation_id": "rel-c7d966-2493c3",
+      "from_source_id": "c7d966e88daf97c00334",
+      "to_source_id": "2493c360096ef6df7499",
+      "relation_type": "REFERENCES",
+      "provenance": "source-stated",
+      "evidence_span_ids": [
+        "6d1248e18dac279640fb"
+      ],
+      "review_status": "verified",
+      "confidence": "high"
+    }
+  ]
+}
